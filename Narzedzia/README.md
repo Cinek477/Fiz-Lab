@@ -18,7 +18,7 @@ Kontrola sprawdza:
 
 - lokalne linki wszystkich README oraz ich dostępność po zastosowaniu `.gitignore`;
 - składnię skryptów, strukturę JSON i zgodność liczby kolumn CSV;
-- dopuszczenie dokładnie wskazanych własnych sprawozdań PDF z ćwiczenia 0;
+- dostępność sprawozdań PDF wskazanych w głównym README;
 - integralność ZIP-ów i zgodność ich zawartości z aktualnymi źródłami.
 
 Dodatkowo możesz skompilować wszystkie 12 dokumentów z ZIP-ów:

@@ -55,6 +55,7 @@ Drugie odtwarza paczki ćwiczeń 11, 31, 71 i 83. [Szczegóły](Narzedzia/README
 | Ćwiczenie | Własne sprawozdanie |
 |---|---|
 | 0 — wahadło | [PDF](0/wahadlo/PDF/sprawozdanie.pdf) |
+| 71 — dwie szczeliny | [PDF](71/PDF/INF3z1c71v1.pdf) |
 
 ## Współpraca
 

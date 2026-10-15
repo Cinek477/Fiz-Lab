@@ -15,6 +15,7 @@ from pakuj_overleaf import ROOT, packages
 SKIP = {'.git', '__pycache__', '.venv', 'tmp', 'temp', 'Archiwum'}
 OWN_REPORTS = (
     '0/wahadlo/PDF/sprawozdanie.pdf',
+    '71/PDF/INF3z1c71v1.pdf',
 )
 
 

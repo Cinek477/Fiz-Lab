@@ -2,6 +2,8 @@
 
 [Ćwiczenie 71](../README.md) · [PDF](PDF/71_szablon_sprawozdania.pdf) · [LaTeX](Tworzenie/71_szablon_sprawozdania.tex) · [Opis danych](Dane/README.md)
 
+[Sprawozdanie na własnych danych — PDF](../PDF/INF3z1c71v1.pdf)
+
 Szablon zawiera cel, teorię, aparaturę, tabele pomiarów i par maksimów,
 miejsce na wykres, ocenę jakości obrazu, niepewności i wnioski.
 Metryka i wyniki są puste. Źródło LaTeX jest samodzielne.

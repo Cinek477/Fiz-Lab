@@ -4,6 +4,7 @@
 
 | Materiał | Plik |
 |---|---|
+| Sprawozdanie na własnych danych | [PDF](PDF/INF3z1c71v1.pdf) |
 | Połączona karta pomiarowa 1–1200 | [PDF](Templatka/PDF/71_karta_pomiarowa_1_1200.pdf) |
 | Pusty szablon sprawozdania | [PDF](Sprawko/PDF/71_szablon_sprawozdania.pdf) |
 | Karta i szablon do Overleaf | [ZIP](71_overleaf.zip) |

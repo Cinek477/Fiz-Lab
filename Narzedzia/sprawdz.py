@@ -25,6 +25,8 @@ def files():
 
 def ignored_paths(paths):
     """Test prawdziwym Gitem, w oddzielnym repozytorium bez plików użytkownika."""
+    if not paths:
+        return set()
     with tempfile.TemporaryDirectory(prefix='fiza-ignore-') as name:
         shadow = Path(name)
         subprocess.run(['git', 'init', '-q', name], check=True, capture_output=True)

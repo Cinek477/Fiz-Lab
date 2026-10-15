@@ -1,0 +1,124 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage{fontspec}
+\setmainfont{texgyretermes-regular.otf}[BoldFont=texgyretermes-bold.otf,ItalicFont=texgyretermes-italic.otf,BoldItalicFont=texgyretermes-bolditalic.otf]
+\setsansfont{texgyreheros-regular.otf}[BoldFont=texgyreheros-bold.otf]
+\usepackage[polish]{babel}
+\usepackage{amsmath,amssymb,geometry,graphicx,tabularx,array,booktabs,xcolor}
+\usepackage[hidelinks]{hyperref}
+\geometry{margin=20mm}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{7pt}
+\renewcommand{\arraystretch}{1.65}
+\newcolumntype{Y}{>{\raggedright\arraybackslash}X}
+\begin{document}
+
+\begingroup\footnotesize\ttfamily\setlength{\parskip}{0pt}\renewcommand{\arraystretch}{1.1}
+\begin{tabularx}{\linewidth}{|p{30mm}|Y|p{20mm}|p{18mm}|p{23mm}|}\hline
+\rule[-16mm]{0pt}{19mm}\textbf{Wydział} & \textbf{Imię i nazwisko} & \textbf{Rok} & \textbf{Grupa} & \textbf{Zespół}\\\hline\end{tabularx}\par
+\begin{tabularx}{\linewidth}{|p{30mm}|Y|p{23mm}|}
+\rule[-13mm]{0pt}{16mm}\parbox[t]{30mm}{\centering\textbf{PRACOWNIA\\FIZYCZNA\\WFiIS AGH}} & \textbf{Temat:} & \textbf{Nr ćwiczenia}\\\hline\end{tabularx}\par
+\begin{tabularx}{\linewidth}{|p{30mm}|Y|Y|Y|Y|p{23mm}|}
+\rule[-13mm]{0pt}{16mm}\textbf{Data wykonania} & \textbf{Data oddania} & \textbf{Zwrot do popr.} & \textbf{Data oddania} & \textbf{Data zaliczenia} & \textbf{OCENA}\\\hline\end{tabularx}\endgroup\par\medskip
+\section*{1 Cel ćwiczenia}
+Celem ćwiczenia jest pomiar rozkładu natężenia światła laserowego po przejściu przez dwie szczeliny oraz wyznaczenie odległości między ich środkami.
+
+\section*{2 Podstawy teoretyczne}
+Dyfrakcja wynika z falowej natury światła. Fale pochodzące z różnych części szczeliny nakładają się, tworząc maksimum centralne oraz słabsze maksima boczne rozdzielone minimami. Dla dwóch szczelin dodatkowo obserwuje się prążki interferencyjne modulowane obwiednią dyfrakcyjną.
+
+Przyjmujemy małe kąty, x \(\ll\) L. Symbol a oznacza szerokość jednej szczeliny, d odległość między środkami dwóch szczelin, λ długość fali, L odległość szczelina–detektor, a x odległość względem centrum obrazu. Surowy odczyt skali oznaczamy p; x = p − p0.
+
+\[
+I(x)=I_0\left(\frac{\sin\alpha}{\alpha}\right)^2\cos^2\beta
+\]
+\[
+\alpha=\frac{\pi ax}{\lambda L},\qquad \beta=\frac{\pi dx}{\lambda L}
+\]
+W układzie podwójnym przybliżone położenia maksimów interferencyjnych spełniają x\_m = mλL/d. Dla pary −m i +m średnia odległość od centrum wynosi r\_m = (p\_prawe − p\_lewe)/2.
+
+\clearpage
+\section*{3 Aparatura i przebieg pomiarów}
+Zestaw obejmuje laser czerwony, przesłonę ze szczelinami, ekran z fotodiodą i mechanizmem przesuwu, woltomierz oraz układ zasilania i oporów. Fotodioda wytwarza prąd zależny od natężenia padającego światła; na oporze powstaje napięcie mierzone woltomierzem.
+
+[Wstaw schemat optyczny i elektryczny albo odwołaj się do schematów instrukcji z podaniem źródła.]
+
+\begingroup\small\begin{tabularx}{\linewidth}{|Y|Y|}\hline
+\textbf{Parametr} & \textbf{Dwie szczeliny} \\ \hline
+λ [nm] & [uzupełnij] \\ \hline
+L [mm] & [uzupełnij] \\ \hline
+Krok [mm] & [uzupełnij] \\ \hline
+Opór R [Ω] & [uzupełnij] \\ \hline
+\end{tabularx}\endgroup\par\medskip
+[Opisz rzeczywiste ustawienie, pomiar i odstępstwa od instrukcji.]
+
+Do opisu przebiegu: dobór oporu i zakresu, ustawienie centrum, kierunek skanowania, zakres obejmujący prążki boczne, stały opór w serii oraz rzeczywiste odstępstwa. Usuń tę podpowiedź po uzupełnieniu.
+
+\clearpage
+\section*{4 Wyniki pomiarów}
+Sygnał I [j.u.] odpowiada [napięciu w mV / wskazaniom miernika w ustalonej skali — wybierz]. Położenia p są bezpośrednimi odczytami skali. [Opisz ewentualną korektę tła.]
+
+\subsection*{Tabela 1 Dwie szczeliny}
+\begingroup\small\begin{tabularx}{\linewidth}{|Y|Y|Y|Y|Y|Y|}\hline
+\textbf{p [mm]} & \textbf{I [j.u.]} & \textbf{p [mm]} & \textbf{I [j.u.]} & \textbf{p [mm]} & \textbf{I [j.u.]} \\ \hline
+[p] & [I] & [p] & [I] & [p] & [I] \\ \hline
+[p] & [I] & [p] & [I] & [p] & [I] \\ \hline
+[p] & [I] & [p] & [I] & [p] & [I] \\ \hline
+[p] & [I] & [p] & [I] & [p] & [I] \\ \hline
+[p] & [I] & [p] & [I] & [p] & [I] \\ \hline
+[p] & [I] & [p] & [I] & [p] & [I] \\ \hline
+[p] & [I] & [p] & [I] & [p] & [I] \\ \hline
+[p] & [I] & [p] & [I] & [p] & [I] \\ \hline
+\end{tabularx}\endgroup\par\medskip
+[Zapisz rozdzielczość skali i woltomierza oraz zauważone wahania odczytów. Długie tabele mogą przejść na kolejne strony.]
+
+\clearpage
+\section*{5 Opracowanie dwóch szczelin}
+\begin{center}\fbox{\begin{minipage}[c][48mm][c]{0.94\linewidth}\centering [Wstaw wykres z własnych pomiarów]\end{minipage}}\end{center}
+Wykres 1 Rozkład sygnału dla podwójnej szczeliny w skali liniowej
+
+\[
+r_m=\frac{p_{\mathrm{prawe},m}-p_{\mathrm{lewe},m}}{2},\qquad d_m=\frac{m\lambda L}{r_m}
+\]
+\subsection*{Tabela 2 Pary maksimów interferencyjnych}
+\begingroup\small\begin{tabularx}{\linewidth}{|Y|Y|Y|Y|Y|}\hline
+\textbf{m} & \textbf{p lewe [mm]} & \textbf{p prawe [mm]} & \textbf{r\_m [mm]} & \textbf{d\_m [mm]} \\ \hline
+1 & [uzupełnij] & [uzupełnij] & [uzupełnij] & [uzupełnij] \\ \hline
+2 & [uzupełnij] & [uzupełnij] & [uzupełnij] & [uzupełnij] \\ \hline
+3 & [uzupełnij] & [uzupełnij] & [uzupełnij] & [uzupełnij] \\ \hline
+4 & [uzupełnij] & [uzupełnij] & [uzupełnij] & [uzupełnij] \\ \hline
+5 & [uzupełnij] & [uzupełnij] & [uzupełnij] & [uzupełnij] \\ \hline
+\end{tabularx}\endgroup\par\medskip
+d średnie = [uzupełnij] mm; uA(d) = [uzupełnij] mm; u(d) = [uzupełnij] mm.
+
+Jakość obrazu: Imax = [uzupełnij] j.u.; Imin w najbliższym minimum = [uzupełnij] j.u.; Q = Imin/Imax = [uzupełnij].
+
+[Zinterpretuj Q i opisz wpływ tła oraz skończonej szerokości detektora.]
+
+\clearpage
+\section*{6 Niepewności pomiarów}
+[Podaj specyfikacje przyrządów, sposób ustalenia ekstremów oraz metodę obliczenia końcowych niepewności.]
+
+\begingroup\small\begin{tabularx}{\linewidth}{|Y|Y|}\hline
+\textbf{Wielkość} & \textbf{Wartość niepewności standardowej} \\ \hline
+u(λ) [nm] & [uzupełnij] \\ \hline
+u(L) [mm] & [uzupełnij] \\ \hline
+u(p) [mm] & [uzupełnij] \\ \hline
+\end{tabularx}\endgroup\par\medskip
+\[
+u_{\mathrm A}(\bar z)=\sqrt{\frac{\sum_{i=1}^{N}(z_i-\bar z)^2}{N(N-1)}}
+\]
+\[
+u(r)=\frac12\sqrt{u^2(p_{\mathrm{lewe}})+u^2(p_{\mathrm{prawe}})}
+\]
+\[
+\frac{u(z)}{z}=\sqrt{\left(\frac{u(\lambda)}{\lambda}\right)^2+\left(\frac{u(L)}{L}\right)^2+\left(\frac{u(r)}{r}\right)^2}
+\]
+Ostatni wzór dotyczy pojedynczego oszacowania odległości między szczelinami przy niezależnych danych wejściowych. λ i L są wspólne dla wyników w serii. Odczyty maksimów pochodzą z tego samego rozkładu; przy niepewności średniej uwzględnij korelacje i sposób ustalenia położeń maksimów. Sama uA nie obejmuje wszystkich tych efektów.
+
+Niepewność rozszerzona: U = k·u, k = [podaj, jeżeli stosujesz]. Końcowe wyniki zaokrąglij do miejsca dziesiętnego wynikającego z niepewności.
+
+\section*{7 Wnioski}
+[Oceń zgodność z teorią na podstawie własnych danych i wskaż dominujące ograniczenia pomiaru.]
+
+[Podaj końcowe d z niepewnościami, oceń obraz względem teorii, skomentuj stosunki natężeń i Q. Uzasadnij dominujące źródła rozbieżności własnymi obserwacjami.]
+
+\end{document}

@@ -1,0 +1,84 @@
+\documentclass[11pt,a4paper]{article}
+\newcommand{\Rodzaj}{Szablon sprawozdania}
+\input{styl.tex}\input{wspolne.tex}
+\begin{document}\metryka
+\section{Cel ćwiczenia}
+Wyznaczenie modułu Younga dwóch metali metodą statyczną na podstawie
+zależności wydłużenia drutu od obciążenia.
+\section{Podstawy teoretyczne}\teoria
+\section{Aparatura i przebieg pomiarów}\dzwignia
+Układ obejmuje statyw z uchwytami drutu i szalką, dźwignię,
+czujnik mikrometryczny, odważniki, mikrometr i przymiar długości.
+\clearpage
+\subsection{Przyrząd pomiarowy}
+\przyrzadopis{Rysunki/przyrzad.pdf}
+Przymiarem wyznacz długość badanego odcinka drutu, a mikrometrem
+średnicę w trzech miejscach. W opisie podaj materiały, zakresy obciążeń,
+krok masy, zerowanie oraz sposób odczytu przy dokładaniu i zdejmowaniu odważników.
+\miejsce{25mm}{Rzeczywisty przebieg: materiały, zakresy mas, krok, zerowanie,
+pomiar długości i średnicy, obciążanie i odciążanie; odstępstwa od instrukcji.}
+
+\clearpage\section{Wyniki pomiarów}
+\subsection{Drut A}\wymiary{Parametry próbki}
+\textbf{Niepewności typu B:} $u(l)=$ \pole\ m,
+$u(d)=$ \pole\ mm. Podaj sposób ich wyznaczenia.
+
+W tabeli zachowaj odczyty obu kierunków. Siłę $F=mg$ i średnie
+wydłużenie $(z_\uparrow+z_\downarrow)/4$ oblicz po przepisaniu danych.
+\par\medskip\tabelaopracowania
+\clearpage\subsection{Drut B}\wymiary{Parametry próbki}
+\textbf{Niepewności typu B:} $u(l)=$ \pole\ m,
+$u(d)=$ \pole\ mm. Podaj sposób ich wyznaczenia.
+
+Zapisz zerowanie i oznacz odczyt maksymalny, jeśli wykorzystano go
+dwukrotnie. Nie dopisuj punktu $(0,0)$ jako pomiaru, gdy go nie wykonano.
+\par\medskip\tabelaopracowania
+
+\clearpage\section{Regresja i wyznaczenie modułu}
+Oblicz $\bar d=(d_1+d_2+d_3)/3$. Zgodnie z instrukcją niepewność
+średnicy oceń metodą typu B, nie z rozrzutu trzech średnic.
+Dla działki $q$ i założenia błędu zaokrąglenia w $[-q/2,q/2]$
+otrzymujemy $u_B=q/\sqrt{12}$. Jeśli podano granicę błędu
+$\pm\Delta$ z rozkładem prostokątnym, użyj $u_B=\Delta/\sqrt3$.
+Nie utożsamiaj działki z granicą błędu bez wyjaśnienia.
+
+Pokaż wszystkie zmierzone punkty. Punkty pominięte w dopasowaniu
+zaznacz i uzasadnij wybór zakresu, bez dopasowywania go do wartości tablicowej.
+Dopasuj $\Delta l=aF+b$; podaj $a$, $u(a)$, $b$ i zakres regresji.
+\miejsce{65mm}{Wykres drutu A: $\Delta l(F)$, obie osie z jednostkami,
+punkty użyte i pominięte, prosta, zakres i parametry dopasowania.}
+\miejsce{65mm}{Wykres drutu B: $\Delta l(F)$, obie osie z jednostkami,
+punkty użyte i pominięte, prosta, zakres i parametry dopasowania.}
+\[
+\boxed{E=\frac{4l}{\pi\bar d^2a},\qquad
+a\,[\mathrm{m/N}]=10^{-3}a\,[\mathrm{mm/N}].}
+\]
+
+\clearpage\section{Niepewności i porównanie z odniesieniem}
+Przy niezależnych $l,d,a$ i pomijalnej niepewności siły, jak w instrukcji:
+\[
+\boxed{\frac{u_c(E)}E=\sqrt{
+\left(\frac{u(l)}l\right)^2+
+\left(2\frac{u(d)}d\right)^2+
+\left(\frac{u(a)}a\right)^2},\qquad U(E)=k\,u_c(E).}
+\]
+Współczynnik 2 przy $u(d)/d$ wynika z potęgi $d^2$.
+Podaj $k$; dla $k=2$ nie deklaruj automatycznie dokładnie 95\% pokrycia.
+Jeśli używasz wykresu względem masy i niepewnego $g$, dodaj także wkład $u(g)/g$.
+\begin{tabularx}{\linewidth}{|Y|C|C|C|C|}\hline
+\naglowek\textbf{Materiał} & $E$ [GPa] & $u_c(E)$ [GPa] & $U(E)$ [GPa] & \textbf{Odniesienie} [GPa]\\\hline
+Drut A & & & &\rule{0pt}{15mm}\\\hline
+Drut B & & & &\rule{0pt}{15mm}\\\hline
+\end{tabularx}
+\miejsce{27mm}{Porównanie: źródło odniesienia, przedział $E\pm U$,
+zgodność lub jej brak. Dyskusja wpływu średnicy, zerowania, wyrazu wolnego,
+histerezy i wyboru zakresu. Nie przypisuj przyczyny bez dowodów.}
+\section{Wnioski}
+\begin{tabularx}{\linewidth}{|p{42mm}|Y|}\hline
+\naglowek\textbf{Zagadnienie} & \textbf{Wynik i interpretacja}\\\hline
+Wyniki obu materiałów &\rule{0pt}{14mm}\\\hline
+Porównanie tablicowe &\rule{0pt}{14mm}\\\hline
+Zakres liniowy i powrót do zera &\rule{0pt}{14mm}\\\hline
+Dominujące niepewności / ograniczenia &\rule{0pt}{14mm}\\\hline
+\end{tabularx}
+\end{document}

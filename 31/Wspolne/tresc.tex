@@ -1,0 +1,102 @@
+\newcommand{\podstawy}{%
+\par\smallskip
+Na jednorodnym papierze przewodzącym stacjonarny przepływ prądu
+modeluje pole elektrostatyczne w obszarze bez ładunków, jeśli odpowiadają
+sobie warunki brzegowe. Potencjał spełnia równanie Laplace'a.
+\[
+\boxed{\nabla^2V=0,\qquad \mathbf E=-\nabla V,\qquad
+|\mathbf E|=\sqrt{E_x^2+E_y^2}.}
+\]
+Linie pola są prostopadłe do ekwipotencjalnych i skierowane od wyższego
+potencjału do niższego. Wartość natężenia i składowa ze znakiem to różne wielkości.
+}
+\newcommand{\teoriaA}{%
+\par\smallskip
+Dla idealnych równoległych elektrod przy $V(0)=0$ i $V(d)=U$:
+\[
+\boxed{V(x)=\frac Ud x,\qquad E_x=-\frac Ud,\qquad |\mathbf E|=\frac Ud.}
+\]
+Zależność opisuje wnętrze z pominięciem efektów brzegowych;
+poza elektrodami pole jest niejednorodne.
+}
+\newcommand{\teoriaB}{%
+\par\smallskip
+Dla elektrody wewnętrznej o promieniu $r_w$ i potencjale $U$
+oraz zewnętrznej $r_z$ o potencjale 0:
+\[
+\boxed{V(r)=U\frac{\ln(r_z/r)}{\ln(r_z/r_w)},\qquad
+E_r(r)=\frac{U}{r\ln(r_z/r_w)}.}
+\]
+Wtedy $V(r_w)=U$, $V(r_z)=0$, a pole jest skierowane na zewnątrz.
+Odwrócenie biegunowości odwraca wektor. Zmiana zera potencjału
+o stałą nie zmienia pola; nie jest tym samym co zmiana znaku całego $V$.
+}
+\newcommand{\teoriaC}{%
+\par\smallskip
+Dla dowolnego układu elektrod nie zakładamy postaci liniowej ani
+radialnej. Linie wyznaczamy z pomiarów potencjału i warunków na elektrodach.
+Obszary bez danych oznaczamy, nie wypełniając ich fikcyjnymi pomiarami.
+}
+\newcommand{\roznice}{%
+\par\smallskip
+Dla trzech kierunków w tej samej odległości:
+\[
+\boxed{\bar V_i=\frac{V_{a,i}+V_{b,i}+V_{c,i}}3,\quad
+s_i^*=\frac{s_i+s_{i+1}}2,\quad
+E_{s,i}=-\frac{\bar V_{i+1}-\bar V_i}{s_{i+1}-s_i}.}
+\]
+Współrzędna $s$ oznacza $x$ lub $r$. W mianowniku używaj metrów:
+$1\ \mathrm{mm}=10^{-3}\ \mathrm m$. Przypisz pochodną do środka przedziału.
+Trzy kierunki nie muszą być trzema niezależnymi powtórzeniami tego samego pomiaru.
+}
+\newcommand{\mapowanie}{%
+Linie ekwipotencjalne rysuj co 1--2 V. Szukane położenie między
+zmierzonymi punktami wyznacz przez interpolację, nie przez zastąpienie
+pomiarów idealnym polem. Dla sąsiadów odległych o $h,k$:
+\[
+\boxed{E_x\approx-\frac{V(x+h,y)-V(x,y)}h,\qquad
+E_y\approx-\frac{V(x,y+k)-V(x,y)}k.}
+\]
+Powyższe składowe są różnicami w przód przy punkcie bazowym;
+podaj użyte punkty i kroki. Dla wektora w środku komórki użyj
+uśrednionych różnic na przeciwległych krawędziach. Nie łącz składowych
+liczonych w różnych miejscach bez wyjaśnienia.
+}
+\newcommand{\dokladnosc}{%
+Zapisz specyfikację i zakres woltomierza, krok siatki oraz stabilność
+zasilania i kontaktu sondy. Dla niezależnych odczytów i odstępu $\Delta s$:
+\[
+\boxed{u(E_s)\approx\sqrt{
+\frac{u^2(V_i)+u^2(V_{i+1})}{(\Delta s)^2}
++\frac{(V_{i+1}-V_i)^2}{(\Delta s)^4}u^2(\Delta s)}.}
+\]
+Uwzględnij korelacje, jeśli odczyty mają wspólne odniesienie lub błąd skali.
+Bez danych przyrządów nie wpisuj wymyślonych słupków niepewności.
+Różniczkowanie nasila wpływ szumu; interpolacja nie zwiększa liczby pomiarów.
+}
+\newcommand{\parametry}[1]{%
+\begin{tabularx}{\linewidth}{|>{\raggedright\arraybackslash}p{55mm}|Y|}\hline
+\naglowek\textbf{Parametr wariantu #1} & \textbf{Wpis ze stanowiska}\\\hline
+Wariant i oznaczenie płyty &\rule{0pt}{9mm}\\\hline
+Napięcia obu elektrod / odniesienie &\rule{0pt}{9mm}\\\hline
+Geometria: $d$ albo $r_w,r_z$ &\rule{0pt}{9mm}\\\hline
+Krok otworów $h,k$, początek i zwrot osi &\rule{0pt}{9mm}\\\hline
+Kierunki a,b,c / kąty promieni &\rule{0pt}{9mm}\\\hline
+Woltomierz: model, zakres, dokładność &\rule{0pt}{9mm}\\\hline
+\end{tabularx}\par\medskip
+Napięcie zalecane w instrukcji: 10 V. Zapisz rzeczywistą wartość
+i biegunowość; nie przenoś wymiarów z cudzego przykładu.
+}
+\newcommand{\aparatura}{%
+\par\medskip\noindent
+\begin{minipage}[c]{.49\linewidth}\centering
+\includegraphics[width=\linewidth]{../../Wspolne/Rysunki/uklad.pdf}
+\end{minipage}\hfill
+\begin{minipage}[c]{.47\linewidth}
+\raggedright
+\captionof{figure}{Układ pomiarowy z instrukcji 31\_wykon.pdf, s.~2.}
+\smallskip Zasilacz wymusza różnicę potencjałów elektrod.
+Woltomierz z sondą mierzy napięcie wybranego punktu względem
+ustalonej elektrody odniesienia. Papier przewodzący stanowi model pola.
+Wymiana płyty zmienia geometrię elektrod, nie zasadę pomiaru.
+\end{minipage}\par\medskip}

@@ -1,0 +1,2290 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage{fontspec}
+\setmainfont{texgyreheros-regular.otf}[BoldFont=texgyreheros-bold.otf]
+\usepackage[polish]{babel}
+\usepackage{amsmath,amssymb,geometry,tabularx,array,fancyhdr}
+\geometry{left=18mm,right=18mm,top=17mm,bottom=18mm}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{5pt}
+\setlength{\tabcolsep}{5pt}
+\renewcommand{\arraystretch}{1.15}
+\newcolumntype{Y}{>{\raggedright\arraybackslash}X}
+\pagestyle{fancy}\fancyhf{}
+\fancyfoot[L]{\footnotesize Ćwiczenie 71 \quad Karta pomiarów i obliczeń}
+\fancyfoot[R]{\footnotesize\thepage\ / 65}
+\renewcommand{\headrulewidth}{0pt}
+\newcommand{\titlepagepart}[1]{{\Large\bfseries Dyfrakcja światła}\par\smallskip{\large\bfseries #1}\par\medskip}
+\newcommand{\note}[1]{{\small #1}\par}
+\newcommand{\writebox}[2]{\begin{tabularx}{\linewidth}{|Y|}\hline\textbf{#1}\\\hline\rule{0pt}{#2}\\\hline\end{tabularx}\par\smallskip}
+\begin{document}
+
+\titlepagepart{1 Dane stanowiska}
+\note{Zapisz własne odczyty. Niepewności możesz obliczyć później, ale dane o przyrządach zbierz na zajęciach.}
+\begin{tabularx}{\linewidth}{|p{72mm}|Y|}\hline
+\textbf{Co wpisać} & \textbf{Miejsce na wpis}\\\hline
+\rule{0pt}{9mm}Imię i nazwisko / współwykonawcy & \\\hline
+\rule{0pt}{9mm}Grupa i zespół / data pomiarów & \\\hline
+\end{tabularx}\par\smallskip
+\begin{tabularx}{\linewidth}{|p{82mm}|Y|Y|}\hline
+\textbf{Wielkość i znaczenie} & \textbf{Wartość} & \textbf{Niepewność standardowa}\\\hline
+\rule{0pt}{10mm}$\lambda\ [\mathrm{nm}]$ -- długość fali &  & \\\hline
+\rule{0pt}{10mm}$L_2\ [\mathrm{mm}]$ -- szczeliny podwójne do detektora &  & \\\hline
+\rule{0pt}{10mm}$R_2\ [\Omega]$ -- opór w serii &  & \\\hline
+\rule{0pt}{10mm}$q_p\ [\mathrm{mm}]$ -- rozdzielczość położenia &  & \\\hline
+\rule{0pt}{10mm}$q_U\ [\mathrm{mV}]$ -- rozdzielczość miernika &  & \\\hline
+\rule{0pt}{10mm}$U_{\mathrm{bg}}\ [\mathrm{mV}]$ -- tło, opcjonalnie &  & \\\hline
+\end{tabularx}\par\smallskip
+\begin{tabularx}{\linewidth}{|p{72mm}|Y|}\hline
+\textbf{Co wpisać} & \textbf{Miejsce na wpis}\\\hline
+\rule{0pt}{10mm}Model miernika i specyfikacja dokładności & \\\hline
+\rule{0pt}{10mm}Oznaczenie płytek / wartości nominalne & \\\hline
+\rule{0pt}{10mm}Źródło informacji o długości fali & \\\hline
+\end{tabularx}\par\smallskip
+\writebox{Szkic układu: laser, szczelina, detektor; zaznacz odległość $L$}{25mm}
+\note{Pomiar dla dwóch szczelin: krok $0{,}1\,\mathrm{mm}$. Długość fali i pozostałe parametry potwierdź na aktualnym stanowisku.}
+\clearpage
+\titlepagepart{2 Ściąga z oznaczeniami}
+\note{Tę stronę czytasz przed pomiarami. Wpisy i obliczenia wykonujesz w tabelach na dalszych stronach.}
+\begin{tabularx}{\linewidth}{|p{43mm}|Y|}\hline
+\textbf{Symbol} & \textbf{Co oznacza}\\\hline
+\rule{0pt}{10mm}$p\ [\mathrm{mm}]$ & Surowy odczyt położenia detektora ze skali.\\\hline
+\rule{0pt}{10mm}$I\ [\mathrm{j.u.}]$ & Odczyt miernika proporcjonalny do jasności, np. napięcie w mV. Jedną skalę zachowaj w całej serii.\\\hline
+\rule{0pt}{10mm}$p_0,\ I_0$ & Położenie maksimum centralnego i sygnał w tym punkcie.\\\hline
+\rule{0pt}{10mm}$x=p-p_0$ & Odległość od środka obrazu; nie jest tym samym co surowy odczyt skali.\\\hline
+\rule{0pt}{10mm}$p_l,\ p_p$ & Położenia lewego i prawego ekstremum tego samego rzędu.\\\hline
+\rule{0pt}{10mm}$r=\dfrac{p_p-p_l}{2}$ & Połowa odległości między parą ekstremów.\\\hline
+\rule{0pt}{10mm}$m=1,2,\ldots$ & Numer minimum lub prążka po jednej stronie. Dla pary maksimów $-2,+2$ wpisujesz $m=2$.\\\hline
+\rule{0pt}{10mm}$d\ [\mathrm{mm}]$ & Odległość między środkami dwóch szczelin.\\\hline
+\rule{0pt}{10mm}$u(z)$ & Niepewność standardowa wielkości $z$, w tej samej jednostce co $z$.\\\hline
+\end{tabularx}\par\smallskip
+\note{Na stanowisku: ustaw obraz, dobierz opór bez przekroczenia zakresu miernika i nie zmieniaj go w serii. Dwie szczeliny: obejmij maksimum centralne i kilkanaście prążków interferencyjnych. Zapisz $L$, $\lambda$ i dokładności przyrządów.}
+\writebox{Ustalenia prowadzącego i własne uwagi}{35mm}
+\clearpage
+\titlepagepart{Dwie szczeliny -- karta 1 z 60}
+
+\note{Wpisuj $p$ ze skali oraz $I$ z miernika. W uwagach zaznacz maksimum, minimum lub zmianę warunków.}
+\begin{tabularx}{\linewidth}{|Y|Y|Y|Y|}\hline
+\textbf{Seria / płytka} & \textbf{$L_2\ [\mathrm{mm}]$} & \textbf{$R_2\ [\Omega]$} & \textbf{Krok $\Delta p\ [\mathrm{mm}]$}\\\hline
+\rule{0pt}{7mm} &  &  & $0{,}1$ \\\hline
+\end{tabularx}\par\smallskip
+\begin{tabularx}{\linewidth}{|Y|Y|Y|Y|}\hline
+\textbf{$p_0\ [\mathrm{mm}]$} & \textbf{$I_0\ [\mathrm{j.u.}]$} & \textbf{Skala sygnału, np. mV} & \textbf{Tło, opcjonalnie}\\\hline
+\rule{0pt}{7mm} &  &  &  \\\hline
+\end{tabularx}\par\smallskip
+\begin{tabularx}{\linewidth}{|p{9mm}|Y|Y|Y|}\hline
+\textbf{Nr} & \textbf{Położenie $p\ [\mathrm{mm}]$} & \textbf{Sygnał $I\ [\mathrm{j.u.}]$} & \textbf{Uwagi}\\\hline
+\rule{0pt}{7mm}1 &  &  & \\\hline
+\rule{0pt}{7mm}2 &  &  & \\\hline
+\rule{0pt}{7mm}3 &  &  & \\\hline
+\rule{0pt}{7mm}4 &  &  & \\\hline
+\rule{0pt}{7mm}5 &  &  & \\\hline
+\rule{0pt}{7mm}6 &  &  & \\\hline
+\rule{0pt}{7mm}7 &  &  & \\\hline
+\rule{0pt}{7mm}8 &  &  & \\\hline
+\rule{0pt}{7mm}9 &  &  & \\\hline
+\rule{0pt}{7mm}10 &  &  & \\\hline
+\rule{0pt}{7mm}11 &  &  & \\\hline
+\rule{0pt}{7mm}12 &  &  & \\\hline
+\rule{0pt}{7mm}13 &  &  & \\\hline
+\rule{0pt}{7mm}14 &  &  & \\\hline
+\rule{0pt}{7mm}15 &  &  & \\\hline
+\rule{0pt}{7mm}16 &  &  & \\\hline
+\rule{0pt}{7mm}17 &  &  & \\\hline
+\rule{0pt}{7mm}18 &  &  & \\\hline
+\rule{0pt}{7mm}19 &  &  & \\\hline
+\rule{0pt}{7mm}20 &  &  & \\\hline
+\end{tabularx}\par\smallskip
+\note{Pomiary 1--20 z 1200. Krok przesuwania detektora: $0{,}1\,\mathrm{mm}$. Zakres pomiaru musi obejmować wszystkie wymagane prążki.}
+\clearpage
+\titlepagepart{Dwie szczeliny -- karta 2 z 60}
+
+\note{Wpisuj $p$ ze skali oraz $I$ z miernika. W uwagach zaznacz maksimum, minimum lub zmianę warunków.}
+\begin{tabularx}{\linewidth}{|Y|Y|Y|Y|}\hline
+\textbf{Seria / płytka} & \textbf{$L_2\ [\mathrm{mm}]$} & \textbf{$R_2\ [\Omega]$} & \textbf{Krok $\Delta p\ [\mathrm{mm}]$}\\\hline
+\rule{0pt}{7mm} &  &  & $0{,}1$ \\\hline
+\end{tabularx}\par\smallskip
+\begin{tabularx}{\linewidth}{|Y|Y|Y|Y|}\hline
+\textbf{$p_0\ [\mathrm{mm}]$} & \textbf{$I_0\ [\mathrm{j.u.}]$} & \textbf{Skala sygnału, np. mV} & \textbf{Tło, opcjonalnie}\\\hline
+\rule{0pt}{7mm} &  &  &  \\\hline
+\end{tabularx}\par\smallskip
+\begin{tabularx}{\linewidth}{|p{9mm}|Y|Y|Y|}\hline
+\textbf{Nr} & \textbf{Położenie $p\ [\mathrm{mm}]$} & \textbf{Sygnał $I\ [\mathrm{j.u.}]$} & \textbf{Uwagi}\\\hline
+\rule{0pt}{7mm}21 &  &  & \\\hline
+\rule{0pt}{7mm}22 &  &  & \\\hline
+\rule{0pt}{7mm}23 &  &  & \\\hline
+\rule{0pt}{7mm}24 &  &  & \\\hline
+\rule{0pt}{7mm}25 &  &  & \\\hline
+\rule{0pt}{7mm}26 &  &  & \\\hline
+\rule{0pt}{7mm}27 &  &  & \\\hline
+\rule{0pt}{7mm}28 &  &  & \\\hline
+\rule{0pt}{7mm}29 &  &  & \\\hline
+\rule{0pt}{7mm}30 &  &  & \\\hline
+\rule{0pt}{7mm}31 &  &  & \\\hline
+\rule{0pt}{7mm}32 &  &  & \\\hline
+\rule{0pt}{7mm}33 &  &  & \\\hline
+\rule{0pt}{7mm}34 &  &  & \\\hline
+\rule{0pt}{7mm}35 &  &  & \\\hline
+\rule{0pt}{7mm}36 &  &  & \\\hline
+\rule{0pt}{7mm}37 &  &  & \\\hline
+\rule{0pt}{7mm}38 &  &  & \\\hline
+\rule{0pt}{7mm}39 &  &  & \\\hline
+\rule{0pt}{7mm}40 &  &  & \\\hline
+\end{tabularx}\par\smallskip
+\note{Pomiary 21--40 z 1200. Krok przesuwania detektora: $0{,}1\,\mathrm{mm}$. Zakres pomiaru musi obejmować wszystkie wymagane prążki.}
+\clearpage
+\titlepagepart{Dwie szczeliny -- karta 3 z 60}
+
+\note{Wpisuj $p$ ze skali oraz $I$ z miernika. W uwagach zaznacz maksimum, minimum lub zmianę warunków.}
+\begin{tabularx}{\linewidth}{|Y|Y|Y|Y|}\hline
+\textbf{Seria / płytka} & \textbf{$L_2\ [\mathrm{mm}]$} & \textbf{$R_2\ [\Omega]$} & \textbf{Krok $\Delta p\ [\mathrm{mm}]$}\\\hline
+\rule{0pt}{7mm} &  &  & $0{,}1$ \\\hline
+\end{tabularx}\par\smallskip
+\begin{tabularx}{\linewidth}{|Y|Y|Y|Y|}\hline
+\textbf{$p_0\ [\mathrm{mm}]$} & \textbf{$I_0\ [\mathrm{j.u.}]$} & \textbf{Skala sygnału, np. mV} & \textbf{Tło, opcjonalnie}\\\hline
+\rule{0pt}{7mm} &  &  &  \\\hline
+\end{tabularx}\par\smallskip
+\begin{tabularx}{\linewidth}{|p{9mm}|Y|Y|Y|}\hline
+\textbf{Nr} & \textbf{Położenie $p\ [\mathrm{mm}]$} & \textbf{Sygnał $I\ [\mathrm{j.u.}]$} & \textbf{Uwagi}\\\hline
+\rule{0pt}{7mm}41 &  &  & \\\hline
+\rule{0pt}{7mm}42 &  &  & \\\hline
+\rule{0pt}{7mm}43 &  &  & \\\hline
+\rule{0pt}{7mm}44 &  &  & \\\hline
+\rule{0pt}{7mm}45 &  &  & \\\hline
+\rule{0pt}{7mm}46 &  &  & \\\hline
+\rule{0pt}{7mm}47 &  &  & \\\hline
+\rule{0pt}{7mm}48 &  &  & \\\hline
+\rule{0pt}{7mm}49 &  &  & \\\hline
+\rule{0pt}{7mm}50 &  &  & \\\hline
+\rule{0pt}{7mm}51 &  &  & \\\hline
+\rule{0pt}{7mm}52 &  &  & \\\hline
+\rule{0pt}{7mm}53 &  &  & \\\hline
+\rule{0pt}{7mm}54 &  &  & \\\hline
+\rule{0pt}{7mm}55 &  &  & \\\hline
+\rule{0pt}{7mm}56 &  &  & \\\hline
+\rule{0pt}{7mm}57 &  &  & \\\hline
+\rule{0pt}{7mm}58 &  &  & \\\hline
+\rule{0pt}{7mm}59 &  &  & \\\hline
+\rule{0pt}{7mm}60 &  &  & \\\hline
+\end{tabularx}\par\smallskip
+\note{Pomiary 41--60 z 1200. Krok przesuwania detektora: $0{,}1\,\mathrm{mm}$. Zakres pomiaru musi obejmować wszystkie wymagane prążki.}
+\clearpage
+\titlepagepart{Dwie szczeliny -- karta 4 z 60}
+
+\note{Wpisuj $p$ ze skali oraz $I$ z miernika. W uwagach zaznacz maksimum, minimum lub zmianę warunków.}
+\begin{tabularx}{\linewidth}{|Y|Y|Y|Y|}\hline
+\textbf{Seria / płytka} & \textbf{$L_2\ [\mathrm{mm}]$} & \textbf{$R_2\ [\Omega]$} & \textbf{Krok $\Delta p\ [\mathrm{mm}]$}\\\hline
+\rule{0pt}{7mm} &  &  & $0{,}1$ \\\hline
+\end{tabularx}\par\smallskip
+\begin{tabularx}{\linewidth}{|Y|Y|Y|Y|}\hline
+\textbf{$p_0\ [\mathrm{mm}]$} & \textbf{$I_0\ [\mathrm{j.u.}]$} & \textbf{Skala sygnału, np. mV} & \textbf{Tło, opcjonalnie}\\\hline
+\rule{0pt}{7mm} &  &  &  \\\hline
+\end{tabularx}\par\smallskip
+\begin{tabularx}{\linewidth}{|p{9mm}|Y|Y|Y|}\hline
+\textbf{Nr} & \textbf{Położenie $p\ [\mathrm{mm}]$} & \textbf{Sygnał $I\ [\mathrm{j.u.}]$} & \textbf{Uwagi}\\\hline
+\rule{0pt}{7mm}61 &  &  & \\\hline
+\rule{0pt}{7mm}62 &  &  & \\\hline
+\rule{0pt}{7mm}63 &  &  & \\\hline
+\rule{0pt}{7mm}64 &  &  & \\\hline
+\rule{0pt}{7mm}65 &  &  & \\\hline
+\rule{0pt}{7mm}66 &  &  & \\\hline
+\rule{0pt}{7mm}67 &  &  & \\\hline
+\rule{0pt}{7mm}68 &  &  & \\\hline
+\rule{0pt}{7mm}69 &  &  & \\\hline
+\rule{0pt}{7mm}70 &  &  & \\\hline
+\rule{0pt}{7mm}71 &  &  & \\\hline
+\rule{0pt}{7mm}72 &  &  & \\\hline
+\rule{0pt}{7mm}73 &  &  & \\\hline
+\rule{0pt}{7mm}74 &  &  & \\\hline
+\rule{0pt}{7mm}75 &  &  & \\\hline
+\rule{0pt}{7mm}76 &  &  & \\\hline
+\rule{0pt}{7mm}77 &  &  & \\\hline
+\rule{0pt}{7mm}78 &  &  & \\\hline
+\rule{0pt}{7mm}79 &  &  & \\\hline
+\rule{0pt}{7mm}80 &  &  & \\\hline
+\end{tabularx}\par\smallskip
+\note{Pomiary 61--80 z 1200. Krok przesuwania detektora: $0{,}1\,\mathrm{mm}$. Zakres pomiaru musi obejmować wszystkie wymagane prążki.}
+\clearpage
+\titlepagepart{Dwie szczeliny -- karta 5 z 60}
+
+\note{Wpisuj $p$ ze skali oraz $I$ z miernika. W uwagach zaznacz maksimum, minimum lub zmianę warunków.}
+\begin{tabularx}{\linewidth}{|Y|Y|Y|Y|}\hline
+\textbf{Seria / płytka} & \textbf{$L_2\ [\mathrm{mm}]$} & \textbf{$R_2\ [\Omega]$} & \textbf{Krok $\Delta p\ [\mathrm{mm}]$}\\\hline
+\rule{0pt}{7mm} &  &  & $0{,}1$ \\\hline
+\end{tabularx}\par\smallskip
+\begin{tabularx}{\linewidth}{|Y|Y|Y|Y|}\hline
+\textbf{$p_0\ [\mathrm{mm}]$} & \textbf{$I_0\ [\mathrm{j.u.}]$} & \textbf{Skala sygnału, np. mV} & \textbf{Tło, opcjonalnie}\\\hline
+\rule{0pt}{7mm} &  &  &  \\\hline
+\end{tabularx}\par\smallskip
+\begin{tabularx}{\linewidth}{|p{9mm}|Y|Y|Y|}\hline
+\textbf{Nr} & \textbf{Położenie $p\ [\mathrm{mm}]$} & \textbf{Sygnał $I\ [\mathrm{j.u.}]$} & \textbf{Uwagi}\\\hline
+\rule{0pt}{7mm}81 &  &  & \\\hline
+\rule{0pt}{7mm}82 &  &  & \\\hline
+\rule{0pt}{7mm}83 &  &  & \\\hline
+\rule{0pt}{7mm}84 &  &  & \\\hline
+\rule{0pt}{7mm}85 &  &  & \\\hline
+\rule{0pt}{7mm}86 &  &  & \\\hline
+\rule{0pt}{7mm}87 &  &  & \\\hline
+\rule{0pt}{7mm}88 &  &  & \\\hline
+\rule{0pt}{7mm}89 &  &  & \\\hline
+\rule{0pt}{7mm}90 &  &  & \\\hline
+\rule{0pt}{7mm}91 &  &  & \\\hline
+\rule{0pt}{7mm}92 &  &  & \\\hline
+\rule{0pt}{7mm}93 &  &  & \\\hline
+\rule{0pt}{7mm}94 &  &  & \\\hline
+\rule{0pt}{7mm}95 &  &  & \\\hline
+\rule{0pt}{7mm}96 &  &  & \\\hline
+\rule{0pt}{7mm}97 &  &  & \\\hline
+\rule{0pt}{7mm}98 &  &  & \\\hline
+\rule{0pt}{7mm}99 &  &  & \\\hline
+\rule{0pt}{7mm}100 &  &  & \\\hline
+\end{tabularx}\par\smallskip
+\note{Pomiary 81--100 z 1200. Krok przesuwania detektora: $0{,}1\,\mathrm{mm}$. Zakres pomiaru musi obejmować wszystkie wymagane prążki.}
+\clearpage
+\titlepagepart{Dwie szczeliny -- karta 6 z 60}
+
+\note{Wpisuj $p$ ze skali oraz $I$ z miernika. W uwagach zaznacz maksimum, minimum lub zmianę warunków.}
+\begin{tabularx}{\linewidth}{|Y|Y|Y|Y|}\hline
+\textbf{Seria / płytka} & \textbf{$L_2\ [\mathrm{mm}]$} & \textbf{$R_2\ [\Omega]$} & \textbf{Krok $\Delta p\ [\mathrm{mm}]$}\\\hline
+\rule{0pt}{7mm} &  &  & $0{,}1$ \\\hline
+\end{tabularx}\par\smallskip
+\begin{tabularx}{\linewidth}{|Y|Y|Y|Y|}\hline
+\textbf{$p_0\ [\mathrm{mm}]$} & \textbf{$I_0\ [\mathrm{j.u.}]$} & \textbf{Skala sygnału, np. mV} & \textbf{Tło, opcjonalnie}\\\hline
+\rule{0pt}{7mm} &  &  &  \\\hline
+\end{tabularx}\par\smallskip
+\begin{tabularx}{\linewidth}{|p{9mm}|Y|Y|Y|}\hline
+\textbf{Nr} & \textbf{Położenie $p\ [\mathrm{mm}]$} & \textbf{Sygnał $I\ [\mathrm{j.u.}]$} & \textbf{Uwagi}\\\hline
+\rule{0pt}{7mm}101 &  &  & \\\hline
+\rule{0pt}{7mm}102 &  &  & \\\hline
+\rule{0pt}{7mm}103 &  &  & \\\hline
+\rule{0pt}{7mm}104 &  &  & \\\hline
+\rule{0pt}{7mm}105 &  &  & \\\hline
+\rule{0pt}{7mm}106 &  &  & \\\hline
+\rule{0pt}{7mm}107 &  &  & \\\hline
+\rule{0pt}{7mm}108 &  &  & \\\hline
+\rule{0pt}{7mm}109 &  &  & \\\hline
+\rule{0pt}{7mm}110 &  &  & \\\hline
+\rule{0pt}{7mm}111 &  &  & \\\hline
+\rule{0pt}{7mm}112 &  &  & \\\hline
+\rule{0pt}{7mm}113 &  &  & \\\hline
+\rule{0pt}{7mm}114 &  &  & \\\hline
+\rule{0pt}{7mm}115 &  &  & \\\hline
+\rule{0pt}{7mm}116 &  &  & \\\hline
+\rule{0pt}{7mm}117 &  &  & \\\hline
+\rule{0pt}{7mm}118 &  &  & \\\hline
+\rule{0pt}{7mm}119 &  &  & \\\hline
+\rule{0pt}{7mm}120 &  &  & \\\hline
+\end{tabularx}\par\smallskip
+\note{Pomiary 101--120 z 1200. Krok przesuwania detektora: $0{,}1\,\mathrm{mm}$. Zakres pomiaru musi obejmować wszystkie wymagane prążki.}
+\clearpage
+\titlepagepart{Dwie szczeliny -- karta 7 z 60}
+
+\note{Wpisuj $p$ ze skali oraz $I$ z miernika. W uwagach zaznacz maksimum, minimum lub zmianę warunków.}
+\begin{tabularx}{\linewidth}{|Y|Y|Y|Y|}\hline
+\textbf{Seria / płytka} & \textbf{$L_2\ [\mathrm{mm}]$} & \textbf{$R_2\ [\Omega]$} & \textbf{Krok $\Delta p\ [\mathrm{mm}]$}\\\hline
+\rule{0pt}{7mm} &  &  & $0{,}1$ \\\hline
+\end{tabularx}\par\smallskip
+\begin{tabularx}{\linewidth}{|Y|Y|Y|Y|}\hline
+\textbf{$p_0\ [\mathrm{mm}]$} & \textbf{$I_0\ [\mathrm{j.u.}]$} & \textbf{Skala sygnału, np. mV} & \textbf{Tło, opcjonalnie}\\\hline
+\rule{0pt}{7mm} &  &  &  \\\hline
+\end{tabularx}\par\smallskip
+\begin{tabularx}{\linewidth}{|p{9mm}|Y|Y|Y|}\hline
+\textbf{Nr} & \textbf{Położenie $p\ [\mathrm{mm}]$} & \textbf{Sygnał $I\ [\mathrm{j.u.}]$} & \textbf{Uwagi}\\\hline
+\rule{0pt}{7mm}121 &  &  & \\\hline
+\rule{0pt}{7mm}122 &  &  & \\\hline
+\rule{0pt}{7mm}123 &  &  & \\\hline
+\rule{0pt}{7mm}124 &  &  & \\\hline
+\rule{0pt}{7mm}125 &  &  & \\\hline
+\rule{0pt}{7mm}126 &  &  & \\\hline
+\rule{0pt}{7mm}127 &  &  & \\\hline
+\rule{0pt}{7mm}128 &  &  & \\\hline
+\rule{0pt}{7mm}129 &  &  & \\\hline
+\rule{0pt}{7mm}130 &  &  & \\\hline
+\rule{0pt}{7mm}131 &  &  & \\\hline
+\rule{0pt}{7mm}132 &  &  & \\\hline
+\rule{0pt}{7mm}133 &  &  & \\\hline
+\rule{0pt}{7mm}134 &  &  & \\\hline
+\rule{0pt}{7mm}135 &  &  & \\\hline
+\rule{0pt}{7mm}136 &  &  & \\\hline
+\rule{0pt}{7mm}137 &  &  & \\\hline
+\rule{0pt}{7mm}138 &  &  & \\\hline
+\rule{0pt}{7mm}139 &  &  & \\\hline
+\rule{0pt}{7mm}140 &  &  & \\\hline
+\end{tabularx}\par\smallskip
+\note{Pomiary 121--140 z 1200. Krok przesuwania detektora: $0{,}1\,\mathrm{mm}$. Zakres pomiaru musi obejmować wszystkie wymagane prążki.}
+\clearpage
+\titlepagepart{Dwie szczeliny -- karta 8 z 60}
+
+\note{Wpisuj $p$ ze skali oraz $I$ z miernika. W uwagach zaznacz maksimum, minimum lub zmianę warunków.}
+\begin{tabularx}{\linewidth}{|Y|Y|Y|Y|}\hline
+\textbf{Seria / płytka} & \textbf{$L_2\ [\mathrm{mm}]$} & \textbf{$R_2\ [\Omega]$} & \textbf{Krok $\Delta p\ [\mathrm{mm}]$}\\\hline
+\rule{0pt}{7mm} &  &  & $0{,}1$ \\\hline
+\end{tabularx}\par\smallskip
+\begin{tabularx}{\linewidth}{|Y|Y|Y|Y|}\hline
+\textbf{$p_0\ [\mathrm{mm}]$} & \textbf{$I_0\ [\mathrm{j.u.}]$} & \textbf{Skala sygnału, np. mV} & \textbf{Tło, opcjonalnie}\\\hline
+\rule{0pt}{7mm} &  &  &  \\\hline
+\end{tabularx}\par\smallskip
+\begin{tabularx}{\linewidth}{|p{9mm}|Y|Y|Y|}\hline
+\textbf{Nr} & \textbf{Położenie $p\ [\mathrm{mm}]$} & \textbf{Sygnał $I\ [\mathrm{j.u.}]$} & \textbf{Uwagi}\\\hline
+\rule{0pt}{7mm}141 &  &  & \\\hline
+\rule{0pt}{7mm}142 &  &  & \\\hline
+\rule{0pt}{7mm}143 &  &  & \\\hline
+\rule{0pt}{7mm}144 &  &  & \\\hline
+\rule{0pt}{7mm}145 &  &  & \\\hline
+\rule{0pt}{7mm}146 &  &  & \\\hline
+\rule{0pt}{7mm}147 &  &  & \\\hline
+\rule{0pt}{7mm}148 &  &  & \\\hline
+\rule{0pt}{7mm}149 &  &  & \\\hline
+\rule{0pt}{7mm}150 &  &  & \\\hline
+\rule{0pt}{7mm}151 &  &  & \\\hline
+\rule{0pt}{7mm}152 &  &  & \\\hline
+\rule{0pt}{7mm}153 &  &  & \\\hline
+\rule{0pt}{7mm}154 &  &  & \\\hline
+\rule{0pt}{7mm}155 &  &  & \\\hline
+\rule{0pt}{7mm}156 &  &  & \\\hline
+\rule{0pt}{7mm}157 &  &  & \\\hline
+\rule{0pt}{7mm}158 &  &  & \\\hline
+\rule{0pt}{7mm}159 &  &  & \\\hline
+\rule{0pt}{7mm}160 &  &  & \\\hline
+\end{tabularx}\par\smallskip
+\note{Pomiary 141--160 z 1200. Krok przesuwania detektora: $0{,}1\,\mathrm{mm}$. Zakres pomiaru musi obejmować wszystkie wymagane prążki.}
+\clearpage
+\titlepagepart{Dwie szczeliny -- karta 9 z 60}
+
+\note{Wpisuj $p$ ze skali oraz $I$ z miernika. W uwagach zaznacz maksimum, minimum lub zmianę warunków.}
+\begin{tabularx}{\linewidth}{|Y|Y|Y|Y|}\hline
+\textbf{Seria / płytka} & \textbf{$L_2\ [\mathrm{mm}]$} & \textbf{$R_2\ [\Omega]$} & \textbf{Krok $\Delta p\ [\mathrm{mm}]$}\\\hline
+\rule{0pt}{7mm} &  &  & $0{,}1$ \\\hline
+\end{tabularx}\par\smallskip
+\begin{tabularx}{\linewidth}{|Y|Y|Y|Y|}\hline
+\textbf{$p_0\ [\mathrm{mm}]$} & \textbf{$I_0\ [\mathrm{j.u.}]$} & \textbf{Skala sygnału, np. mV} & \textbf{Tło, opcjonalnie}\\\hline
+\rule{0pt}{7mm} &  &  &  \\\hline
+\end{tabularx}\par\smallskip
+\begin{tabularx}{\linewidth}{|p{9mm}|Y|Y|Y|}\hline
+\textbf{Nr} & \textbf{Położenie $p\ [\mathrm{mm}]$} & \textbf{Sygnał $I\ [\mathrm{j.u.}]$} & \textbf{Uwagi}\\\hline
+\rule{0pt}{7mm}161 &  &  & \\\hline
+\rule{0pt}{7mm}162 &  &  & \\\hline
+\rule{0pt}{7mm}163 &  &  & \\\hline
+\rule{0pt}{7mm}164 &  &  & \\\hline
+\rule{0pt}{7mm}165 &  &  & \\\hline
+\rule{0pt}{7mm}166 &  &  & \\\hline
+\rule{0pt}{7mm}167 &  &  & \\\hline
+\rule{0pt}{7mm}168 &  &  & \\\hline
+\rule{0pt}{7mm}169 &  &  & \\\hline
+\rule{0pt}{7mm}170 &  &  & \\\hline
+\rule{0pt}{7mm}171 &  &  & \\\hline
+\rule{0pt}{7mm}172 &  &  & \\\hline
+\rule{0pt}{7mm}173 &  &  & \\\hline
+\rule{0pt}{7mm}174 &  &  & \\\hline
+\rule{0pt}{7mm}175 &  &  & \\\hline
+\rule{0pt}{7mm}176 &  &  & \\\hline
+\rule{0pt}{7mm}177 &  &  & \\\hline
+\rule{0pt}{7mm}178 &  &  & \\\hline
+\rule{0pt}{7mm}179 &  &  & \\\hline
+\rule{0pt}{7mm}180 &  &  & \\\hline
+\end{tabularx}\par\smallskip
+\note{Pomiary 161--180 z 1200. Krok przesuwania detektora: $0{,}1\,\mathrm{mm}$. Zakres pomiaru musi obejmować wszystkie wymagane prążki.}
+\clearpage
+\titlepagepart{Dwie szczeliny -- karta 10 z 60}
+
+\note{Wpisuj $p$ ze skali oraz $I$ z miernika. W uwagach zaznacz maksimum, minimum lub zmianę warunków.}
+\begin{tabularx}{\linewidth}{|Y|Y|Y|Y|}\hline
+\textbf{Seria / płytka} & \textbf{$L_2\ [\mathrm{mm}]$} & \textbf{$R_2\ [\Omega]$} & \textbf{Krok $\Delta p\ [\mathrm{mm}]$}\\\hline
+\rule{0pt}{7mm} &  &  & $0{,}1$ \\\hline
+\end{tabularx}\par\smallskip
+\begin{tabularx}{\linewidth}{|Y|Y|Y|Y|}\hline
+\textbf{$p_0\ [\mathrm{mm}]$} & \textbf{$I_0\ [\mathrm{j.u.}]$} & \textbf{Skala sygnału, np. mV} & \textbf{Tło, opcjonalnie}\\\hline
+\rule{0pt}{7mm} &  &  &  \\\hline
+\end{tabularx}\par\smallskip
+\begin{tabularx}{\linewidth}{|p{9mm}|Y|Y|Y|}\hline
+\textbf{Nr} & \textbf{Położenie $p\ [\mathrm{mm}]$} & \textbf{Sygnał $I\ [\mathrm{j.u.}]$} & \textbf{Uwagi}\\\hline
+\rule{0pt}{7mm}181 &  &  & \\\hline
+\rule{0pt}{7mm}182 &  &  & \\\hline
+\rule{0pt}{7mm}183 &  &  & \\\hline
+\rule{0pt}{7mm}184 &  &  & \\\hline
+\rule{0pt}{7mm}185 &  &  & \\\hline
+\rule{0pt}{7mm}186 &  &  & \\\hline
+\rule{0pt}{7mm}187 &  &  & \\\hline
+\rule{0pt}{7mm}188 &  &  & \\\hline
+\rule{0pt}{7mm}189 &  &  & \\\hline
+\rule{0pt}{7mm}190 &  &  & \\\hline
+\rule{0pt}{7mm}191 &  &  & \\\hline
+\rule{0pt}{7mm}192 &  &  & \\\hline
+\rule{0pt}{7mm}193 &  &  & \\\hline
+\rule{0pt}{7mm}194 &  &  & \\\hline
+\rule{0pt}{7mm}195 &  &  & \\\hline
+\rule{0pt}{7mm}196 &  &  & \\\hline
+\rule{0pt}{7mm}197 &  &  & \\\hline
+\rule{0pt}{7mm}198 &  &  & \\\hline
+\rule{0pt}{7mm}199 &  &  & \\\hline
+\rule{0pt}{7mm}200 &  &  & \\\hline
+\end{tabularx}\par\smallskip
+\note{Pomiary 181--200 z 1200. Krok przesuwania detektora: $0{,}1\,\mathrm{mm}$. Zakres pomiaru musi obejmować wszystkie wymagane prążki.}
+\clearpage
+\titlepagepart{Dwie szczeliny -- karta 11 z 60}
+
+\note{Wpisuj $p$ ze skali oraz $I$ z miernika. W uwagach zaznacz maksimum, minimum lub zmianę warunków.}
+\begin{tabularx}{\linewidth}{|Y|Y|Y|Y|}\hline
+\textbf{Seria / płytka} & \textbf{$L_2\ [\mathrm{mm}]$} & \textbf{$R_2\ [\Omega]$} & \textbf{Krok $\Delta p\ [\mathrm{mm}]$}\\\hline
+\rule{0pt}{7mm} &  &  & $0{,}1$ \\\hline
+\end{tabularx}\par\smallskip
+\begin{tabularx}{\linewidth}{|Y|Y|Y|Y|}\hline
+\textbf{$p_0\ [\mathrm{mm}]$} & \textbf{$I_0\ [\mathrm{j.u.}]$} & \textbf{Skala sygnału, np. mV} & \textbf{Tło, opcjonalnie}\\\hline
+\rule{0pt}{7mm} &  &  &  \\\hline
+\end{tabularx}\par\smallskip
+\begin{tabularx}{\linewidth}{|p{9mm}|Y|Y|Y|}\hline
+\textbf{Nr} & \textbf{Położenie $p\ [\mathrm{mm}]$} & \textbf{Sygnał $I\ [\mathrm{j.u.}]$} & \textbf{Uwagi}\\\hline
+\rule{0pt}{7mm}201 &  &  & \\\hline
+\rule{0pt}{7mm}202 &  &  & \\\hline
+\rule{0pt}{7mm}203 &  &  & \\\hline
+\rule{0pt}{7mm}204 &  &  & \\\hline
+\rule{0pt}{7mm}205 &  &  & \\\hline
+\rule{0pt}{7mm}206 &  &  & \\\hline
+\rule{0pt}{7mm}207 &  &  & \\\hline
+\rule{0pt}{7mm}208 &  &  & \\\hline
+\rule{0pt}{7mm}209 &  &  & \\\hline
+\rule{0pt}{7mm}210 &  &  & \\\hline
+\rule{0pt}{7mm}211 &  &  & \\\hline
+\rule{0pt}{7mm}212 &  &  & \\\hline
+\rule{0pt}{7mm}213 &  &  & \\\hline
+\rule{0pt}{7mm}214 &  &  & \\\hline
+\rule{0pt}{7mm}215 &  &  & \\\hline
+\rule{0pt}{7mm}216 &  &  & \\\hline
+\rule{0pt}{7mm}217 &  &  & \\\hline
+\rule{0pt}{7mm}218 &  &  & \\\hline
+\rule{0pt}{7mm}219 &  &  & \\\hline
+\rule{0pt}{7mm}220 &  &  & \\\hline
+\end{tabularx}\par\smallskip
+\note{Pomiary 201--220 z 1200. Krok przesuwania detektora: $0{,}1\,\mathrm{mm}$. Zakres pomiaru musi obejmować wszystkie wymagane prążki.}
+\clearpage
+\titlepagepart{Dwie szczeliny -- karta 12 z 60}
+
+\note{Wpisuj $p$ ze skali oraz $I$ z miernika. W uwagach zaznacz maksimum, minimum lub zmianę warunków.}
+\begin{tabularx}{\linewidth}{|Y|Y|Y|Y|}\hline
+\textbf{Seria / płytka} & \textbf{$L_2\ [\mathrm{mm}]$} & \textbf{$R_2\ [\Omega]$} & \textbf{Krok $\Delta p\ [\mathrm{mm}]$}\\\hline
+\rule{0pt}{7mm} &  &  & $0{,}1$ \\\hline
+\end{tabularx}\par\smallskip
+\begin{tabularx}{\linewidth}{|Y|Y|Y|Y|}\hline
+\textbf{$p_0\ [\mathrm{mm}]$} & \textbf{$I_0\ [\mathrm{j.u.}]$} & \textbf{Skala sygnału, np. mV} & \textbf{Tło, opcjonalnie}\\\hline
+\rule{0pt}{7mm} &  &  &  \\\hline
+\end{tabularx}\par\smallskip
+\begin{tabularx}{\linewidth}{|p{9mm}|Y|Y|Y|}\hline
+\textbf{Nr} & \textbf{Położenie $p\ [\mathrm{mm}]$} & \textbf{Sygnał $I\ [\mathrm{j.u.}]$} & \textbf{Uwagi}\\\hline
+\rule{0pt}{7mm}221 &  &  & \\\hline
+\rule{0pt}{7mm}222 &  &  & \\\hline
+\rule{0pt}{7mm}223 &  &  & \\\hline
+\rule{0pt}{7mm}224 &  &  & \\\hline
+\rule{0pt}{7mm}225 &  &  & \\\hline
+\rule{0pt}{7mm}226 &  &  & \\\hline
+\rule{0pt}{7mm}227 &  &  & \\\hline
+\rule{0pt}{7mm}228 &  &  & \\\hline
+\rule{0pt}{7mm}229 &  &  & \\\hline
+\rule{0pt}{7mm}230 &  &  & \\\hline
+\rule{0pt}{7mm}231 &  &  & \\\hline
+\rule{0pt}{7mm}232 &  &  & \\\hline
+\rule{0pt}{7mm}233 &  &  & \\\hline
+\rule{0pt}{7mm}234 &  &  & \\\hline
+\rule{0pt}{7mm}235 &  &  & \\\hline
+\rule{0pt}{7mm}236 &  &  & \\\hline
+\rule{0pt}{7mm}237 &  &  & \\\hline
+\rule{0pt}{7mm}238 &  &  & \\\hline
+\rule{0pt}{7mm}239 &  &  & \\\hline
+\rule{0pt}{7mm}240 &  &  & \\\hline
+\end{tabularx}\par\smallskip
+\note{Pomiary 221--240 z 1200. Krok przesuwania detektora: $0{,}1\,\mathrm{mm}$. Zakres pomiaru musi obejmować wszystkie wymagane prążki.}
+\clearpage
+\titlepagepart{Dwie szczeliny -- karta 13 z 60}
+
+\note{Wpisuj $p$ ze skali oraz $I$ z miernika. W uwagach zaznacz maksimum, minimum lub zmianę warunków.}
+\begin{tabularx}{\linewidth}{|Y|Y|Y|Y|}\hline
+\textbf{Seria / płytka} & \textbf{$L_2\ [\mathrm{mm}]$} & \textbf{$R_2\ [\Omega]$} & \textbf{Krok $\Delta p\ [\mathrm{mm}]$}\\\hline
+\rule{0pt}{7mm} &  &  & $0{,}1$ \\\hline
+\end{tabularx}\par\smallskip
+\begin{tabularx}{\linewidth}{|Y|Y|Y|Y|}\hline
+\textbf{$p_0\ [\mathrm{mm}]$} & \textbf{$I_0\ [\mathrm{j.u.}]$} & \textbf{Skala sygnału, np. mV} & \textbf{Tło, opcjonalnie}\\\hline
+\rule{0pt}{7mm} &  &  &  \\\hline
+\end{tabularx}\par\smallskip
+\begin{tabularx}{\linewidth}{|p{9mm}|Y|Y|Y|}\hline
+\textbf{Nr} & \textbf{Położenie $p\ [\mathrm{mm}]$} & \textbf{Sygnał $I\ [\mathrm{j.u.}]$} & \textbf{Uwagi}\\\hline
+\rule{0pt}{7mm}241 &  &  & \\\hline
+\rule{0pt}{7mm}242 &  &  & \\\hline
+\rule{0pt}{7mm}243 &  &  & \\\hline
+\rule{0pt}{7mm}244 &  &  & \\\hline
+\rule{0pt}{7mm}245 &  &  & \\\hline
+\rule{0pt}{7mm}246 &  &  & \\\hline
+\rule{0pt}{7mm}247 &  &  & \\\hline
+\rule{0pt}{7mm}248 &  &  & \\\hline
+\rule{0pt}{7mm}249 &  &  & \\\hline
+\rule{0pt}{7mm}250 &  &  & \\\hline
+\rule{0pt}{7mm}251 &  &  & \\\hline
+\rule{0pt}{7mm}252 &  &  & \\\hline
+\rule{0pt}{7mm}253 &  &  & \\\hline
+\rule{0pt}{7mm}254 &  &  & \\\hline
+\rule{0pt}{7mm}255 &  &  & \\\hline
+\rule{0pt}{7mm}256 &  &  & \\\hline
+\rule{0pt}{7mm}257 &  &  & \\\hline
+\rule{0pt}{7mm}258 &  &  & \\\hline
+\rule{0pt}{7mm}259 &  &  & \\\hline
+\rule{0pt}{7mm}260 &  &  & \\\hline
+\end{tabularx}\par\smallskip
+\note{Pomiary 241--260 z 1200. Krok przesuwania detektora: $0{,}1\,\mathrm{mm}$. Zakres pomiaru musi obejmować wszystkie wymagane prążki.}
+\clearpage
+\titlepagepart{Dwie szczeliny -- karta 14 z 60}
+
+\note{Wpisuj $p$ ze skali oraz $I$ z miernika. W uwagach zaznacz maksimum, minimum lub zmianę warunków.}
+\begin{tabularx}{\linewidth}{|Y|Y|Y|Y|}\hline
+\textbf{Seria / płytka} & \textbf{$L_2\ [\mathrm{mm}]$} & \textbf{$R_2\ [\Omega]$} & \textbf{Krok $\Delta p\ [\mathrm{mm}]$}\\\hline
+\rule{0pt}{7mm} &  &  & $0{,}1$ \\\hline
+\end{tabularx}\par\smallskip
+\begin{tabularx}{\linewidth}{|Y|Y|Y|Y|}\hline
+\textbf{$p_0\ [\mathrm{mm}]$} & \textbf{$I_0\ [\mathrm{j.u.}]$} & \textbf{Skala sygnału, np. mV} & \textbf{Tło, opcjonalnie}\\\hline
+\rule{0pt}{7mm} &  &  &  \\\hline
+\end{tabularx}\par\smallskip
+\begin{tabularx}{\linewidth}{|p{9mm}|Y|Y|Y|}\hline
+\textbf{Nr} & \textbf{Położenie $p\ [\mathrm{mm}]$} & \textbf{Sygnał $I\ [\mathrm{j.u.}]$} & \textbf{Uwagi}\\\hline
+\rule{0pt}{7mm}261 &  &  & \\\hline
+\rule{0pt}{7mm}262 &  &  & \\\hline
+\rule{0pt}{7mm}263 &  &  & \\\hline
+\rule{0pt}{7mm}264 &  &  & \\\hline
+\rule{0pt}{7mm}265 &  &  & \\\hline
+\rule{0pt}{7mm}266 &  &  & \\\hline
+\rule{0pt}{7mm}267 &  &  & \\\hline
+\rule{0pt}{7mm}268 &  &  & \\\hline
+\rule{0pt}{7mm}269 &  &  & \\\hline
+\rule{0pt}{7mm}270 &  &  & \\\hline
+\rule{0pt}{7mm}271 &  &  & \\\hline
+\rule{0pt}{7mm}272 &  &  & \\\hline
+\rule{0pt}{7mm}273 &  &  & \\\hline
+\rule{0pt}{7mm}274 &  &  & \\\hline
+\rule{0pt}{7mm}275 &  &  & \\\hline
+\rule{0pt}{7mm}276 &  &  & \\\hline
+\rule{0pt}{7mm}277 &  &  & \\\hline
+\rule{0pt}{7mm}278 &  &  & \\\hline
+\rule{0pt}{7mm}279 &  &  & \\\hline
+\rule{0pt}{7mm}280 &  &  & \\\hline
+\end{tabularx}\par\smallskip
+\note{Pomiary 261--280 z 1200. Krok przesuwania detektora: $0{,}1\,\mathrm{mm}$. Zakres pomiaru musi obejmować wszystkie wymagane prążki.}
+\clearpage
+\titlepagepart{Dwie szczeliny -- karta 15 z 60}
+
+\note{Wpisuj $p$ ze skali oraz $I$ z miernika. W uwagach zaznacz maksimum, minimum lub zmianę warunków.}
+\begin{tabularx}{\linewidth}{|Y|Y|Y|Y|}\hline
+\textbf{Seria / płytka} & \textbf{$L_2\ [\mathrm{mm}]$} & \textbf{$R_2\ [\Omega]$} & \textbf{Krok $\Delta p\ [\mathrm{mm}]$}\\\hline
+\rule{0pt}{7mm} &  &  & $0{,}1$ \\\hline
+\end{tabularx}\par\smallskip
+\begin{tabularx}{\linewidth}{|Y|Y|Y|Y|}\hline
+\textbf{$p_0\ [\mathrm{mm}]$} & \textbf{$I_0\ [\mathrm{j.u.}]$} & \textbf{Skala sygnału, np. mV} & \textbf{Tło, opcjonalnie}\\\hline
+\rule{0pt}{7mm} &  &  &  \\\hline
+\end{tabularx}\par\smallskip
+\begin{tabularx}{\linewidth}{|p{9mm}|Y|Y|Y|}\hline
+\textbf{Nr} & \textbf{Położenie $p\ [\mathrm{mm}]$} & \textbf{Sygnał $I\ [\mathrm{j.u.}]$} & \textbf{Uwagi}\\\hline
+\rule{0pt}{7mm}281 &  &  & \\\hline
+\rule{0pt}{7mm}282 &  &  & \\\hline
+\rule{0pt}{7mm}283 &  &  & \\\hline
+\rule{0pt}{7mm}284 &  &  & \\\hline
+\rule{0pt}{7mm}285 &  &  & \\\hline
+\rule{0pt}{7mm}286 &  &  & \\\hline
+\rule{0pt}{7mm}287 &  &  & \\\hline
+\rule{0pt}{7mm}288 &  &  & \\\hline
+\rule{0pt}{7mm}289 &  &  & \\\hline
+\rule{0pt}{7mm}290 &  &  & \\\hline
+\rule{0pt}{7mm}291 &  &  & \\\hline
+\rule{0pt}{7mm}292 &  &  & \\\hline
+\rule{0pt}{7mm}293 &  &  & \\\hline
+\rule{0pt}{7mm}294 &  &  & \\\hline
+\rule{0pt}{7mm}295 &  &  & \\\hline
+\rule{0pt}{7mm}296 &  &  & \\\hline
+\rule{0pt}{7mm}297 &  &  & \\\hline
+\rule{0pt}{7mm}298 &  &  & \\\hline
+\rule{0pt}{7mm}299 &  &  & \\\hline
+\rule{0pt}{7mm}300 &  &  & \\\hline
+\end{tabularx}\par\smallskip
+\note{Pomiary 281--300 z 1200. Krok przesuwania detektora: $0{,}1\,\mathrm{mm}$. Zakres pomiaru musi obejmować wszystkie wymagane prążki.}
+\clearpage
+\titlepagepart{Dwie szczeliny -- karta 16 z 60}
+
+\note{Wpisuj $p$ ze skali oraz $I$ z miernika. W uwagach zaznacz maksimum, minimum lub zmianę warunków.}
+\begin{tabularx}{\linewidth}{|Y|Y|Y|Y|}\hline
+\textbf{Seria / płytka} & \textbf{$L_2\ [\mathrm{mm}]$} & \textbf{$R_2\ [\Omega]$} & \textbf{Krok $\Delta p\ [\mathrm{mm}]$}\\\hline
+\rule{0pt}{7mm} &  &  & $0{,}1$ \\\hline
+\end{tabularx}\par\smallskip
+\begin{tabularx}{\linewidth}{|Y|Y|Y|Y|}\hline
+\textbf{$p_0\ [\mathrm{mm}]$} & \textbf{$I_0\ [\mathrm{j.u.}]$} & \textbf{Skala sygnału, np. mV} & \textbf{Tło, opcjonalnie}\\\hline
+\rule{0pt}{7mm} &  &  &  \\\hline
+\end{tabularx}\par\smallskip
+\begin{tabularx}{\linewidth}{|p{9mm}|Y|Y|Y|}\hline
+\textbf{Nr} & \textbf{Położenie $p\ [\mathrm{mm}]$} & \textbf{Sygnał $I\ [\mathrm{j.u.}]$} & \textbf{Uwagi}\\\hline
+\rule{0pt}{7mm}301 &  &  & \\\hline
+\rule{0pt}{7mm}302 &  &  & \\\hline
+\rule{0pt}{7mm}303 &  &  & \\\hline
+\rule{0pt}{7mm}304 &  &  & \\\hline
+\rule{0pt}{7mm}305 &  &  & \\\hline
+\rule{0pt}{7mm}306 &  &  & \\\hline
+\rule{0pt}{7mm}307 &  &  & \\\hline
+\rule{0pt}{7mm}308 &  &  & \\\hline
+\rule{0pt}{7mm}309 &  &  & \\\hline
+\rule{0pt}{7mm}310 &  &  & \\\hline
+\rule{0pt}{7mm}311 &  &  & \\\hline
+\rule{0pt}{7mm}312 &  &  & \\\hline
+\rule{0pt}{7mm}313 &  &  & \\\hline
+\rule{0pt}{7mm}314 &  &  & \\\hline
+\rule{0pt}{7mm}315 &  &  & \\\hline
+\rule{0pt}{7mm}316 &  &  & \\\hline
+\rule{0pt}{7mm}317 &  &  & \\\hline
+\rule{0pt}{7mm}318 &  &  & \\\hline
+\rule{0pt}{7mm}319 &  &  & \\\hline
+\rule{0pt}{7mm}320 &  &  & \\\hline
+\end{tabularx}\par\smallskip
+\note{Pomiary 301--320 z 1200. Krok przesuwania detektora: $0{,}1\,\mathrm{mm}$. Zakres pomiaru musi obejmować wszystkie wymagane prążki.}
+\clearpage
+\titlepagepart{Dwie szczeliny -- karta 17 z 60}
+
+\note{Wpisuj $p$ ze skali oraz $I$ z miernika. W uwagach zaznacz maksimum, minimum lub zmianę warunków.}
+\begin{tabularx}{\linewidth}{|Y|Y|Y|Y|}\hline
+\textbf{Seria / płytka} & \textbf{$L_2\ [\mathrm{mm}]$} & \textbf{$R_2\ [\Omega]$} & \textbf{Krok $\Delta p\ [\mathrm{mm}]$}\\\hline
+\rule{0pt}{7mm} &  &  & $0{,}1$ \\\hline
+\end{tabularx}\par\smallskip
+\begin{tabularx}{\linewidth}{|Y|Y|Y|Y|}\hline
+\textbf{$p_0\ [\mathrm{mm}]$} & \textbf{$I_0\ [\mathrm{j.u.}]$} & \textbf{Skala sygnału, np. mV} & \textbf{Tło, opcjonalnie}\\\hline
+\rule{0pt}{7mm} &  &  &  \\\hline
+\end{tabularx}\par\smallskip
+\begin{tabularx}{\linewidth}{|p{9mm}|Y|Y|Y|}\hline
+\textbf{Nr} & \textbf{Położenie $p\ [\mathrm{mm}]$} & \textbf{Sygnał $I\ [\mathrm{j.u.}]$} & \textbf{Uwagi}\\\hline
+\rule{0pt}{7mm}321 &  &  & \\\hline
+\rule{0pt}{7mm}322 &  &  & \\\hline
+\rule{0pt}{7mm}323 &  &  & \\\hline
+\rule{0pt}{7mm}324 &  &  & \\\hline
+\rule{0pt}{7mm}325 &  &  & \\\hline
+\rule{0pt}{7mm}326 &  &  & \\\hline
+\rule{0pt}{7mm}327 &  &  & \\\hline
+\rule{0pt}{7mm}328 &  &  & \\\hline
+\rule{0pt}{7mm}329 &  &  & \\\hline
+\rule{0pt}{7mm}330 &  &  & \\\hline
+\rule{0pt}{7mm}331 &  &  & \\\hline
+\rule{0pt}{7mm}332 &  &  & \\\hline
+\rule{0pt}{7mm}333 &  &  & \\\hline
+\rule{0pt}{7mm}334 &  &  & \\\hline
+\rule{0pt}{7mm}335 &  &  & \\\hline
+\rule{0pt}{7mm}336 &  &  & \\\hline
+\rule{0pt}{7mm}337 &  &  & \\\hline
+\rule{0pt}{7mm}338 &  &  & \\\hline
+\rule{0pt}{7mm}339 &  &  & \\\hline
+\rule{0pt}{7mm}340 &  &  & \\\hline
+\end{tabularx}\par\smallskip
+\note{Pomiary 321--340 z 1200. Krok przesuwania detektora: $0{,}1\,\mathrm{mm}$. Zakres pomiaru musi obejmować wszystkie wymagane prążki.}
+\clearpage
+\titlepagepart{Dwie szczeliny -- karta 18 z 60}
+
+\note{Wpisuj $p$ ze skali oraz $I$ z miernika. W uwagach zaznacz maksimum, minimum lub zmianę warunków.}
+\begin{tabularx}{\linewidth}{|Y|Y|Y|Y|}\hline
+\textbf{Seria / płytka} & \textbf{$L_2\ [\mathrm{mm}]$} & \textbf{$R_2\ [\Omega]$} & \textbf{Krok $\Delta p\ [\mathrm{mm}]$}\\\hline
+\rule{0pt}{7mm} &  &  & $0{,}1$ \\\hline
+\end{tabularx}\par\smallskip
+\begin{tabularx}{\linewidth}{|Y|Y|Y|Y|}\hline
+\textbf{$p_0\ [\mathrm{mm}]$} & \textbf{$I_0\ [\mathrm{j.u.}]$} & \textbf{Skala sygnału, np. mV} & \textbf{Tło, opcjonalnie}\\\hline
+\rule{0pt}{7mm} &  &  &  \\\hline
+\end{tabularx}\par\smallskip
+\begin{tabularx}{\linewidth}{|p{9mm}|Y|Y|Y|}\hline
+\textbf{Nr} & \textbf{Położenie $p\ [\mathrm{mm}]$} & \textbf{Sygnał $I\ [\mathrm{j.u.}]$} & \textbf{Uwagi}\\\hline
+\rule{0pt}{7mm}341 &  &  & \\\hline
+\rule{0pt}{7mm}342 &  &  & \\\hline
+\rule{0pt}{7mm}343 &  &  & \\\hline
+\rule{0pt}{7mm}344 &  &  & \\\hline
+\rule{0pt}{7mm}345 &  &  & \\\hline
+\rule{0pt}{7mm}346 &  &  & \\\hline
+\rule{0pt}{7mm}347 &  &  & \\\hline
+\rule{0pt}{7mm}348 &  &  & \\\hline
+\rule{0pt}{7mm}349 &  &  & \\\hline
+\rule{0pt}{7mm}350 &  &  & \\\hline
+\rule{0pt}{7mm}351 &  &  & \\\hline
+\rule{0pt}{7mm}352 &  &  & \\\hline
+\rule{0pt}{7mm}353 &  &  & \\\hline
+\rule{0pt}{7mm}354 &  &  & \\\hline
+\rule{0pt}{7mm}355 &  &  & \\\hline
+\rule{0pt}{7mm}356 &  &  & \\\hline
+\rule{0pt}{7mm}357 &  &  & \\\hline
+\rule{0pt}{7mm}358 &  &  & \\\hline
+\rule{0pt}{7mm}359 &  &  & \\\hline
+\rule{0pt}{7mm}360 &  &  & \\\hline
+\end{tabularx}\par\smallskip
+\note{Pomiary 341--360 z 1200. Krok przesuwania detektora: $0{,}1\,\mathrm{mm}$. Zakres pomiaru musi obejmować wszystkie wymagane prążki.}
+\clearpage
+\titlepagepart{Dwie szczeliny -- karta 19 z 60}
+
+\note{Wpisuj $p$ ze skali oraz $I$ z miernika. W uwagach zaznacz maksimum, minimum lub zmianę warunków.}
+\begin{tabularx}{\linewidth}{|Y|Y|Y|Y|}\hline
+\textbf{Seria / płytka} & \textbf{$L_2\ [\mathrm{mm}]$} & \textbf{$R_2\ [\Omega]$} & \textbf{Krok $\Delta p\ [\mathrm{mm}]$}\\\hline
+\rule{0pt}{7mm} &  &  & $0{,}1$ \\\hline
+\end{tabularx}\par\smallskip
+\begin{tabularx}{\linewidth}{|Y|Y|Y|Y|}\hline
+\textbf{$p_0\ [\mathrm{mm}]$} & \textbf{$I_0\ [\mathrm{j.u.}]$} & \textbf{Skala sygnału, np. mV} & \textbf{Tło, opcjonalnie}\\\hline
+\rule{0pt}{7mm} &  &  &  \\\hline
+\end{tabularx}\par\smallskip
+\begin{tabularx}{\linewidth}{|p{9mm}|Y|Y|Y|}\hline
+\textbf{Nr} & \textbf{Położenie $p\ [\mathrm{mm}]$} & \textbf{Sygnał $I\ [\mathrm{j.u.}]$} & \textbf{Uwagi}\\\hline
+\rule{0pt}{7mm}361 &  &  & \\\hline
+\rule{0pt}{7mm}362 &  &  & \\\hline
+\rule{0pt}{7mm}363 &  &  & \\\hline
+\rule{0pt}{7mm}364 &  &  & \\\hline
+\rule{0pt}{7mm}365 &  &  & \\\hline
+\rule{0pt}{7mm}366 &  &  & \\\hline
+\rule{0pt}{7mm}367 &  &  & \\\hline
+\rule{0pt}{7mm}368 &  &  & \\\hline
+\rule{0pt}{7mm}369 &  &  & \\\hline
+\rule{0pt}{7mm}370 &  &  & \\\hline
+\rule{0pt}{7mm}371 &  &  & \\\hline
+\rule{0pt}{7mm}372 &  &  & \\\hline
+\rule{0pt}{7mm}373 &  &  & \\\hline
+\rule{0pt}{7mm}374 &  &  & \\\hline
+\rule{0pt}{7mm}375 &  &  & \\\hline
+\rule{0pt}{7mm}376 &  &  & \\\hline
+\rule{0pt}{7mm}377 &  &  & \\\hline
+\rule{0pt}{7mm}378 &  &  & \\\hline
+\rule{0pt}{7mm}379 &  &  & \\\hline
+\rule{0pt}{7mm}380 &  &  & \\\hline
+\end{tabularx}\par\smallskip
+\note{Pomiary 361--380 z 1200. Krok przesuwania detektora: $0{,}1\,\mathrm{mm}$. Zakres pomiaru musi obejmować wszystkie wymagane prążki.}
+\clearpage
+\titlepagepart{Dwie szczeliny -- karta 20 z 60}
+
+\note{Wpisuj $p$ ze skali oraz $I$ z miernika. W uwagach zaznacz maksimum, minimum lub zmianę warunków.}
+\begin{tabularx}{\linewidth}{|Y|Y|Y|Y|}\hline
+\textbf{Seria / płytka} & \textbf{$L_2\ [\mathrm{mm}]$} & \textbf{$R_2\ [\Omega]$} & \textbf{Krok $\Delta p\ [\mathrm{mm}]$}\\\hline
+\rule{0pt}{7mm} &  &  & $0{,}1$ \\\hline
+\end{tabularx}\par\smallskip
+\begin{tabularx}{\linewidth}{|Y|Y|Y|Y|}\hline
+\textbf{$p_0\ [\mathrm{mm}]$} & \textbf{$I_0\ [\mathrm{j.u.}]$} & \textbf{Skala sygnału, np. mV} & \textbf{Tło, opcjonalnie}\\\hline
+\rule{0pt}{7mm} &  &  &  \\\hline
+\end{tabularx}\par\smallskip
+\begin{tabularx}{\linewidth}{|p{9mm}|Y|Y|Y|}\hline
+\textbf{Nr} & \textbf{Położenie $p\ [\mathrm{mm}]$} & \textbf{Sygnał $I\ [\mathrm{j.u.}]$} & \textbf{Uwagi}\\\hline
+\rule{0pt}{7mm}381 &  &  & \\\hline
+\rule{0pt}{7mm}382 &  &  & \\\hline
+\rule{0pt}{7mm}383 &  &  & \\\hline
+\rule{0pt}{7mm}384 &  &  & \\\hline
+\rule{0pt}{7mm}385 &  &  & \\\hline
+\rule{0pt}{7mm}386 &  &  & \\\hline
+\rule{0pt}{7mm}387 &  &  & \\\hline
+\rule{0pt}{7mm}388 &  &  & \\\hline
+\rule{0pt}{7mm}389 &  &  & \\\hline
+\rule{0pt}{7mm}390 &  &  & \\\hline
+\rule{0pt}{7mm}391 &  &  & \\\hline
+\rule{0pt}{7mm}392 &  &  & \\\hline
+\rule{0pt}{7mm}393 &  &  & \\\hline
+\rule{0pt}{7mm}394 &  &  & \\\hline
+\rule{0pt}{7mm}395 &  &  & \\\hline
+\rule{0pt}{7mm}396 &  &  & \\\hline
+\rule{0pt}{7mm}397 &  &  & \\\hline
+\rule{0pt}{7mm}398 &  &  & \\\hline
+\rule{0pt}{7mm}399 &  &  & \\\hline
+\rule{0pt}{7mm}400 &  &  & \\\hline
+\end{tabularx}\par\smallskip
+\note{Pomiary 381--400 z 1200. Krok przesuwania detektora: $0{,}1\,\mathrm{mm}$. Zakres pomiaru musi obejmować wszystkie wymagane prążki.}
+\clearpage
+\titlepagepart{Dwie szczeliny -- karta 21 z 60}
+
+\note{Wpisuj $p$ ze skali oraz $I$ z miernika. W uwagach zaznacz maksimum, minimum lub zmianę warunków.}
+\begin{tabularx}{\linewidth}{|Y|Y|Y|Y|}\hline
+\textbf{Seria / płytka} & \textbf{$L_2\ [\mathrm{mm}]$} & \textbf{$R_2\ [\Omega]$} & \textbf{Krok $\Delta p\ [\mathrm{mm}]$}\\\hline
+\rule{0pt}{7mm} &  &  & $0{,}1$ \\\hline
+\end{tabularx}\par\smallskip
+\begin{tabularx}{\linewidth}{|Y|Y|Y|Y|}\hline
+\textbf{$p_0\ [\mathrm{mm}]$} & \textbf{$I_0\ [\mathrm{j.u.}]$} & \textbf{Skala sygnału, np. mV} & \textbf{Tło, opcjonalnie}\\\hline
+\rule{0pt}{7mm} &  &  &  \\\hline
+\end{tabularx}\par\smallskip
+\begin{tabularx}{\linewidth}{|p{9mm}|Y|Y|Y|}\hline
+\textbf{Nr} & \textbf{Położenie $p\ [\mathrm{mm}]$} & \textbf{Sygnał $I\ [\mathrm{j.u.}]$} & \textbf{Uwagi}\\\hline
+\rule{0pt}{7mm}401 &  &  & \\\hline
+\rule{0pt}{7mm}402 &  &  & \\\hline
+\rule{0pt}{7mm}403 &  &  & \\\hline
+\rule{0pt}{7mm}404 &  &  & \\\hline
+\rule{0pt}{7mm}405 &  &  & \\\hline
+\rule{0pt}{7mm}406 &  &  & \\\hline
+\rule{0pt}{7mm}407 &  &  & \\\hline
+\rule{0pt}{7mm}408 &  &  & \\\hline
+\rule{0pt}{7mm}409 &  &  & \\\hline
+\rule{0pt}{7mm}410 &  &  & \\\hline
+\rule{0pt}{7mm}411 &  &  & \\\hline
+\rule{0pt}{7mm}412 &  &  & \\\hline
+\rule{0pt}{7mm}413 &  &  & \\\hline
+\rule{0pt}{7mm}414 &  &  & \\\hline
+\rule{0pt}{7mm}415 &  &  & \\\hline
+\rule{0pt}{7mm}416 &  &  & \\\hline
+\rule{0pt}{7mm}417 &  &  & \\\hline
+\rule{0pt}{7mm}418 &  &  & \\\hline
+\rule{0pt}{7mm}419 &  &  & \\\hline
+\rule{0pt}{7mm}420 &  &  & \\\hline
+\end{tabularx}\par\smallskip
+\note{Pomiary 401--420 z 1200. Krok przesuwania detektora: $0{,}1\,\mathrm{mm}$. Zakres pomiaru musi obejmować wszystkie wymagane prążki.}
+\clearpage
+\titlepagepart{Dwie szczeliny -- karta 22 z 60}
+
+\note{Wpisuj $p$ ze skali oraz $I$ z miernika. W uwagach zaznacz maksimum, minimum lub zmianę warunków.}
+\begin{tabularx}{\linewidth}{|Y|Y|Y|Y|}\hline
+\textbf{Seria / płytka} & \textbf{$L_2\ [\mathrm{mm}]$} & \textbf{$R_2\ [\Omega]$} & \textbf{Krok $\Delta p\ [\mathrm{mm}]$}\\\hline
+\rule{0pt}{7mm} &  &  & $0{,}1$ \\\hline
+\end{tabularx}\par\smallskip
+\begin{tabularx}{\linewidth}{|Y|Y|Y|Y|}\hline
+\textbf{$p_0\ [\mathrm{mm}]$} & \textbf{$I_0\ [\mathrm{j.u.}]$} & \textbf{Skala sygnału, np. mV} & \textbf{Tło, opcjonalnie}\\\hline
+\rule{0pt}{7mm} &  &  &  \\\hline
+\end{tabularx}\par\smallskip
+\begin{tabularx}{\linewidth}{|p{9mm}|Y|Y|Y|}\hline
+\textbf{Nr} & \textbf{Położenie $p\ [\mathrm{mm}]$} & \textbf{Sygnał $I\ [\mathrm{j.u.}]$} & \textbf{Uwagi}\\\hline
+\rule{0pt}{7mm}421 &  &  & \\\hline
+\rule{0pt}{7mm}422 &  &  & \\\hline
+\rule{0pt}{7mm}423 &  &  & \\\hline
+\rule{0pt}{7mm}424 &  &  & \\\hline
+\rule{0pt}{7mm}425 &  &  & \\\hline
+\rule{0pt}{7mm}426 &  &  & \\\hline
+\rule{0pt}{7mm}427 &  &  & \\\hline
+\rule{0pt}{7mm}428 &  &  & \\\hline
+\rule{0pt}{7mm}429 &  &  & \\\hline
+\rule{0pt}{7mm}430 &  &  & \\\hline
+\rule{0pt}{7mm}431 &  &  & \\\hline
+\rule{0pt}{7mm}432 &  &  & \\\hline
+\rule{0pt}{7mm}433 &  &  & \\\hline
+\rule{0pt}{7mm}434 &  &  & \\\hline
+\rule{0pt}{7mm}435 &  &  & \\\hline
+\rule{0pt}{7mm}436 &  &  & \\\hline
+\rule{0pt}{7mm}437 &  &  & \\\hline
+\rule{0pt}{7mm}438 &  &  & \\\hline
+\rule{0pt}{7mm}439 &  &  & \\\hline
+\rule{0pt}{7mm}440 &  &  & \\\hline
+\end{tabularx}\par\smallskip
+\note{Pomiary 421--440 z 1200. Krok przesuwania detektora: $0{,}1\,\mathrm{mm}$. Zakres pomiaru musi obejmować wszystkie wymagane prążki.}
+\clearpage
+\titlepagepart{Dwie szczeliny -- karta 23 z 60}
+
+\note{Wpisuj $p$ ze skali oraz $I$ z miernika. W uwagach zaznacz maksimum, minimum lub zmianę warunków.}
+\begin{tabularx}{\linewidth}{|Y|Y|Y|Y|}\hline
+\textbf{Seria / płytka} & \textbf{$L_2\ [\mathrm{mm}]$} & \textbf{$R_2\ [\Omega]$} & \textbf{Krok $\Delta p\ [\mathrm{mm}]$}\\\hline
+\rule{0pt}{7mm} &  &  & $0{,}1$ \\\hline
+\end{tabularx}\par\smallskip
+\begin{tabularx}{\linewidth}{|Y|Y|Y|Y|}\hline
+\textbf{$p_0\ [\mathrm{mm}]$} & \textbf{$I_0\ [\mathrm{j.u.}]$} & \textbf{Skala sygnału, np. mV} & \textbf{Tło, opcjonalnie}\\\hline
+\rule{0pt}{7mm} &  &  &  \\\hline
+\end{tabularx}\par\smallskip
+\begin{tabularx}{\linewidth}{|p{9mm}|Y|Y|Y|}\hline
+\textbf{Nr} & \textbf{Położenie $p\ [\mathrm{mm}]$} & \textbf{Sygnał $I\ [\mathrm{j.u.}]$} & \textbf{Uwagi}\\\hline
+\rule{0pt}{7mm}441 &  &  & \\\hline
+\rule{0pt}{7mm}442 &  &  & \\\hline
+\rule{0pt}{7mm}443 &  &  & \\\hline
+\rule{0pt}{7mm}444 &  &  & \\\hline
+\rule{0pt}{7mm}445 &  &  & \\\hline
+\rule{0pt}{7mm}446 &  &  & \\\hline
+\rule{0pt}{7mm}447 &  &  & \\\hline
+\rule{0pt}{7mm}448 &  &  & \\\hline
+\rule{0pt}{7mm}449 &  &  & \\\hline
+\rule{0pt}{7mm}450 &  &  & \\\hline
+\rule{0pt}{7mm}451 &  &  & \\\hline
+\rule{0pt}{7mm}452 &  &  & \\\hline
+\rule{0pt}{7mm}453 &  &  & \\\hline
+\rule{0pt}{7mm}454 &  &  & \\\hline
+\rule{0pt}{7mm}455 &  &  & \\\hline
+\rule{0pt}{7mm}456 &  &  & \\\hline
+\rule{0pt}{7mm}457 &  &  & \\\hline
+\rule{0pt}{7mm}458 &  &  & \\\hline
+\rule{0pt}{7mm}459 &  &  & \\\hline
+\rule{0pt}{7mm}460 &  &  & \\\hline
+\end{tabularx}\par\smallskip
+\note{Pomiary 441--460 z 1200. Krok przesuwania detektora: $0{,}1\,\mathrm{mm}$. Zakres pomiaru musi obejmować wszystkie wymagane prążki.}
+\clearpage
+\titlepagepart{Dwie szczeliny -- karta 24 z 60}
+
+\note{Wpisuj $p$ ze skali oraz $I$ z miernika. W uwagach zaznacz maksimum, minimum lub zmianę warunków.}
+\begin{tabularx}{\linewidth}{|Y|Y|Y|Y|}\hline
+\textbf{Seria / płytka} & \textbf{$L_2\ [\mathrm{mm}]$} & \textbf{$R_2\ [\Omega]$} & \textbf{Krok $\Delta p\ [\mathrm{mm}]$}\\\hline
+\rule{0pt}{7mm} &  &  & $0{,}1$ \\\hline
+\end{tabularx}\par\smallskip
+\begin{tabularx}{\linewidth}{|Y|Y|Y|Y|}\hline
+\textbf{$p_0\ [\mathrm{mm}]$} & \textbf{$I_0\ [\mathrm{j.u.}]$} & \textbf{Skala sygnału, np. mV} & \textbf{Tło, opcjonalnie}\\\hline
+\rule{0pt}{7mm} &  &  &  \\\hline
+\end{tabularx}\par\smallskip
+\begin{tabularx}{\linewidth}{|p{9mm}|Y|Y|Y|}\hline
+\textbf{Nr} & \textbf{Położenie $p\ [\mathrm{mm}]$} & \textbf{Sygnał $I\ [\mathrm{j.u.}]$} & \textbf{Uwagi}\\\hline
+\rule{0pt}{7mm}461 &  &  & \\\hline
+\rule{0pt}{7mm}462 &  &  & \\\hline
+\rule{0pt}{7mm}463 &  &  & \\\hline
+\rule{0pt}{7mm}464 &  &  & \\\hline
+\rule{0pt}{7mm}465 &  &  & \\\hline
+\rule{0pt}{7mm}466 &  &  & \\\hline
+\rule{0pt}{7mm}467 &  &  & \\\hline
+\rule{0pt}{7mm}468 &  &  & \\\hline
+\rule{0pt}{7mm}469 &  &  & \\\hline
+\rule{0pt}{7mm}470 &  &  & \\\hline
+\rule{0pt}{7mm}471 &  &  & \\\hline
+\rule{0pt}{7mm}472 &  &  & \\\hline
+\rule{0pt}{7mm}473 &  &  & \\\hline
+\rule{0pt}{7mm}474 &  &  & \\\hline
+\rule{0pt}{7mm}475 &  &  & \\\hline
+\rule{0pt}{7mm}476 &  &  & \\\hline
+\rule{0pt}{7mm}477 &  &  & \\\hline
+\rule{0pt}{7mm}478 &  &  & \\\hline
+\rule{0pt}{7mm}479 &  &  & \\\hline
+\rule{0pt}{7mm}480 &  &  & \\\hline
+\end{tabularx}\par\smallskip
+\note{Pomiary 461--480 z 1200. Krok przesuwania detektora: $0{,}1\,\mathrm{mm}$. Zakres pomiaru musi obejmować wszystkie wymagane prążki.}
+\clearpage
+\titlepagepart{Dwie szczeliny -- karta 25 z 60}
+
+\note{Wpisuj $p$ ze skali oraz $I$ z miernika. W uwagach zaznacz maksimum, minimum lub zmianę warunków.}
+\begin{tabularx}{\linewidth}{|Y|Y|Y|Y|}\hline
+\textbf{Seria / płytka} & \textbf{$L_2\ [\mathrm{mm}]$} & \textbf{$R_2\ [\Omega]$} & \textbf{Krok $\Delta p\ [\mathrm{mm}]$}\\\hline
+\rule{0pt}{7mm} &  &  & $0{,}1$ \\\hline
+\end{tabularx}\par\smallskip
+\begin{tabularx}{\linewidth}{|Y|Y|Y|Y|}\hline
+\textbf{$p_0\ [\mathrm{mm}]$} & \textbf{$I_0\ [\mathrm{j.u.}]$} & \textbf{Skala sygnału, np. mV} & \textbf{Tło, opcjonalnie}\\\hline
+\rule{0pt}{7mm} &  &  &  \\\hline
+\end{tabularx}\par\smallskip
+\begin{tabularx}{\linewidth}{|p{9mm}|Y|Y|Y|}\hline
+\textbf{Nr} & \textbf{Położenie $p\ [\mathrm{mm}]$} & \textbf{Sygnał $I\ [\mathrm{j.u.}]$} & \textbf{Uwagi}\\\hline
+\rule{0pt}{7mm}481 &  &  & \\\hline
+\rule{0pt}{7mm}482 &  &  & \\\hline
+\rule{0pt}{7mm}483 &  &  & \\\hline
+\rule{0pt}{7mm}484 &  &  & \\\hline
+\rule{0pt}{7mm}485 &  &  & \\\hline
+\rule{0pt}{7mm}486 &  &  & \\\hline
+\rule{0pt}{7mm}487 &  &  & \\\hline
+\rule{0pt}{7mm}488 &  &  & \\\hline
+\rule{0pt}{7mm}489 &  &  & \\\hline
+\rule{0pt}{7mm}490 &  &  & \\\hline
+\rule{0pt}{7mm}491 &  &  & \\\hline
+\rule{0pt}{7mm}492 &  &  & \\\hline
+\rule{0pt}{7mm}493 &  &  & \\\hline
+\rule{0pt}{7mm}494 &  &  & \\\hline
+\rule{0pt}{7mm}495 &  &  & \\\hline
+\rule{0pt}{7mm}496 &  &  & \\\hline
+\rule{0pt}{7mm}497 &  &  & \\\hline
+\rule{0pt}{7mm}498 &  &  & \\\hline
+\rule{0pt}{7mm}499 &  &  & \\\hline
+\rule{0pt}{7mm}500 &  &  & \\\hline
+\end{tabularx}\par\smallskip
+\note{Pomiary 481--500 z 1200. Krok przesuwania detektora: $0{,}1\,\mathrm{mm}$. Zakres pomiaru musi obejmować wszystkie wymagane prążki.}
+\clearpage
+\titlepagepart{Dwie szczeliny -- karta 26 z 60}
+
+\note{Wpisuj $p$ ze skali oraz $I$ z miernika. W uwagach zaznacz maksimum, minimum lub zmianę warunków.}
+\begin{tabularx}{\linewidth}{|Y|Y|Y|Y|}\hline
+\textbf{Seria / płytka} & \textbf{$L_2\ [\mathrm{mm}]$} & \textbf{$R_2\ [\Omega]$} & \textbf{Krok $\Delta p\ [\mathrm{mm}]$}\\\hline
+\rule{0pt}{7mm} &  &  & $0{,}1$ \\\hline
+\end{tabularx}\par\smallskip
+\begin{tabularx}{\linewidth}{|Y|Y|Y|Y|}\hline
+\textbf{$p_0\ [\mathrm{mm}]$} & \textbf{$I_0\ [\mathrm{j.u.}]$} & \textbf{Skala sygnału, np. mV} & \textbf{Tło, opcjonalnie}\\\hline
+\rule{0pt}{7mm} &  &  &  \\\hline
+\end{tabularx}\par\smallskip
+\begin{tabularx}{\linewidth}{|p{9mm}|Y|Y|Y|}\hline
+\textbf{Nr} & \textbf{Położenie $p\ [\mathrm{mm}]$} & \textbf{Sygnał $I\ [\mathrm{j.u.}]$} & \textbf{Uwagi}\\\hline
+\rule{0pt}{7mm}501 &  &  & \\\hline
+\rule{0pt}{7mm}502 &  &  & \\\hline
+\rule{0pt}{7mm}503 &  &  & \\\hline
+\rule{0pt}{7mm}504 &  &  & \\\hline
+\rule{0pt}{7mm}505 &  &  & \\\hline
+\rule{0pt}{7mm}506 &  &  & \\\hline
+\rule{0pt}{7mm}507 &  &  & \\\hline
+\rule{0pt}{7mm}508 &  &  & \\\hline
+\rule{0pt}{7mm}509 &  &  & \\\hline
+\rule{0pt}{7mm}510 &  &  & \\\hline
+\rule{0pt}{7mm}511 &  &  & \\\hline
+\rule{0pt}{7mm}512 &  &  & \\\hline
+\rule{0pt}{7mm}513 &  &  & \\\hline
+\rule{0pt}{7mm}514 &  &  & \\\hline
+\rule{0pt}{7mm}515 &  &  & \\\hline
+\rule{0pt}{7mm}516 &  &  & \\\hline
+\rule{0pt}{7mm}517 &  &  & \\\hline
+\rule{0pt}{7mm}518 &  &  & \\\hline
+\rule{0pt}{7mm}519 &  &  & \\\hline
+\rule{0pt}{7mm}520 &  &  & \\\hline
+\end{tabularx}\par\smallskip
+\note{Pomiary 501--520 z 1200. Krok przesuwania detektora: $0{,}1\,\mathrm{mm}$. Zakres pomiaru musi obejmować wszystkie wymagane prążki.}
+\clearpage
+\titlepagepart{Dwie szczeliny -- karta 27 z 60}
+
+\note{Wpisuj $p$ ze skali oraz $I$ z miernika. W uwagach zaznacz maksimum, minimum lub zmianę warunków.}
+\begin{tabularx}{\linewidth}{|Y|Y|Y|Y|}\hline
+\textbf{Seria / płytka} & \textbf{$L_2\ [\mathrm{mm}]$} & \textbf{$R_2\ [\Omega]$} & \textbf{Krok $\Delta p\ [\mathrm{mm}]$}\\\hline
+\rule{0pt}{7mm} &  &  & $0{,}1$ \\\hline
+\end{tabularx}\par\smallskip
+\begin{tabularx}{\linewidth}{|Y|Y|Y|Y|}\hline
+\textbf{$p_0\ [\mathrm{mm}]$} & \textbf{$I_0\ [\mathrm{j.u.}]$} & \textbf{Skala sygnału, np. mV} & \textbf{Tło, opcjonalnie}\\\hline
+\rule{0pt}{7mm} &  &  &  \\\hline
+\end{tabularx}\par\smallskip
+\begin{tabularx}{\linewidth}{|p{9mm}|Y|Y|Y|}\hline
+\textbf{Nr} & \textbf{Położenie $p\ [\mathrm{mm}]$} & \textbf{Sygnał $I\ [\mathrm{j.u.}]$} & \textbf{Uwagi}\\\hline
+\rule{0pt}{7mm}521 &  &  & \\\hline
+\rule{0pt}{7mm}522 &  &  & \\\hline
+\rule{0pt}{7mm}523 &  &  & \\\hline
+\rule{0pt}{7mm}524 &  &  & \\\hline
+\rule{0pt}{7mm}525 &  &  & \\\hline
+\rule{0pt}{7mm}526 &  &  & \\\hline
+\rule{0pt}{7mm}527 &  &  & \\\hline
+\rule{0pt}{7mm}528 &  &  & \\\hline
+\rule{0pt}{7mm}529 &  &  & \\\hline
+\rule{0pt}{7mm}530 &  &  & \\\hline
+\rule{0pt}{7mm}531 &  &  & \\\hline
+\rule{0pt}{7mm}532 &  &  & \\\hline
+\rule{0pt}{7mm}533 &  &  & \\\hline
+\rule{0pt}{7mm}534 &  &  & \\\hline
+\rule{0pt}{7mm}535 &  &  & \\\hline
+\rule{0pt}{7mm}536 &  &  & \\\hline
+\rule{0pt}{7mm}537 &  &  & \\\hline
+\rule{0pt}{7mm}538 &  &  & \\\hline
+\rule{0pt}{7mm}539 &  &  & \\\hline
+\rule{0pt}{7mm}540 &  &  & \\\hline
+\end{tabularx}\par\smallskip
+\note{Pomiary 521--540 z 1200. Krok przesuwania detektora: $0{,}1\,\mathrm{mm}$. Zakres pomiaru musi obejmować wszystkie wymagane prążki.}
+\clearpage
+\titlepagepart{Dwie szczeliny -- karta 28 z 60}
+
+\note{Wpisuj $p$ ze skali oraz $I$ z miernika. W uwagach zaznacz maksimum, minimum lub zmianę warunków.}
+\begin{tabularx}{\linewidth}{|Y|Y|Y|Y|}\hline
+\textbf{Seria / płytka} & \textbf{$L_2\ [\mathrm{mm}]$} & \textbf{$R_2\ [\Omega]$} & \textbf{Krok $\Delta p\ [\mathrm{mm}]$}\\\hline
+\rule{0pt}{7mm} &  &  & $0{,}1$ \\\hline
+\end{tabularx}\par\smallskip
+\begin{tabularx}{\linewidth}{|Y|Y|Y|Y|}\hline
+\textbf{$p_0\ [\mathrm{mm}]$} & \textbf{$I_0\ [\mathrm{j.u.}]$} & \textbf{Skala sygnału, np. mV} & \textbf{Tło, opcjonalnie}\\\hline
+\rule{0pt}{7mm} &  &  &  \\\hline
+\end{tabularx}\par\smallskip
+\begin{tabularx}{\linewidth}{|p{9mm}|Y|Y|Y|}\hline
+\textbf{Nr} & \textbf{Położenie $p\ [\mathrm{mm}]$} & \textbf{Sygnał $I\ [\mathrm{j.u.}]$} & \textbf{Uwagi}\\\hline
+\rule{0pt}{7mm}541 &  &  & \\\hline
+\rule{0pt}{7mm}542 &  &  & \\\hline
+\rule{0pt}{7mm}543 &  &  & \\\hline
+\rule{0pt}{7mm}544 &  &  & \\\hline
+\rule{0pt}{7mm}545 &  &  & \\\hline
+\rule{0pt}{7mm}546 &  &  & \\\hline
+\rule{0pt}{7mm}547 &  &  & \\\hline
+\rule{0pt}{7mm}548 &  &  & \\\hline
+\rule{0pt}{7mm}549 &  &  & \\\hline
+\rule{0pt}{7mm}550 &  &  & \\\hline
+\rule{0pt}{7mm}551 &  &  & \\\hline
+\rule{0pt}{7mm}552 &  &  & \\\hline
+\rule{0pt}{7mm}553 &  &  & \\\hline
+\rule{0pt}{7mm}554 &  &  & \\\hline
+\rule{0pt}{7mm}555 &  &  & \\\hline
+\rule{0pt}{7mm}556 &  &  & \\\hline
+\rule{0pt}{7mm}557 &  &  & \\\hline
+\rule{0pt}{7mm}558 &  &  & \\\hline
+\rule{0pt}{7mm}559 &  &  & \\\hline
+\rule{0pt}{7mm}560 &  &  & \\\hline
+\end{tabularx}\par\smallskip
+\note{Pomiary 541--560 z 1200. Krok przesuwania detektora: $0{,}1\,\mathrm{mm}$. Zakres pomiaru musi obejmować wszystkie wymagane prążki.}
+\clearpage
+\titlepagepart{Dwie szczeliny -- karta 29 z 60}
+
+\note{Wpisuj $p$ ze skali oraz $I$ z miernika. W uwagach zaznacz maksimum, minimum lub zmianę warunków.}
+\begin{tabularx}{\linewidth}{|Y|Y|Y|Y|}\hline
+\textbf{Seria / płytka} & \textbf{$L_2\ [\mathrm{mm}]$} & \textbf{$R_2\ [\Omega]$} & \textbf{Krok $\Delta p\ [\mathrm{mm}]$}\\\hline
+\rule{0pt}{7mm} &  &  & $0{,}1$ \\\hline
+\end{tabularx}\par\smallskip
+\begin{tabularx}{\linewidth}{|Y|Y|Y|Y|}\hline
+\textbf{$p_0\ [\mathrm{mm}]$} & \textbf{$I_0\ [\mathrm{j.u.}]$} & \textbf{Skala sygnału, np. mV} & \textbf{Tło, opcjonalnie}\\\hline
+\rule{0pt}{7mm} &  &  &  \\\hline
+\end{tabularx}\par\smallskip
+\begin{tabularx}{\linewidth}{|p{9mm}|Y|Y|Y|}\hline
+\textbf{Nr} & \textbf{Położenie $p\ [\mathrm{mm}]$} & \textbf{Sygnał $I\ [\mathrm{j.u.}]$} & \textbf{Uwagi}\\\hline
+\rule{0pt}{7mm}561 &  &  & \\\hline
+\rule{0pt}{7mm}562 &  &  & \\\hline
+\rule{0pt}{7mm}563 &  &  & \\\hline
+\rule{0pt}{7mm}564 &  &  & \\\hline
+\rule{0pt}{7mm}565 &  &  & \\\hline
+\rule{0pt}{7mm}566 &  &  & \\\hline
+\rule{0pt}{7mm}567 &  &  & \\\hline
+\rule{0pt}{7mm}568 &  &  & \\\hline
+\rule{0pt}{7mm}569 &  &  & \\\hline
+\rule{0pt}{7mm}570 &  &  & \\\hline
+\rule{0pt}{7mm}571 &  &  & \\\hline
+\rule{0pt}{7mm}572 &  &  & \\\hline
+\rule{0pt}{7mm}573 &  &  & \\\hline
+\rule{0pt}{7mm}574 &  &  & \\\hline
+\rule{0pt}{7mm}575 &  &  & \\\hline
+\rule{0pt}{7mm}576 &  &  & \\\hline
+\rule{0pt}{7mm}577 &  &  & \\\hline
+\rule{0pt}{7mm}578 &  &  & \\\hline
+\rule{0pt}{7mm}579 &  &  & \\\hline
+\rule{0pt}{7mm}580 &  &  & \\\hline
+\end{tabularx}\par\smallskip
+\note{Pomiary 561--580 z 1200. Krok przesuwania detektora: $0{,}1\,\mathrm{mm}$. Zakres pomiaru musi obejmować wszystkie wymagane prążki.}
+\clearpage
+\titlepagepart{Dwie szczeliny -- karta 30 z 60}
+
+\note{Wpisuj $p$ ze skali oraz $I$ z miernika. W uwagach zaznacz maksimum, minimum lub zmianę warunków.}
+\begin{tabularx}{\linewidth}{|Y|Y|Y|Y|}\hline
+\textbf{Seria / płytka} & \textbf{$L_2\ [\mathrm{mm}]$} & \textbf{$R_2\ [\Omega]$} & \textbf{Krok $\Delta p\ [\mathrm{mm}]$}\\\hline
+\rule{0pt}{7mm} &  &  & $0{,}1$ \\\hline
+\end{tabularx}\par\smallskip
+\begin{tabularx}{\linewidth}{|Y|Y|Y|Y|}\hline
+\textbf{$p_0\ [\mathrm{mm}]$} & \textbf{$I_0\ [\mathrm{j.u.}]$} & \textbf{Skala sygnału, np. mV} & \textbf{Tło, opcjonalnie}\\\hline
+\rule{0pt}{7mm} &  &  &  \\\hline
+\end{tabularx}\par\smallskip
+\begin{tabularx}{\linewidth}{|p{9mm}|Y|Y|Y|}\hline
+\textbf{Nr} & \textbf{Położenie $p\ [\mathrm{mm}]$} & \textbf{Sygnał $I\ [\mathrm{j.u.}]$} & \textbf{Uwagi}\\\hline
+\rule{0pt}{7mm}581 &  &  & \\\hline
+\rule{0pt}{7mm}582 &  &  & \\\hline
+\rule{0pt}{7mm}583 &  &  & \\\hline
+\rule{0pt}{7mm}584 &  &  & \\\hline
+\rule{0pt}{7mm}585 &  &  & \\\hline
+\rule{0pt}{7mm}586 &  &  & \\\hline
+\rule{0pt}{7mm}587 &  &  & \\\hline
+\rule{0pt}{7mm}588 &  &  & \\\hline
+\rule{0pt}{7mm}589 &  &  & \\\hline
+\rule{0pt}{7mm}590 &  &  & \\\hline
+\rule{0pt}{7mm}591 &  &  & \\\hline
+\rule{0pt}{7mm}592 &  &  & \\\hline
+\rule{0pt}{7mm}593 &  &  & \\\hline
+\rule{0pt}{7mm}594 &  &  & \\\hline
+\rule{0pt}{7mm}595 &  &  & \\\hline
+\rule{0pt}{7mm}596 &  &  & \\\hline
+\rule{0pt}{7mm}597 &  &  & \\\hline
+\rule{0pt}{7mm}598 &  &  & \\\hline
+\rule{0pt}{7mm}599 &  &  & \\\hline
+\rule{0pt}{7mm}600 &  &  & \\\hline
+\end{tabularx}\par\smallskip
+\note{Pomiary 581--600 z 1200. Krok przesuwania detektora: $0{,}1\,\mathrm{mm}$. Zakres pomiaru musi obejmować wszystkie wymagane prążki.}
+\clearpage
+\titlepagepart{Dwie szczeliny -- karta 31 z 60}
+
+\note{Wpisuj $p$ ze skali oraz $I$ z miernika. W uwagach zaznacz maksimum, minimum lub zmianę warunków.}
+\begin{tabularx}{\linewidth}{|Y|Y|Y|Y|}\hline
+\textbf{Seria / płytka} & \textbf{$L_2\ [\mathrm{mm}]$} & \textbf{$R_2\ [\Omega]$} & \textbf{Krok $\Delta p\ [\mathrm{mm}]$}\\\hline
+\rule{0pt}{7mm} &  &  & $0{,}1$ \\\hline
+\end{tabularx}\par\smallskip
+\begin{tabularx}{\linewidth}{|Y|Y|Y|Y|}\hline
+\textbf{$p_0\ [\mathrm{mm}]$} & \textbf{$I_0\ [\mathrm{j.u.}]$} & \textbf{Skala sygnału, np. mV} & \textbf{Tło, opcjonalnie}\\\hline
+\rule{0pt}{7mm} &  &  &  \\\hline
+\end{tabularx}\par\smallskip
+\begin{tabularx}{\linewidth}{|p{9mm}|Y|Y|Y|}\hline
+\textbf{Nr} & \textbf{Położenie $p\ [\mathrm{mm}]$} & \textbf{Sygnał $I\ [\mathrm{j.u.}]$} & \textbf{Uwagi}\\\hline
+\rule{0pt}{7mm}601 &  &  & \\\hline
+\rule{0pt}{7mm}602 &  &  & \\\hline
+\rule{0pt}{7mm}603 &  &  & \\\hline
+\rule{0pt}{7mm}604 &  &  & \\\hline
+\rule{0pt}{7mm}605 &  &  & \\\hline
+\rule{0pt}{7mm}606 &  &  & \\\hline
+\rule{0pt}{7mm}607 &  &  & \\\hline
+\rule{0pt}{7mm}608 &  &  & \\\hline
+\rule{0pt}{7mm}609 &  &  & \\\hline
+\rule{0pt}{7mm}610 &  &  & \\\hline
+\rule{0pt}{7mm}611 &  &  & \\\hline
+\rule{0pt}{7mm}612 &  &  & \\\hline
+\rule{0pt}{7mm}613 &  &  & \\\hline
+\rule{0pt}{7mm}614 &  &  & \\\hline
+\rule{0pt}{7mm}615 &  &  & \\\hline
+\rule{0pt}{7mm}616 &  &  & \\\hline
+\rule{0pt}{7mm}617 &  &  & \\\hline
+\rule{0pt}{7mm}618 &  &  & \\\hline
+\rule{0pt}{7mm}619 &  &  & \\\hline
+\rule{0pt}{7mm}620 &  &  & \\\hline
+\end{tabularx}\par\smallskip
+\note{Pomiary 601--620 z 1200. Krok przesuwania detektora: $0{,}1\,\mathrm{mm}$. Zakres pomiaru musi obejmować wszystkie wymagane prążki.}
+\clearpage
+\titlepagepart{Dwie szczeliny -- karta 32 z 60}
+
+\note{Wpisuj $p$ ze skali oraz $I$ z miernika. W uwagach zaznacz maksimum, minimum lub zmianę warunków.}
+\begin{tabularx}{\linewidth}{|Y|Y|Y|Y|}\hline
+\textbf{Seria / płytka} & \textbf{$L_2\ [\mathrm{mm}]$} & \textbf{$R_2\ [\Omega]$} & \textbf{Krok $\Delta p\ [\mathrm{mm}]$}\\\hline
+\rule{0pt}{7mm} &  &  & $0{,}1$ \\\hline
+\end{tabularx}\par\smallskip
+\begin{tabularx}{\linewidth}{|Y|Y|Y|Y|}\hline
+\textbf{$p_0\ [\mathrm{mm}]$} & \textbf{$I_0\ [\mathrm{j.u.}]$} & \textbf{Skala sygnału, np. mV} & \textbf{Tło, opcjonalnie}\\\hline
+\rule{0pt}{7mm} &  &  &  \\\hline
+\end{tabularx}\par\smallskip
+\begin{tabularx}{\linewidth}{|p{9mm}|Y|Y|Y|}\hline
+\textbf{Nr} & \textbf{Położenie $p\ [\mathrm{mm}]$} & \textbf{Sygnał $I\ [\mathrm{j.u.}]$} & \textbf{Uwagi}\\\hline
+\rule{0pt}{7mm}621 &  &  & \\\hline
+\rule{0pt}{7mm}622 &  &  & \\\hline
+\rule{0pt}{7mm}623 &  &  & \\\hline
+\rule{0pt}{7mm}624 &  &  & \\\hline
+\rule{0pt}{7mm}625 &  &  & \\\hline
+\rule{0pt}{7mm}626 &  &  & \\\hline
+\rule{0pt}{7mm}627 &  &  & \\\hline
+\rule{0pt}{7mm}628 &  &  & \\\hline
+\rule{0pt}{7mm}629 &  &  & \\\hline
+\rule{0pt}{7mm}630 &  &  & \\\hline
+\rule{0pt}{7mm}631 &  &  & \\\hline
+\rule{0pt}{7mm}632 &  &  & \\\hline
+\rule{0pt}{7mm}633 &  &  & \\\hline
+\rule{0pt}{7mm}634 &  &  & \\\hline
+\rule{0pt}{7mm}635 &  &  & \\\hline
+\rule{0pt}{7mm}636 &  &  & \\\hline
+\rule{0pt}{7mm}637 &  &  & \\\hline
+\rule{0pt}{7mm}638 &  &  & \\\hline
+\rule{0pt}{7mm}639 &  &  & \\\hline
+\rule{0pt}{7mm}640 &  &  & \\\hline
+\end{tabularx}\par\smallskip
+\note{Pomiary 621--640 z 1200. Krok przesuwania detektora: $0{,}1\,\mathrm{mm}$. Zakres pomiaru musi obejmować wszystkie wymagane prążki.}
+\clearpage
+\titlepagepart{Dwie szczeliny -- karta 33 z 60}
+
+\note{Wpisuj $p$ ze skali oraz $I$ z miernika. W uwagach zaznacz maksimum, minimum lub zmianę warunków.}
+\begin{tabularx}{\linewidth}{|Y|Y|Y|Y|}\hline
+\textbf{Seria / płytka} & \textbf{$L_2\ [\mathrm{mm}]$} & \textbf{$R_2\ [\Omega]$} & \textbf{Krok $\Delta p\ [\mathrm{mm}]$}\\\hline
+\rule{0pt}{7mm} &  &  & $0{,}1$ \\\hline
+\end{tabularx}\par\smallskip
+\begin{tabularx}{\linewidth}{|Y|Y|Y|Y|}\hline
+\textbf{$p_0\ [\mathrm{mm}]$} & \textbf{$I_0\ [\mathrm{j.u.}]$} & \textbf{Skala sygnału, np. mV} & \textbf{Tło, opcjonalnie}\\\hline
+\rule{0pt}{7mm} &  &  &  \\\hline
+\end{tabularx}\par\smallskip
+\begin{tabularx}{\linewidth}{|p{9mm}|Y|Y|Y|}\hline
+\textbf{Nr} & \textbf{Położenie $p\ [\mathrm{mm}]$} & \textbf{Sygnał $I\ [\mathrm{j.u.}]$} & \textbf{Uwagi}\\\hline
+\rule{0pt}{7mm}641 &  &  & \\\hline
+\rule{0pt}{7mm}642 &  &  & \\\hline
+\rule{0pt}{7mm}643 &  &  & \\\hline
+\rule{0pt}{7mm}644 &  &  & \\\hline
+\rule{0pt}{7mm}645 &  &  & \\\hline
+\rule{0pt}{7mm}646 &  &  & \\\hline
+\rule{0pt}{7mm}647 &  &  & \\\hline
+\rule{0pt}{7mm}648 &  &  & \\\hline
+\rule{0pt}{7mm}649 &  &  & \\\hline
+\rule{0pt}{7mm}650 &  &  & \\\hline
+\rule{0pt}{7mm}651 &  &  & \\\hline
+\rule{0pt}{7mm}652 &  &  & \\\hline
+\rule{0pt}{7mm}653 &  &  & \\\hline
+\rule{0pt}{7mm}654 &  &  & \\\hline
+\rule{0pt}{7mm}655 &  &  & \\\hline
+\rule{0pt}{7mm}656 &  &  & \\\hline
+\rule{0pt}{7mm}657 &  &  & \\\hline
+\rule{0pt}{7mm}658 &  &  & \\\hline
+\rule{0pt}{7mm}659 &  &  & \\\hline
+\rule{0pt}{7mm}660 &  &  & \\\hline
+\end{tabularx}\par\smallskip
+\note{Pomiary 641--660 z 1200. Krok przesuwania detektora: $0{,}1\,\mathrm{mm}$. Zakres pomiaru musi obejmować wszystkie wymagane prążki.}
+\clearpage
+\titlepagepart{Dwie szczeliny -- karta 34 z 60}
+
+\note{Wpisuj $p$ ze skali oraz $I$ z miernika. W uwagach zaznacz maksimum, minimum lub zmianę warunków.}
+\begin{tabularx}{\linewidth}{|Y|Y|Y|Y|}\hline
+\textbf{Seria / płytka} & \textbf{$L_2\ [\mathrm{mm}]$} & \textbf{$R_2\ [\Omega]$} & \textbf{Krok $\Delta p\ [\mathrm{mm}]$}\\\hline
+\rule{0pt}{7mm} &  &  & $0{,}1$ \\\hline
+\end{tabularx}\par\smallskip
+\begin{tabularx}{\linewidth}{|Y|Y|Y|Y|}\hline
+\textbf{$p_0\ [\mathrm{mm}]$} & \textbf{$I_0\ [\mathrm{j.u.}]$} & \textbf{Skala sygnału, np. mV} & \textbf{Tło, opcjonalnie}\\\hline
+\rule{0pt}{7mm} &  &  &  \\\hline
+\end{tabularx}\par\smallskip
+\begin{tabularx}{\linewidth}{|p{9mm}|Y|Y|Y|}\hline
+\textbf{Nr} & \textbf{Położenie $p\ [\mathrm{mm}]$} & \textbf{Sygnał $I\ [\mathrm{j.u.}]$} & \textbf{Uwagi}\\\hline
+\rule{0pt}{7mm}661 &  &  & \\\hline
+\rule{0pt}{7mm}662 &  &  & \\\hline
+\rule{0pt}{7mm}663 &  &  & \\\hline
+\rule{0pt}{7mm}664 &  &  & \\\hline
+\rule{0pt}{7mm}665 &  &  & \\\hline
+\rule{0pt}{7mm}666 &  &  & \\\hline
+\rule{0pt}{7mm}667 &  &  & \\\hline
+\rule{0pt}{7mm}668 &  &  & \\\hline
+\rule{0pt}{7mm}669 &  &  & \\\hline
+\rule{0pt}{7mm}670 &  &  & \\\hline
+\rule{0pt}{7mm}671 &  &  & \\\hline
+\rule{0pt}{7mm}672 &  &  & \\\hline
+\rule{0pt}{7mm}673 &  &  & \\\hline
+\rule{0pt}{7mm}674 &  &  & \\\hline
+\rule{0pt}{7mm}675 &  &  & \\\hline
+\rule{0pt}{7mm}676 &  &  & \\\hline
+\rule{0pt}{7mm}677 &  &  & \\\hline
+\rule{0pt}{7mm}678 &  &  & \\\hline
+\rule{0pt}{7mm}679 &  &  & \\\hline
+\rule{0pt}{7mm}680 &  &  & \\\hline
+\end{tabularx}\par\smallskip
+\note{Pomiary 661--680 z 1200. Krok przesuwania detektora: $0{,}1\,\mathrm{mm}$. Zakres pomiaru musi obejmować wszystkie wymagane prążki.}
+\clearpage
+\titlepagepart{Dwie szczeliny -- karta 35 z 60}
+
+\note{Wpisuj $p$ ze skali oraz $I$ z miernika. W uwagach zaznacz maksimum, minimum lub zmianę warunków.}
+\begin{tabularx}{\linewidth}{|Y|Y|Y|Y|}\hline
+\textbf{Seria / płytka} & \textbf{$L_2\ [\mathrm{mm}]$} & \textbf{$R_2\ [\Omega]$} & \textbf{Krok $\Delta p\ [\mathrm{mm}]$}\\\hline
+\rule{0pt}{7mm} &  &  & $0{,}1$ \\\hline
+\end{tabularx}\par\smallskip
+\begin{tabularx}{\linewidth}{|Y|Y|Y|Y|}\hline
+\textbf{$p_0\ [\mathrm{mm}]$} & \textbf{$I_0\ [\mathrm{j.u.}]$} & \textbf{Skala sygnału, np. mV} & \textbf{Tło, opcjonalnie}\\\hline
+\rule{0pt}{7mm} &  &  &  \\\hline
+\end{tabularx}\par\smallskip
+\begin{tabularx}{\linewidth}{|p{9mm}|Y|Y|Y|}\hline
+\textbf{Nr} & \textbf{Położenie $p\ [\mathrm{mm}]$} & \textbf{Sygnał $I\ [\mathrm{j.u.}]$} & \textbf{Uwagi}\\\hline
+\rule{0pt}{7mm}681 &  &  & \\\hline
+\rule{0pt}{7mm}682 &  &  & \\\hline
+\rule{0pt}{7mm}683 &  &  & \\\hline
+\rule{0pt}{7mm}684 &  &  & \\\hline
+\rule{0pt}{7mm}685 &  &  & \\\hline
+\rule{0pt}{7mm}686 &  &  & \\\hline
+\rule{0pt}{7mm}687 &  &  & \\\hline
+\rule{0pt}{7mm}688 &  &  & \\\hline
+\rule{0pt}{7mm}689 &  &  & \\\hline
+\rule{0pt}{7mm}690 &  &  & \\\hline
+\rule{0pt}{7mm}691 &  &  & \\\hline
+\rule{0pt}{7mm}692 &  &  & \\\hline
+\rule{0pt}{7mm}693 &  &  & \\\hline
+\rule{0pt}{7mm}694 &  &  & \\\hline
+\rule{0pt}{7mm}695 &  &  & \\\hline
+\rule{0pt}{7mm}696 &  &  & \\\hline
+\rule{0pt}{7mm}697 &  &  & \\\hline
+\rule{0pt}{7mm}698 &  &  & \\\hline
+\rule{0pt}{7mm}699 &  &  & \\\hline
+\rule{0pt}{7mm}700 &  &  & \\\hline
+\end{tabularx}\par\smallskip
+\note{Pomiary 681--700 z 1200. Krok przesuwania detektora: $0{,}1\,\mathrm{mm}$. Zakres pomiaru musi obejmować wszystkie wymagane prążki.}
+\clearpage
+\titlepagepart{Dwie szczeliny -- karta 36 z 60}
+
+\note{Wpisuj $p$ ze skali oraz $I$ z miernika. W uwagach zaznacz maksimum, minimum lub zmianę warunków.}
+\begin{tabularx}{\linewidth}{|Y|Y|Y|Y|}\hline
+\textbf{Seria / płytka} & \textbf{$L_2\ [\mathrm{mm}]$} & \textbf{$R_2\ [\Omega]$} & \textbf{Krok $\Delta p\ [\mathrm{mm}]$}\\\hline
+\rule{0pt}{7mm} &  &  & $0{,}1$ \\\hline
+\end{tabularx}\par\smallskip
+\begin{tabularx}{\linewidth}{|Y|Y|Y|Y|}\hline
+\textbf{$p_0\ [\mathrm{mm}]$} & \textbf{$I_0\ [\mathrm{j.u.}]$} & \textbf{Skala sygnału, np. mV} & \textbf{Tło, opcjonalnie}\\\hline
+\rule{0pt}{7mm} &  &  &  \\\hline
+\end{tabularx}\par\smallskip
+\begin{tabularx}{\linewidth}{|p{9mm}|Y|Y|Y|}\hline
+\textbf{Nr} & \textbf{Położenie $p\ [\mathrm{mm}]$} & \textbf{Sygnał $I\ [\mathrm{j.u.}]$} & \textbf{Uwagi}\\\hline
+\rule{0pt}{7mm}701 &  &  & \\\hline
+\rule{0pt}{7mm}702 &  &  & \\\hline
+\rule{0pt}{7mm}703 &  &  & \\\hline
+\rule{0pt}{7mm}704 &  &  & \\\hline
+\rule{0pt}{7mm}705 &  &  & \\\hline
+\rule{0pt}{7mm}706 &  &  & \\\hline
+\rule{0pt}{7mm}707 &  &  & \\\hline
+\rule{0pt}{7mm}708 &  &  & \\\hline
+\rule{0pt}{7mm}709 &  &  & \\\hline
+\rule{0pt}{7mm}710 &  &  & \\\hline
+\rule{0pt}{7mm}711 &  &  & \\\hline
+\rule{0pt}{7mm}712 &  &  & \\\hline
+\rule{0pt}{7mm}713 &  &  & \\\hline
+\rule{0pt}{7mm}714 &  &  & \\\hline
+\rule{0pt}{7mm}715 &  &  & \\\hline
+\rule{0pt}{7mm}716 &  &  & \\\hline
+\rule{0pt}{7mm}717 &  &  & \\\hline
+\rule{0pt}{7mm}718 &  &  & \\\hline
+\rule{0pt}{7mm}719 &  &  & \\\hline
+\rule{0pt}{7mm}720 &  &  & \\\hline
+\end{tabularx}\par\smallskip
+\note{Pomiary 701--720 z 1200. Krok przesuwania detektora: $0{,}1\,\mathrm{mm}$. Zakres pomiaru musi obejmować wszystkie wymagane prążki.}
+\clearpage
+\titlepagepart{Dwie szczeliny -- karta 37 z 60}
+
+\note{Wpisuj $p$ ze skali oraz $I$ z miernika. W uwagach zaznacz maksimum, minimum lub zmianę warunków.}
+\begin{tabularx}{\linewidth}{|Y|Y|Y|Y|}\hline
+\textbf{Seria / płytka} & \textbf{$L_2\ [\mathrm{mm}]$} & \textbf{$R_2\ [\Omega]$} & \textbf{Krok $\Delta p\ [\mathrm{mm}]$}\\\hline
+\rule{0pt}{7mm} &  &  & $0{,}1$ \\\hline
+\end{tabularx}\par\smallskip
+\begin{tabularx}{\linewidth}{|Y|Y|Y|Y|}\hline
+\textbf{$p_0\ [\mathrm{mm}]$} & \textbf{$I_0\ [\mathrm{j.u.}]$} & \textbf{Skala sygnału, np. mV} & \textbf{Tło, opcjonalnie}\\\hline
+\rule{0pt}{7mm} &  &  &  \\\hline
+\end{tabularx}\par\smallskip
+\begin{tabularx}{\linewidth}{|p{9mm}|Y|Y|Y|}\hline
+\textbf{Nr} & \textbf{Położenie $p\ [\mathrm{mm}]$} & \textbf{Sygnał $I\ [\mathrm{j.u.}]$} & \textbf{Uwagi}\\\hline
+\rule{0pt}{7mm}721 &  &  & \\\hline
+\rule{0pt}{7mm}722 &  &  & \\\hline
+\rule{0pt}{7mm}723 &  &  & \\\hline
+\rule{0pt}{7mm}724 &  &  & \\\hline
+\rule{0pt}{7mm}725 &  &  & \\\hline
+\rule{0pt}{7mm}726 &  &  & \\\hline
+\rule{0pt}{7mm}727 &  &  & \\\hline
+\rule{0pt}{7mm}728 &  &  & \\\hline
+\rule{0pt}{7mm}729 &  &  & \\\hline
+\rule{0pt}{7mm}730 &  &  & \\\hline
+\rule{0pt}{7mm}731 &  &  & \\\hline
+\rule{0pt}{7mm}732 &  &  & \\\hline
+\rule{0pt}{7mm}733 &  &  & \\\hline
+\rule{0pt}{7mm}734 &  &  & \\\hline
+\rule{0pt}{7mm}735 &  &  & \\\hline
+\rule{0pt}{7mm}736 &  &  & \\\hline
+\rule{0pt}{7mm}737 &  &  & \\\hline
+\rule{0pt}{7mm}738 &  &  & \\\hline
+\rule{0pt}{7mm}739 &  &  & \\\hline
+\rule{0pt}{7mm}740 &  &  & \\\hline
+\end{tabularx}\par\smallskip
+\note{Pomiary 721--740 z 1200. Krok przesuwania detektora: $0{,}1\,\mathrm{mm}$. Zakres pomiaru musi obejmować wszystkie wymagane prążki.}
+\clearpage
+\titlepagepart{Dwie szczeliny -- karta 38 z 60}
+
+\note{Wpisuj $p$ ze skali oraz $I$ z miernika. W uwagach zaznacz maksimum, minimum lub zmianę warunków.}
+\begin{tabularx}{\linewidth}{|Y|Y|Y|Y|}\hline
+\textbf{Seria / płytka} & \textbf{$L_2\ [\mathrm{mm}]$} & \textbf{$R_2\ [\Omega]$} & \textbf{Krok $\Delta p\ [\mathrm{mm}]$}\\\hline
+\rule{0pt}{7mm} &  &  & $0{,}1$ \\\hline
+\end{tabularx}\par\smallskip
+\begin{tabularx}{\linewidth}{|Y|Y|Y|Y|}\hline
+\textbf{$p_0\ [\mathrm{mm}]$} & \textbf{$I_0\ [\mathrm{j.u.}]$} & \textbf{Skala sygnału, np. mV} & \textbf{Tło, opcjonalnie}\\\hline
+\rule{0pt}{7mm} &  &  &  \\\hline
+\end{tabularx}\par\smallskip
+\begin{tabularx}{\linewidth}{|p{9mm}|Y|Y|Y|}\hline
+\textbf{Nr} & \textbf{Położenie $p\ [\mathrm{mm}]$} & \textbf{Sygnał $I\ [\mathrm{j.u.}]$} & \textbf{Uwagi}\\\hline
+\rule{0pt}{7mm}741 &  &  & \\\hline
+\rule{0pt}{7mm}742 &  &  & \\\hline
+\rule{0pt}{7mm}743 &  &  & \\\hline
+\rule{0pt}{7mm}744 &  &  & \\\hline
+\rule{0pt}{7mm}745 &  &  & \\\hline
+\rule{0pt}{7mm}746 &  &  & \\\hline
+\rule{0pt}{7mm}747 &  &  & \\\hline
+\rule{0pt}{7mm}748 &  &  & \\\hline
+\rule{0pt}{7mm}749 &  &  & \\\hline
+\rule{0pt}{7mm}750 &  &  & \\\hline
+\rule{0pt}{7mm}751 &  &  & \\\hline
+\rule{0pt}{7mm}752 &  &  & \\\hline
+\rule{0pt}{7mm}753 &  &  & \\\hline
+\rule{0pt}{7mm}754 &  &  & \\\hline
+\rule{0pt}{7mm}755 &  &  & \\\hline
+\rule{0pt}{7mm}756 &  &  & \\\hline
+\rule{0pt}{7mm}757 &  &  & \\\hline
+\rule{0pt}{7mm}758 &  &  & \\\hline
+\rule{0pt}{7mm}759 &  &  & \\\hline
+\rule{0pt}{7mm}760 &  &  & \\\hline
+\end{tabularx}\par\smallskip
+\note{Pomiary 741--760 z 1200. Krok przesuwania detektora: $0{,}1\,\mathrm{mm}$. Zakres pomiaru musi obejmować wszystkie wymagane prążki.}
+\clearpage
+\titlepagepart{Dwie szczeliny -- karta 39 z 60}
+
+\note{Wpisuj $p$ ze skali oraz $I$ z miernika. W uwagach zaznacz maksimum, minimum lub zmianę warunków.}
+\begin{tabularx}{\linewidth}{|Y|Y|Y|Y|}\hline
+\textbf{Seria / płytka} & \textbf{$L_2\ [\mathrm{mm}]$} & \textbf{$R_2\ [\Omega]$} & \textbf{Krok $\Delta p\ [\mathrm{mm}]$}\\\hline
+\rule{0pt}{7mm} &  &  & $0{,}1$ \\\hline
+\end{tabularx}\par\smallskip
+\begin{tabularx}{\linewidth}{|Y|Y|Y|Y|}\hline
+\textbf{$p_0\ [\mathrm{mm}]$} & \textbf{$I_0\ [\mathrm{j.u.}]$} & \textbf{Skala sygnału, np. mV} & \textbf{Tło, opcjonalnie}\\\hline
+\rule{0pt}{7mm} &  &  &  \\\hline
+\end{tabularx}\par\smallskip
+\begin{tabularx}{\linewidth}{|p{9mm}|Y|Y|Y|}\hline
+\textbf{Nr} & \textbf{Położenie $p\ [\mathrm{mm}]$} & \textbf{Sygnał $I\ [\mathrm{j.u.}]$} & \textbf{Uwagi}\\\hline
+\rule{0pt}{7mm}761 &  &  & \\\hline
+\rule{0pt}{7mm}762 &  &  & \\\hline
+\rule{0pt}{7mm}763 &  &  & \\\hline
+\rule{0pt}{7mm}764 &  &  & \\\hline
+\rule{0pt}{7mm}765 &  &  & \\\hline
+\rule{0pt}{7mm}766 &  &  & \\\hline
+\rule{0pt}{7mm}767 &  &  & \\\hline
+\rule{0pt}{7mm}768 &  &  & \\\hline
+\rule{0pt}{7mm}769 &  &  & \\\hline
+\rule{0pt}{7mm}770 &  &  & \\\hline
+\rule{0pt}{7mm}771 &  &  & \\\hline
+\rule{0pt}{7mm}772 &  &  & \\\hline
+\rule{0pt}{7mm}773 &  &  & \\\hline
+\rule{0pt}{7mm}774 &  &  & \\\hline
+\rule{0pt}{7mm}775 &  &  & \\\hline
+\rule{0pt}{7mm}776 &  &  & \\\hline
+\rule{0pt}{7mm}777 &  &  & \\\hline
+\rule{0pt}{7mm}778 &  &  & \\\hline
+\rule{0pt}{7mm}779 &  &  & \\\hline
+\rule{0pt}{7mm}780 &  &  & \\\hline
+\end{tabularx}\par\smallskip
+\note{Pomiary 761--780 z 1200. Krok przesuwania detektora: $0{,}1\,\mathrm{mm}$. Zakres pomiaru musi obejmować wszystkie wymagane prążki.}
+\clearpage
+\titlepagepart{Dwie szczeliny -- karta 40 z 60}
+
+\note{Wpisuj $p$ ze skali oraz $I$ z miernika. W uwagach zaznacz maksimum, minimum lub zmianę warunków.}
+\begin{tabularx}{\linewidth}{|Y|Y|Y|Y|}\hline
+\textbf{Seria / płytka} & \textbf{$L_2\ [\mathrm{mm}]$} & \textbf{$R_2\ [\Omega]$} & \textbf{Krok $\Delta p\ [\mathrm{mm}]$}\\\hline
+\rule{0pt}{7mm} &  &  & $0{,}1$ \\\hline
+\end{tabularx}\par\smallskip
+\begin{tabularx}{\linewidth}{|Y|Y|Y|Y|}\hline
+\textbf{$p_0\ [\mathrm{mm}]$} & \textbf{$I_0\ [\mathrm{j.u.}]$} & \textbf{Skala sygnału, np. mV} & \textbf{Tło, opcjonalnie}\\\hline
+\rule{0pt}{7mm} &  &  &  \\\hline
+\end{tabularx}\par\smallskip
+\begin{tabularx}{\linewidth}{|p{9mm}|Y|Y|Y|}\hline
+\textbf{Nr} & \textbf{Położenie $p\ [\mathrm{mm}]$} & \textbf{Sygnał $I\ [\mathrm{j.u.}]$} & \textbf{Uwagi}\\\hline
+\rule{0pt}{7mm}781 &  &  & \\\hline
+\rule{0pt}{7mm}782 &  &  & \\\hline
+\rule{0pt}{7mm}783 &  &  & \\\hline
+\rule{0pt}{7mm}784 &  &  & \\\hline
+\rule{0pt}{7mm}785 &  &  & \\\hline
+\rule{0pt}{7mm}786 &  &  & \\\hline
+\rule{0pt}{7mm}787 &  &  & \\\hline
+\rule{0pt}{7mm}788 &  &  & \\\hline
+\rule{0pt}{7mm}789 &  &  & \\\hline
+\rule{0pt}{7mm}790 &  &  & \\\hline
+\rule{0pt}{7mm}791 &  &  & \\\hline
+\rule{0pt}{7mm}792 &  &  & \\\hline
+\rule{0pt}{7mm}793 &  &  & \\\hline
+\rule{0pt}{7mm}794 &  &  & \\\hline
+\rule{0pt}{7mm}795 &  &  & \\\hline
+\rule{0pt}{7mm}796 &  &  & \\\hline
+\rule{0pt}{7mm}797 &  &  & \\\hline
+\rule{0pt}{7mm}798 &  &  & \\\hline
+\rule{0pt}{7mm}799 &  &  & \\\hline
+\rule{0pt}{7mm}800 &  &  & \\\hline
+\end{tabularx}\par\smallskip
+\note{Pomiary 781--800 z 1200. Krok przesuwania detektora: $0{,}1\,\mathrm{mm}$. Zakres pomiaru musi obejmować wszystkie wymagane prążki.}
+\clearpage
+\titlepagepart{Dwie szczeliny -- karta 41 z 60}
+
+\note{Wpisuj $p$ ze skali oraz $I$ z miernika. W uwagach zaznacz maksimum, minimum lub zmianę warunków.}
+\begin{tabularx}{\linewidth}{|Y|Y|Y|Y|}\hline
+\textbf{Seria / płytka} & \textbf{$L_2\ [\mathrm{mm}]$} & \textbf{$R_2\ [\Omega]$} & \textbf{Krok $\Delta p\ [\mathrm{mm}]$}\\\hline
+\rule{0pt}{7mm} &  &  & $0{,}1$ \\\hline
+\end{tabularx}\par\smallskip
+\begin{tabularx}{\linewidth}{|Y|Y|Y|Y|}\hline
+\textbf{$p_0\ [\mathrm{mm}]$} & \textbf{$I_0\ [\mathrm{j.u.}]$} & \textbf{Skala sygnału, np. mV} & \textbf{Tło, opcjonalnie}\\\hline
+\rule{0pt}{7mm} &  &  &  \\\hline
+\end{tabularx}\par\smallskip
+\begin{tabularx}{\linewidth}{|p{9mm}|Y|Y|Y|}\hline
+\textbf{Nr} & \textbf{Położenie $p\ [\mathrm{mm}]$} & \textbf{Sygnał $I\ [\mathrm{j.u.}]$} & \textbf{Uwagi}\\\hline
+\rule{0pt}{7mm}801 &  &  & \\\hline
+\rule{0pt}{7mm}802 &  &  & \\\hline
+\rule{0pt}{7mm}803 &  &  & \\\hline
+\rule{0pt}{7mm}804 &  &  & \\\hline
+\rule{0pt}{7mm}805 &  &  & \\\hline
+\rule{0pt}{7mm}806 &  &  & \\\hline
+\rule{0pt}{7mm}807 &  &  & \\\hline
+\rule{0pt}{7mm}808 &  &  & \\\hline
+\rule{0pt}{7mm}809 &  &  & \\\hline
+\rule{0pt}{7mm}810 &  &  & \\\hline
+\rule{0pt}{7mm}811 &  &  & \\\hline
+\rule{0pt}{7mm}812 &  &  & \\\hline
+\rule{0pt}{7mm}813 &  &  & \\\hline
+\rule{0pt}{7mm}814 &  &  & \\\hline
+\rule{0pt}{7mm}815 &  &  & \\\hline
+\rule{0pt}{7mm}816 &  &  & \\\hline
+\rule{0pt}{7mm}817 &  &  & \\\hline
+\rule{0pt}{7mm}818 &  &  & \\\hline
+\rule{0pt}{7mm}819 &  &  & \\\hline
+\rule{0pt}{7mm}820 &  &  & \\\hline
+\end{tabularx}\par\smallskip
+\note{Pomiary 801--820 z 1200. Krok przesuwania detektora: $0{,}1\,\mathrm{mm}$. Zakres pomiaru musi obejmować wszystkie wymagane prążki.}
+\clearpage
+\titlepagepart{Dwie szczeliny -- karta 42 z 60}
+
+\note{Wpisuj $p$ ze skali oraz $I$ z miernika. W uwagach zaznacz maksimum, minimum lub zmianę warunków.}
+\begin{tabularx}{\linewidth}{|Y|Y|Y|Y|}\hline
+\textbf{Seria / płytka} & \textbf{$L_2\ [\mathrm{mm}]$} & \textbf{$R_2\ [\Omega]$} & \textbf{Krok $\Delta p\ [\mathrm{mm}]$}\\\hline
+\rule{0pt}{7mm} &  &  & $0{,}1$ \\\hline
+\end{tabularx}\par\smallskip
+\begin{tabularx}{\linewidth}{|Y|Y|Y|Y|}\hline
+\textbf{$p_0\ [\mathrm{mm}]$} & \textbf{$I_0\ [\mathrm{j.u.}]$} & \textbf{Skala sygnału, np. mV} & \textbf{Tło, opcjonalnie}\\\hline
+\rule{0pt}{7mm} &  &  &  \\\hline
+\end{tabularx}\par\smallskip
+\begin{tabularx}{\linewidth}{|p{9mm}|Y|Y|Y|}\hline
+\textbf{Nr} & \textbf{Położenie $p\ [\mathrm{mm}]$} & \textbf{Sygnał $I\ [\mathrm{j.u.}]$} & \textbf{Uwagi}\\\hline
+\rule{0pt}{7mm}821 &  &  & \\\hline
+\rule{0pt}{7mm}822 &  &  & \\\hline
+\rule{0pt}{7mm}823 &  &  & \\\hline
+\rule{0pt}{7mm}824 &  &  & \\\hline
+\rule{0pt}{7mm}825 &  &  & \\\hline
+\rule{0pt}{7mm}826 &  &  & \\\hline
+\rule{0pt}{7mm}827 &  &  & \\\hline
+\rule{0pt}{7mm}828 &  &  & \\\hline
+\rule{0pt}{7mm}829 &  &  & \\\hline
+\rule{0pt}{7mm}830 &  &  & \\\hline
+\rule{0pt}{7mm}831 &  &  & \\\hline
+\rule{0pt}{7mm}832 &  &  & \\\hline
+\rule{0pt}{7mm}833 &  &  & \\\hline
+\rule{0pt}{7mm}834 &  &  & \\\hline
+\rule{0pt}{7mm}835 &  &  & \\\hline
+\rule{0pt}{7mm}836 &  &  & \\\hline
+\rule{0pt}{7mm}837 &  &  & \\\hline
+\rule{0pt}{7mm}838 &  &  & \\\hline
+\rule{0pt}{7mm}839 &  &  & \\\hline
+\rule{0pt}{7mm}840 &  &  & \\\hline
+\end{tabularx}\par\smallskip
+\note{Pomiary 821--840 z 1200. Krok przesuwania detektora: $0{,}1\,\mathrm{mm}$. Zakres pomiaru musi obejmować wszystkie wymagane prążki.}
+\clearpage
+\titlepagepart{Dwie szczeliny -- karta 43 z 60}
+
+\note{Wpisuj $p$ ze skali oraz $I$ z miernika. W uwagach zaznacz maksimum, minimum lub zmianę warunków.}
+\begin{tabularx}{\linewidth}{|Y|Y|Y|Y|}\hline
+\textbf{Seria / płytka} & \textbf{$L_2\ [\mathrm{mm}]$} & \textbf{$R_2\ [\Omega]$} & \textbf{Krok $\Delta p\ [\mathrm{mm}]$}\\\hline
+\rule{0pt}{7mm} &  &  & $0{,}1$ \\\hline
+\end{tabularx}\par\smallskip
+\begin{tabularx}{\linewidth}{|Y|Y|Y|Y|}\hline
+\textbf{$p_0\ [\mathrm{mm}]$} & \textbf{$I_0\ [\mathrm{j.u.}]$} & \textbf{Skala sygnału, np. mV} & \textbf{Tło, opcjonalnie}\\\hline
+\rule{0pt}{7mm} &  &  &  \\\hline
+\end{tabularx}\par\smallskip
+\begin{tabularx}{\linewidth}{|p{9mm}|Y|Y|Y|}\hline
+\textbf{Nr} & \textbf{Położenie $p\ [\mathrm{mm}]$} & \textbf{Sygnał $I\ [\mathrm{j.u.}]$} & \textbf{Uwagi}\\\hline
+\rule{0pt}{7mm}841 &  &  & \\\hline
+\rule{0pt}{7mm}842 &  &  & \\\hline
+\rule{0pt}{7mm}843 &  &  & \\\hline
+\rule{0pt}{7mm}844 &  &  & \\\hline
+\rule{0pt}{7mm}845 &  &  & \\\hline
+\rule{0pt}{7mm}846 &  &  & \\\hline
+\rule{0pt}{7mm}847 &  &  & \\\hline
+\rule{0pt}{7mm}848 &  &  & \\\hline
+\rule{0pt}{7mm}849 &  &  & \\\hline
+\rule{0pt}{7mm}850 &  &  & \\\hline
+\rule{0pt}{7mm}851 &  &  & \\\hline
+\rule{0pt}{7mm}852 &  &  & \\\hline
+\rule{0pt}{7mm}853 &  &  & \\\hline
+\rule{0pt}{7mm}854 &  &  & \\\hline
+\rule{0pt}{7mm}855 &  &  & \\\hline
+\rule{0pt}{7mm}856 &  &  & \\\hline
+\rule{0pt}{7mm}857 &  &  & \\\hline
+\rule{0pt}{7mm}858 &  &  & \\\hline
+\rule{0pt}{7mm}859 &  &  & \\\hline
+\rule{0pt}{7mm}860 &  &  & \\\hline
+\end{tabularx}\par\smallskip
+\note{Pomiary 841--860 z 1200. Krok przesuwania detektora: $0{,}1\,\mathrm{mm}$. Zakres pomiaru musi obejmować wszystkie wymagane prążki.}
+\clearpage
+\titlepagepart{Dwie szczeliny -- karta 44 z 60}
+
+\note{Wpisuj $p$ ze skali oraz $I$ z miernika. W uwagach zaznacz maksimum, minimum lub zmianę warunków.}
+\begin{tabularx}{\linewidth}{|Y|Y|Y|Y|}\hline
+\textbf{Seria / płytka} & \textbf{$L_2\ [\mathrm{mm}]$} & \textbf{$R_2\ [\Omega]$} & \textbf{Krok $\Delta p\ [\mathrm{mm}]$}\\\hline
+\rule{0pt}{7mm} &  &  & $0{,}1$ \\\hline
+\end{tabularx}\par\smallskip
+\begin{tabularx}{\linewidth}{|Y|Y|Y|Y|}\hline
+\textbf{$p_0\ [\mathrm{mm}]$} & \textbf{$I_0\ [\mathrm{j.u.}]$} & \textbf{Skala sygnału, np. mV} & \textbf{Tło, opcjonalnie}\\\hline
+\rule{0pt}{7mm} &  &  &  \\\hline
+\end{tabularx}\par\smallskip
+\begin{tabularx}{\linewidth}{|p{9mm}|Y|Y|Y|}\hline
+\textbf{Nr} & \textbf{Położenie $p\ [\mathrm{mm}]$} & \textbf{Sygnał $I\ [\mathrm{j.u.}]$} & \textbf{Uwagi}\\\hline
+\rule{0pt}{7mm}861 &  &  & \\\hline
+\rule{0pt}{7mm}862 &  &  & \\\hline
+\rule{0pt}{7mm}863 &  &  & \\\hline
+\rule{0pt}{7mm}864 &  &  & \\\hline
+\rule{0pt}{7mm}865 &  &  & \\\hline
+\rule{0pt}{7mm}866 &  &  & \\\hline
+\rule{0pt}{7mm}867 &  &  & \\\hline
+\rule{0pt}{7mm}868 &  &  & \\\hline
+\rule{0pt}{7mm}869 &  &  & \\\hline
+\rule{0pt}{7mm}870 &  &  & \\\hline
+\rule{0pt}{7mm}871 &  &  & \\\hline
+\rule{0pt}{7mm}872 &  &  & \\\hline
+\rule{0pt}{7mm}873 &  &  & \\\hline
+\rule{0pt}{7mm}874 &  &  & \\\hline
+\rule{0pt}{7mm}875 &  &  & \\\hline
+\rule{0pt}{7mm}876 &  &  & \\\hline
+\rule{0pt}{7mm}877 &  &  & \\\hline
+\rule{0pt}{7mm}878 &  &  & \\\hline
+\rule{0pt}{7mm}879 &  &  & \\\hline
+\rule{0pt}{7mm}880 &  &  & \\\hline
+\end{tabularx}\par\smallskip
+\note{Pomiary 861--880 z 1200. Krok przesuwania detektora: $0{,}1\,\mathrm{mm}$. Zakres pomiaru musi obejmować wszystkie wymagane prążki.}
+\clearpage
+\titlepagepart{Dwie szczeliny -- karta 45 z 60}
+
+\note{Wpisuj $p$ ze skali oraz $I$ z miernika. W uwagach zaznacz maksimum, minimum lub zmianę warunków.}
+\begin{tabularx}{\linewidth}{|Y|Y|Y|Y|}\hline
+\textbf{Seria / płytka} & \textbf{$L_2\ [\mathrm{mm}]$} & \textbf{$R_2\ [\Omega]$} & \textbf{Krok $\Delta p\ [\mathrm{mm}]$}\\\hline
+\rule{0pt}{7mm} &  &  & $0{,}1$ \\\hline
+\end{tabularx}\par\smallskip
+\begin{tabularx}{\linewidth}{|Y|Y|Y|Y|}\hline
+\textbf{$p_0\ [\mathrm{mm}]$} & \textbf{$I_0\ [\mathrm{j.u.}]$} & \textbf{Skala sygnału, np. mV} & \textbf{Tło, opcjonalnie}\\\hline
+\rule{0pt}{7mm} &  &  &  \\\hline
+\end{tabularx}\par\smallskip
+\begin{tabularx}{\linewidth}{|p{9mm}|Y|Y|Y|}\hline
+\textbf{Nr} & \textbf{Położenie $p\ [\mathrm{mm}]$} & \textbf{Sygnał $I\ [\mathrm{j.u.}]$} & \textbf{Uwagi}\\\hline
+\rule{0pt}{7mm}881 &  &  & \\\hline
+\rule{0pt}{7mm}882 &  &  & \\\hline
+\rule{0pt}{7mm}883 &  &  & \\\hline
+\rule{0pt}{7mm}884 &  &  & \\\hline
+\rule{0pt}{7mm}885 &  &  & \\\hline
+\rule{0pt}{7mm}886 &  &  & \\\hline
+\rule{0pt}{7mm}887 &  &  & \\\hline
+\rule{0pt}{7mm}888 &  &  & \\\hline
+\rule{0pt}{7mm}889 &  &  & \\\hline
+\rule{0pt}{7mm}890 &  &  & \\\hline
+\rule{0pt}{7mm}891 &  &  & \\\hline
+\rule{0pt}{7mm}892 &  &  & \\\hline
+\rule{0pt}{7mm}893 &  &  & \\\hline
+\rule{0pt}{7mm}894 &  &  & \\\hline
+\rule{0pt}{7mm}895 &  &  & \\\hline
+\rule{0pt}{7mm}896 &  &  & \\\hline
+\rule{0pt}{7mm}897 &  &  & \\\hline
+\rule{0pt}{7mm}898 &  &  & \\\hline
+\rule{0pt}{7mm}899 &  &  & \\\hline
+\rule{0pt}{7mm}900 &  &  & \\\hline
+\end{tabularx}\par\smallskip
+\note{Pomiary 881--900 z 1200. Krok przesuwania detektora: $0{,}1\,\mathrm{mm}$. Zakres pomiaru musi obejmować wszystkie wymagane prążki.}
+\clearpage
+\titlepagepart{Dwie szczeliny -- karta 46 z 60}
+
+\note{Wpisuj $p$ ze skali oraz $I$ z miernika. W uwagach zaznacz maksimum, minimum lub zmianę warunków.}
+\begin{tabularx}{\linewidth}{|Y|Y|Y|Y|}\hline
+\textbf{Seria / płytka} & \textbf{$L_2\ [\mathrm{mm}]$} & \textbf{$R_2\ [\Omega]$} & \textbf{Krok $\Delta p\ [\mathrm{mm}]$}\\\hline
+\rule{0pt}{7mm} &  &  & $0{,}1$ \\\hline
+\end{tabularx}\par\smallskip
+\begin{tabularx}{\linewidth}{|Y|Y|Y|Y|}\hline
+\textbf{$p_0\ [\mathrm{mm}]$} & \textbf{$I_0\ [\mathrm{j.u.}]$} & \textbf{Skala sygnału, np. mV} & \textbf{Tło, opcjonalnie}\\\hline
+\rule{0pt}{7mm} &  &  &  \\\hline
+\end{tabularx}\par\smallskip
+\begin{tabularx}{\linewidth}{|p{9mm}|Y|Y|Y|}\hline
+\textbf{Nr} & \textbf{Położenie $p\ [\mathrm{mm}]$} & \textbf{Sygnał $I\ [\mathrm{j.u.}]$} & \textbf{Uwagi}\\\hline
+\rule{0pt}{7mm}901 &  &  & \\\hline
+\rule{0pt}{7mm}902 &  &  & \\\hline
+\rule{0pt}{7mm}903 &  &  & \\\hline
+\rule{0pt}{7mm}904 &  &  & \\\hline
+\rule{0pt}{7mm}905 &  &  & \\\hline
+\rule{0pt}{7mm}906 &  &  & \\\hline
+\rule{0pt}{7mm}907 &  &  & \\\hline
+\rule{0pt}{7mm}908 &  &  & \\\hline
+\rule{0pt}{7mm}909 &  &  & \\\hline
+\rule{0pt}{7mm}910 &  &  & \\\hline
+\rule{0pt}{7mm}911 &  &  & \\\hline
+\rule{0pt}{7mm}912 &  &  & \\\hline
+\rule{0pt}{7mm}913 &  &  & \\\hline
+\rule{0pt}{7mm}914 &  &  & \\\hline
+\rule{0pt}{7mm}915 &  &  & \\\hline
+\rule{0pt}{7mm}916 &  &  & \\\hline
+\rule{0pt}{7mm}917 &  &  & \\\hline
+\rule{0pt}{7mm}918 &  &  & \\\hline
+\rule{0pt}{7mm}919 &  &  & \\\hline
+\rule{0pt}{7mm}920 &  &  & \\\hline
+\end{tabularx}\par\smallskip
+\note{Pomiary 901--920 z 1200. Krok przesuwania detektora: $0{,}1\,\mathrm{mm}$. Zakres pomiaru musi obejmować wszystkie wymagane prążki.}
+\clearpage
+\titlepagepart{Dwie szczeliny -- karta 47 z 60}
+
+\note{Wpisuj $p$ ze skali oraz $I$ z miernika. W uwagach zaznacz maksimum, minimum lub zmianę warunków.}
+\begin{tabularx}{\linewidth}{|Y|Y|Y|Y|}\hline
+\textbf{Seria / płytka} & \textbf{$L_2\ [\mathrm{mm}]$} & \textbf{$R_2\ [\Omega]$} & \textbf{Krok $\Delta p\ [\mathrm{mm}]$}\\\hline
+\rule{0pt}{7mm} &  &  & $0{,}1$ \\\hline
+\end{tabularx}\par\smallskip
+\begin{tabularx}{\linewidth}{|Y|Y|Y|Y|}\hline
+\textbf{$p_0\ [\mathrm{mm}]$} & \textbf{$I_0\ [\mathrm{j.u.}]$} & \textbf{Skala sygnału, np. mV} & \textbf{Tło, opcjonalnie}\\\hline
+\rule{0pt}{7mm} &  &  &  \\\hline
+\end{tabularx}\par\smallskip
+\begin{tabularx}{\linewidth}{|p{9mm}|Y|Y|Y|}\hline
+\textbf{Nr} & \textbf{Położenie $p\ [\mathrm{mm}]$} & \textbf{Sygnał $I\ [\mathrm{j.u.}]$} & \textbf{Uwagi}\\\hline
+\rule{0pt}{7mm}921 &  &  & \\\hline
+\rule{0pt}{7mm}922 &  &  & \\\hline
+\rule{0pt}{7mm}923 &  &  & \\\hline
+\rule{0pt}{7mm}924 &  &  & \\\hline
+\rule{0pt}{7mm}925 &  &  & \\\hline
+\rule{0pt}{7mm}926 &  &  & \\\hline
+\rule{0pt}{7mm}927 &  &  & \\\hline
+\rule{0pt}{7mm}928 &  &  & \\\hline
+\rule{0pt}{7mm}929 &  &  & \\\hline
+\rule{0pt}{7mm}930 &  &  & \\\hline
+\rule{0pt}{7mm}931 &  &  & \\\hline
+\rule{0pt}{7mm}932 &  &  & \\\hline
+\rule{0pt}{7mm}933 &  &  & \\\hline
+\rule{0pt}{7mm}934 &  &  & \\\hline
+\rule{0pt}{7mm}935 &  &  & \\\hline
+\rule{0pt}{7mm}936 &  &  & \\\hline
+\rule{0pt}{7mm}937 &  &  & \\\hline
+\rule{0pt}{7mm}938 &  &  & \\\hline
+\rule{0pt}{7mm}939 &  &  & \\\hline
+\rule{0pt}{7mm}940 &  &  & \\\hline
+\end{tabularx}\par\smallskip
+\note{Pomiary 921--940 z 1200. Krok przesuwania detektora: $0{,}1\,\mathrm{mm}$. Zakres pomiaru musi obejmować wszystkie wymagane prążki.}
+\clearpage
+\titlepagepart{Dwie szczeliny -- karta 48 z 60}
+
+\note{Wpisuj $p$ ze skali oraz $I$ z miernika. W uwagach zaznacz maksimum, minimum lub zmianę warunków.}
+\begin{tabularx}{\linewidth}{|Y|Y|Y|Y|}\hline
+\textbf{Seria / płytka} & \textbf{$L_2\ [\mathrm{mm}]$} & \textbf{$R_2\ [\Omega]$} & \textbf{Krok $\Delta p\ [\mathrm{mm}]$}\\\hline
+\rule{0pt}{7mm} &  &  & $0{,}1$ \\\hline
+\end{tabularx}\par\smallskip
+\begin{tabularx}{\linewidth}{|Y|Y|Y|Y|}\hline
+\textbf{$p_0\ [\mathrm{mm}]$} & \textbf{$I_0\ [\mathrm{j.u.}]$} & \textbf{Skala sygnału, np. mV} & \textbf{Tło, opcjonalnie}\\\hline
+\rule{0pt}{7mm} &  &  &  \\\hline
+\end{tabularx}\par\smallskip
+\begin{tabularx}{\linewidth}{|p{9mm}|Y|Y|Y|}\hline
+\textbf{Nr} & \textbf{Położenie $p\ [\mathrm{mm}]$} & \textbf{Sygnał $I\ [\mathrm{j.u.}]$} & \textbf{Uwagi}\\\hline
+\rule{0pt}{7mm}941 &  &  & \\\hline
+\rule{0pt}{7mm}942 &  &  & \\\hline
+\rule{0pt}{7mm}943 &  &  & \\\hline
+\rule{0pt}{7mm}944 &  &  & \\\hline
+\rule{0pt}{7mm}945 &  &  & \\\hline
+\rule{0pt}{7mm}946 &  &  & \\\hline
+\rule{0pt}{7mm}947 &  &  & \\\hline
+\rule{0pt}{7mm}948 &  &  & \\\hline
+\rule{0pt}{7mm}949 &  &  & \\\hline
+\rule{0pt}{7mm}950 &  &  & \\\hline
+\rule{0pt}{7mm}951 &  &  & \\\hline
+\rule{0pt}{7mm}952 &  &  & \\\hline
+\rule{0pt}{7mm}953 &  &  & \\\hline
+\rule{0pt}{7mm}954 &  &  & \\\hline
+\rule{0pt}{7mm}955 &  &  & \\\hline
+\rule{0pt}{7mm}956 &  &  & \\\hline
+\rule{0pt}{7mm}957 &  &  & \\\hline
+\rule{0pt}{7mm}958 &  &  & \\\hline
+\rule{0pt}{7mm}959 &  &  & \\\hline
+\rule{0pt}{7mm}960 &  &  & \\\hline
+\end{tabularx}\par\smallskip
+\note{Pomiary 941--960 z 1200. Krok przesuwania detektora: $0{,}1\,\mathrm{mm}$. Zakres pomiaru musi obejmować wszystkie wymagane prążki.}
+\clearpage
+\titlepagepart{Dwie szczeliny -- karta 49 z 60}
+
+\note{Wpisuj $p$ ze skali oraz $I$ z miernika. W uwagach zaznacz maksimum, minimum lub zmianę warunków.}
+\begin{tabularx}{\linewidth}{|Y|Y|Y|Y|}\hline
+\textbf{Seria / płytka} & \textbf{$L_2\ [\mathrm{mm}]$} & \textbf{$R_2\ [\Omega]$} & \textbf{Krok $\Delta p\ [\mathrm{mm}]$}\\\hline
+\rule{0pt}{7mm} &  &  & $0{,}1$ \\\hline
+\end{tabularx}\par\smallskip
+\begin{tabularx}{\linewidth}{|Y|Y|Y|Y|}\hline
+\textbf{$p_0\ [\mathrm{mm}]$} & \textbf{$I_0\ [\mathrm{j.u.}]$} & \textbf{Skala sygnału, np. mV} & \textbf{Tło, opcjonalnie}\\\hline
+\rule{0pt}{7mm} &  &  &  \\\hline
+\end{tabularx}\par\smallskip
+\begin{tabularx}{\linewidth}{|p{9mm}|Y|Y|Y|}\hline
+\textbf{Nr} & \textbf{Położenie $p\ [\mathrm{mm}]$} & \textbf{Sygnał $I\ [\mathrm{j.u.}]$} & \textbf{Uwagi}\\\hline
+\rule{0pt}{7mm}961 &  &  & \\\hline
+\rule{0pt}{7mm}962 &  &  & \\\hline
+\rule{0pt}{7mm}963 &  &  & \\\hline
+\rule{0pt}{7mm}964 &  &  & \\\hline
+\rule{0pt}{7mm}965 &  &  & \\\hline
+\rule{0pt}{7mm}966 &  &  & \\\hline
+\rule{0pt}{7mm}967 &  &  & \\\hline
+\rule{0pt}{7mm}968 &  &  & \\\hline
+\rule{0pt}{7mm}969 &  &  & \\\hline
+\rule{0pt}{7mm}970 &  &  & \\\hline
+\rule{0pt}{7mm}971 &  &  & \\\hline
+\rule{0pt}{7mm}972 &  &  & \\\hline
+\rule{0pt}{7mm}973 &  &  & \\\hline
+\rule{0pt}{7mm}974 &  &  & \\\hline
+\rule{0pt}{7mm}975 &  &  & \\\hline
+\rule{0pt}{7mm}976 &  &  & \\\hline
+\rule{0pt}{7mm}977 &  &  & \\\hline
+\rule{0pt}{7mm}978 &  &  & \\\hline
+\rule{0pt}{7mm}979 &  &  & \\\hline
+\rule{0pt}{7mm}980 &  &  & \\\hline
+\end{tabularx}\par\smallskip
+\note{Pomiary 961--980 z 1200. Krok przesuwania detektora: $0{,}1\,\mathrm{mm}$. Zakres pomiaru musi obejmować wszystkie wymagane prążki.}
+\clearpage
+\titlepagepart{Dwie szczeliny -- karta 50 z 60}
+
+\note{Wpisuj $p$ ze skali oraz $I$ z miernika. W uwagach zaznacz maksimum, minimum lub zmianę warunków.}
+\begin{tabularx}{\linewidth}{|Y|Y|Y|Y|}\hline
+\textbf{Seria / płytka} & \textbf{$L_2\ [\mathrm{mm}]$} & \textbf{$R_2\ [\Omega]$} & \textbf{Krok $\Delta p\ [\mathrm{mm}]$}\\\hline
+\rule{0pt}{7mm} &  &  & $0{,}1$ \\\hline
+\end{tabularx}\par\smallskip
+\begin{tabularx}{\linewidth}{|Y|Y|Y|Y|}\hline
+\textbf{$p_0\ [\mathrm{mm}]$} & \textbf{$I_0\ [\mathrm{j.u.}]$} & \textbf{Skala sygnału, np. mV} & \textbf{Tło, opcjonalnie}\\\hline
+\rule{0pt}{7mm} &  &  &  \\\hline
+\end{tabularx}\par\smallskip
+\begin{tabularx}{\linewidth}{|p{9mm}|Y|Y|Y|}\hline
+\textbf{Nr} & \textbf{Położenie $p\ [\mathrm{mm}]$} & \textbf{Sygnał $I\ [\mathrm{j.u.}]$} & \textbf{Uwagi}\\\hline
+\rule{0pt}{7mm}981 &  &  & \\\hline
+\rule{0pt}{7mm}982 &  &  & \\\hline
+\rule{0pt}{7mm}983 &  &  & \\\hline
+\rule{0pt}{7mm}984 &  &  & \\\hline
+\rule{0pt}{7mm}985 &  &  & \\\hline
+\rule{0pt}{7mm}986 &  &  & \\\hline
+\rule{0pt}{7mm}987 &  &  & \\\hline
+\rule{0pt}{7mm}988 &  &  & \\\hline
+\rule{0pt}{7mm}989 &  &  & \\\hline
+\rule{0pt}{7mm}990 &  &  & \\\hline
+\rule{0pt}{7mm}991 &  &  & \\\hline
+\rule{0pt}{7mm}992 &  &  & \\\hline
+\rule{0pt}{7mm}993 &  &  & \\\hline
+\rule{0pt}{7mm}994 &  &  & \\\hline
+\rule{0pt}{7mm}995 &  &  & \\\hline
+\rule{0pt}{7mm}996 &  &  & \\\hline
+\rule{0pt}{7mm}997 &  &  & \\\hline
+\rule{0pt}{7mm}998 &  &  & \\\hline
+\rule{0pt}{7mm}999 &  &  & \\\hline
+\rule{0pt}{7mm}1000 &  &  & \\\hline
+\end{tabularx}\par\smallskip
+\note{Pomiary 981--1000 z 1200. Krok przesuwania detektora: $0{,}1\,\mathrm{mm}$. Zakres pomiaru musi obejmować wszystkie wymagane prążki.}
+\clearpage
+\titlepagepart{Dwie szczeliny -- karta 51 z 60}
+
+\note{Wpisuj $p$ ze skali oraz $I$ z miernika. W uwagach zaznacz maksimum, minimum lub zmianę warunków.}
+\begin{tabularx}{\linewidth}{|Y|Y|Y|Y|}\hline
+\textbf{Seria / płytka} & \textbf{$L_2\ [\mathrm{mm}]$} & \textbf{$R_2\ [\Omega]$} & \textbf{Krok $\Delta p\ [\mathrm{mm}]$}\\\hline
+\rule{0pt}{7mm} &  &  & $0{,}1$ \\\hline
+\end{tabularx}\par\smallskip
+\begin{tabularx}{\linewidth}{|Y|Y|Y|Y|}\hline
+\textbf{$p_0\ [\mathrm{mm}]$} & \textbf{$I_0\ [\mathrm{j.u.}]$} & \textbf{Skala sygnału, np. mV} & \textbf{Tło, opcjonalnie}\\\hline
+\rule{0pt}{7mm} &  &  &  \\\hline
+\end{tabularx}\par\smallskip
+\begin{tabularx}{\linewidth}{|p{9mm}|Y|Y|Y|}\hline
+\textbf{Nr} & \textbf{Położenie $p\ [\mathrm{mm}]$} & \textbf{Sygnał $I\ [\mathrm{j.u.}]$} & \textbf{Uwagi}\\\hline
+\rule{0pt}{7mm}1001 &  &  & \\\hline
+\rule{0pt}{7mm}1002 &  &  & \\\hline
+\rule{0pt}{7mm}1003 &  &  & \\\hline
+\rule{0pt}{7mm}1004 &  &  & \\\hline
+\rule{0pt}{7mm}1005 &  &  & \\\hline
+\rule{0pt}{7mm}1006 &  &  & \\\hline
+\rule{0pt}{7mm}1007 &  &  & \\\hline
+\rule{0pt}{7mm}1008 &  &  & \\\hline
+\rule{0pt}{7mm}1009 &  &  & \\\hline
+\rule{0pt}{7mm}1010 &  &  & \\\hline
+\rule{0pt}{7mm}1011 &  &  & \\\hline
+\rule{0pt}{7mm}1012 &  &  & \\\hline
+\rule{0pt}{7mm}1013 &  &  & \\\hline
+\rule{0pt}{7mm}1014 &  &  & \\\hline
+\rule{0pt}{7mm}1015 &  &  & \\\hline
+\rule{0pt}{7mm}1016 &  &  & \\\hline
+\rule{0pt}{7mm}1017 &  &  & \\\hline
+\rule{0pt}{7mm}1018 &  &  & \\\hline
+\rule{0pt}{7mm}1019 &  &  & \\\hline
+\rule{0pt}{7mm}1020 &  &  & \\\hline
+\end{tabularx}\par\smallskip
+\note{Pomiary 1001--1020 z 1200. Krok przesuwania detektora: $0{,}1\,\mathrm{mm}$. Zakres pomiaru musi obejmować wszystkie wymagane prążki.}
+\clearpage
+\titlepagepart{Dwie szczeliny -- karta 52 z 60}
+
+\note{Wpisuj $p$ ze skali oraz $I$ z miernika. W uwagach zaznacz maksimum, minimum lub zmianę warunków.}
+\begin{tabularx}{\linewidth}{|Y|Y|Y|Y|}\hline
+\textbf{Seria / płytka} & \textbf{$L_2\ [\mathrm{mm}]$} & \textbf{$R_2\ [\Omega]$} & \textbf{Krok $\Delta p\ [\mathrm{mm}]$}\\\hline
+\rule{0pt}{7mm} &  &  & $0{,}1$ \\\hline
+\end{tabularx}\par\smallskip
+\begin{tabularx}{\linewidth}{|Y|Y|Y|Y|}\hline
+\textbf{$p_0\ [\mathrm{mm}]$} & \textbf{$I_0\ [\mathrm{j.u.}]$} & \textbf{Skala sygnału, np. mV} & \textbf{Tło, opcjonalnie}\\\hline
+\rule{0pt}{7mm} &  &  &  \\\hline
+\end{tabularx}\par\smallskip
+\begin{tabularx}{\linewidth}{|p{9mm}|Y|Y|Y|}\hline
+\textbf{Nr} & \textbf{Położenie $p\ [\mathrm{mm}]$} & \textbf{Sygnał $I\ [\mathrm{j.u.}]$} & \textbf{Uwagi}\\\hline
+\rule{0pt}{7mm}1021 &  &  & \\\hline
+\rule{0pt}{7mm}1022 &  &  & \\\hline
+\rule{0pt}{7mm}1023 &  &  & \\\hline
+\rule{0pt}{7mm}1024 &  &  & \\\hline
+\rule{0pt}{7mm}1025 &  &  & \\\hline
+\rule{0pt}{7mm}1026 &  &  & \\\hline
+\rule{0pt}{7mm}1027 &  &  & \\\hline
+\rule{0pt}{7mm}1028 &  &  & \\\hline
+\rule{0pt}{7mm}1029 &  &  & \\\hline
+\rule{0pt}{7mm}1030 &  &  & \\\hline
+\rule{0pt}{7mm}1031 &  &  & \\\hline
+\rule{0pt}{7mm}1032 &  &  & \\\hline
+\rule{0pt}{7mm}1033 &  &  & \\\hline
+\rule{0pt}{7mm}1034 &  &  & \\\hline
+\rule{0pt}{7mm}1035 &  &  & \\\hline
+\rule{0pt}{7mm}1036 &  &  & \\\hline
+\rule{0pt}{7mm}1037 &  &  & \\\hline
+\rule{0pt}{7mm}1038 &  &  & \\\hline
+\rule{0pt}{7mm}1039 &  &  & \\\hline
+\rule{0pt}{7mm}1040 &  &  & \\\hline
+\end{tabularx}\par\smallskip
+\note{Pomiary 1021--1040 z 1200. Krok przesuwania detektora: $0{,}1\,\mathrm{mm}$. Zakres pomiaru musi obejmować wszystkie wymagane prążki.}
+\clearpage
+\titlepagepart{Dwie szczeliny -- karta 53 z 60}
+
+\note{Wpisuj $p$ ze skali oraz $I$ z miernika. W uwagach zaznacz maksimum, minimum lub zmianę warunków.}
+\begin{tabularx}{\linewidth}{|Y|Y|Y|Y|}\hline
+\textbf{Seria / płytka} & \textbf{$L_2\ [\mathrm{mm}]$} & \textbf{$R_2\ [\Omega]$} & \textbf{Krok $\Delta p\ [\mathrm{mm}]$}\\\hline
+\rule{0pt}{7mm} &  &  & $0{,}1$ \\\hline
+\end{tabularx}\par\smallskip
+\begin{tabularx}{\linewidth}{|Y|Y|Y|Y|}\hline
+\textbf{$p_0\ [\mathrm{mm}]$} & \textbf{$I_0\ [\mathrm{j.u.}]$} & \textbf{Skala sygnału, np. mV} & \textbf{Tło, opcjonalnie}\\\hline
+\rule{0pt}{7mm} &  &  &  \\\hline
+\end{tabularx}\par\smallskip
+\begin{tabularx}{\linewidth}{|p{9mm}|Y|Y|Y|}\hline
+\textbf{Nr} & \textbf{Położenie $p\ [\mathrm{mm}]$} & \textbf{Sygnał $I\ [\mathrm{j.u.}]$} & \textbf{Uwagi}\\\hline
+\rule{0pt}{7mm}1041 &  &  & \\\hline
+\rule{0pt}{7mm}1042 &  &  & \\\hline
+\rule{0pt}{7mm}1043 &  &  & \\\hline
+\rule{0pt}{7mm}1044 &  &  & \\\hline
+\rule{0pt}{7mm}1045 &  &  & \\\hline
+\rule{0pt}{7mm}1046 &  &  & \\\hline
+\rule{0pt}{7mm}1047 &  &  & \\\hline
+\rule{0pt}{7mm}1048 &  &  & \\\hline
+\rule{0pt}{7mm}1049 &  &  & \\\hline
+\rule{0pt}{7mm}1050 &  &  & \\\hline
+\rule{0pt}{7mm}1051 &  &  & \\\hline
+\rule{0pt}{7mm}1052 &  &  & \\\hline
+\rule{0pt}{7mm}1053 &  &  & \\\hline
+\rule{0pt}{7mm}1054 &  &  & \\\hline
+\rule{0pt}{7mm}1055 &  &  & \\\hline
+\rule{0pt}{7mm}1056 &  &  & \\\hline
+\rule{0pt}{7mm}1057 &  &  & \\\hline
+\rule{0pt}{7mm}1058 &  &  & \\\hline
+\rule{0pt}{7mm}1059 &  &  & \\\hline
+\rule{0pt}{7mm}1060 &  &  & \\\hline
+\end{tabularx}\par\smallskip
+\note{Pomiary 1041--1060 z 1200. Krok przesuwania detektora: $0{,}1\,\mathrm{mm}$. Zakres pomiaru musi obejmować wszystkie wymagane prążki.}
+\clearpage
+\titlepagepart{Dwie szczeliny -- karta 54 z 60}
+
+\note{Wpisuj $p$ ze skali oraz $I$ z miernika. W uwagach zaznacz maksimum, minimum lub zmianę warunków.}
+\begin{tabularx}{\linewidth}{|Y|Y|Y|Y|}\hline
+\textbf{Seria / płytka} & \textbf{$L_2\ [\mathrm{mm}]$} & \textbf{$R_2\ [\Omega]$} & \textbf{Krok $\Delta p\ [\mathrm{mm}]$}\\\hline
+\rule{0pt}{7mm} &  &  & $0{,}1$ \\\hline
+\end{tabularx}\par\smallskip
+\begin{tabularx}{\linewidth}{|Y|Y|Y|Y|}\hline
+\textbf{$p_0\ [\mathrm{mm}]$} & \textbf{$I_0\ [\mathrm{j.u.}]$} & \textbf{Skala sygnału, np. mV} & \textbf{Tło, opcjonalnie}\\\hline
+\rule{0pt}{7mm} &  &  &  \\\hline
+\end{tabularx}\par\smallskip
+\begin{tabularx}{\linewidth}{|p{9mm}|Y|Y|Y|}\hline
+\textbf{Nr} & \textbf{Położenie $p\ [\mathrm{mm}]$} & \textbf{Sygnał $I\ [\mathrm{j.u.}]$} & \textbf{Uwagi}\\\hline
+\rule{0pt}{7mm}1061 &  &  & \\\hline
+\rule{0pt}{7mm}1062 &  &  & \\\hline
+\rule{0pt}{7mm}1063 &  &  & \\\hline
+\rule{0pt}{7mm}1064 &  &  & \\\hline
+\rule{0pt}{7mm}1065 &  &  & \\\hline
+\rule{0pt}{7mm}1066 &  &  & \\\hline
+\rule{0pt}{7mm}1067 &  &  & \\\hline
+\rule{0pt}{7mm}1068 &  &  & \\\hline
+\rule{0pt}{7mm}1069 &  &  & \\\hline
+\rule{0pt}{7mm}1070 &  &  & \\\hline
+\rule{0pt}{7mm}1071 &  &  & \\\hline
+\rule{0pt}{7mm}1072 &  &  & \\\hline
+\rule{0pt}{7mm}1073 &  &  & \\\hline
+\rule{0pt}{7mm}1074 &  &  & \\\hline
+\rule{0pt}{7mm}1075 &  &  & \\\hline
+\rule{0pt}{7mm}1076 &  &  & \\\hline
+\rule{0pt}{7mm}1077 &  &  & \\\hline
+\rule{0pt}{7mm}1078 &  &  & \\\hline
+\rule{0pt}{7mm}1079 &  &  & \\\hline
+\rule{0pt}{7mm}1080 &  &  & \\\hline
+\end{tabularx}\par\smallskip
+\note{Pomiary 1061--1080 z 1200. Krok przesuwania detektora: $0{,}1\,\mathrm{mm}$. Zakres pomiaru musi obejmować wszystkie wymagane prążki.}
+\clearpage
+\titlepagepart{Dwie szczeliny -- karta 55 z 60}
+
+\note{Wpisuj $p$ ze skali oraz $I$ z miernika. W uwagach zaznacz maksimum, minimum lub zmianę warunków.}
+\begin{tabularx}{\linewidth}{|Y|Y|Y|Y|}\hline
+\textbf{Seria / płytka} & \textbf{$L_2\ [\mathrm{mm}]$} & \textbf{$R_2\ [\Omega]$} & \textbf{Krok $\Delta p\ [\mathrm{mm}]$}\\\hline
+\rule{0pt}{7mm} &  &  & $0{,}1$ \\\hline
+\end{tabularx}\par\smallskip
+\begin{tabularx}{\linewidth}{|Y|Y|Y|Y|}\hline
+\textbf{$p_0\ [\mathrm{mm}]$} & \textbf{$I_0\ [\mathrm{j.u.}]$} & \textbf{Skala sygnału, np. mV} & \textbf{Tło, opcjonalnie}\\\hline
+\rule{0pt}{7mm} &  &  &  \\\hline
+\end{tabularx}\par\smallskip
+\begin{tabularx}{\linewidth}{|p{9mm}|Y|Y|Y|}\hline
+\textbf{Nr} & \textbf{Położenie $p\ [\mathrm{mm}]$} & \textbf{Sygnał $I\ [\mathrm{j.u.}]$} & \textbf{Uwagi}\\\hline
+\rule{0pt}{7mm}1081 &  &  & \\\hline
+\rule{0pt}{7mm}1082 &  &  & \\\hline
+\rule{0pt}{7mm}1083 &  &  & \\\hline
+\rule{0pt}{7mm}1084 &  &  & \\\hline
+\rule{0pt}{7mm}1085 &  &  & \\\hline
+\rule{0pt}{7mm}1086 &  &  & \\\hline
+\rule{0pt}{7mm}1087 &  &  & \\\hline
+\rule{0pt}{7mm}1088 &  &  & \\\hline
+\rule{0pt}{7mm}1089 &  &  & \\\hline
+\rule{0pt}{7mm}1090 &  &  & \\\hline
+\rule{0pt}{7mm}1091 &  &  & \\\hline
+\rule{0pt}{7mm}1092 &  &  & \\\hline
+\rule{0pt}{7mm}1093 &  &  & \\\hline
+\rule{0pt}{7mm}1094 &  &  & \\\hline
+\rule{0pt}{7mm}1095 &  &  & \\\hline
+\rule{0pt}{7mm}1096 &  &  & \\\hline
+\rule{0pt}{7mm}1097 &  &  & \\\hline
+\rule{0pt}{7mm}1098 &  &  & \\\hline
+\rule{0pt}{7mm}1099 &  &  & \\\hline
+\rule{0pt}{7mm}1100 &  &  & \\\hline
+\end{tabularx}\par\smallskip
+\note{Pomiary 1081--1100 z 1200. Krok przesuwania detektora: $0{,}1\,\mathrm{mm}$. Zakres pomiaru musi obejmować wszystkie wymagane prążki.}
+\clearpage
+\titlepagepart{Dwie szczeliny -- karta 56 z 60}
+
+\note{Wpisuj $p$ ze skali oraz $I$ z miernika. W uwagach zaznacz maksimum, minimum lub zmianę warunków.}
+\begin{tabularx}{\linewidth}{|Y|Y|Y|Y|}\hline
+\textbf{Seria / płytka} & \textbf{$L_2\ [\mathrm{mm}]$} & \textbf{$R_2\ [\Omega]$} & \textbf{Krok $\Delta p\ [\mathrm{mm}]$}\\\hline
+\rule{0pt}{7mm} &  &  & $0{,}1$ \\\hline
+\end{tabularx}\par\smallskip
+\begin{tabularx}{\linewidth}{|Y|Y|Y|Y|}\hline
+\textbf{$p_0\ [\mathrm{mm}]$} & \textbf{$I_0\ [\mathrm{j.u.}]$} & \textbf{Skala sygnału, np. mV} & \textbf{Tło, opcjonalnie}\\\hline
+\rule{0pt}{7mm} &  &  &  \\\hline
+\end{tabularx}\par\smallskip
+\begin{tabularx}{\linewidth}{|p{9mm}|Y|Y|Y|}\hline
+\textbf{Nr} & \textbf{Położenie $p\ [\mathrm{mm}]$} & \textbf{Sygnał $I\ [\mathrm{j.u.}]$} & \textbf{Uwagi}\\\hline
+\rule{0pt}{7mm}1101 &  &  & \\\hline
+\rule{0pt}{7mm}1102 &  &  & \\\hline
+\rule{0pt}{7mm}1103 &  &  & \\\hline
+\rule{0pt}{7mm}1104 &  &  & \\\hline
+\rule{0pt}{7mm}1105 &  &  & \\\hline
+\rule{0pt}{7mm}1106 &  &  & \\\hline
+\rule{0pt}{7mm}1107 &  &  & \\\hline
+\rule{0pt}{7mm}1108 &  &  & \\\hline
+\rule{0pt}{7mm}1109 &  &  & \\\hline
+\rule{0pt}{7mm}1110 &  &  & \\\hline
+\rule{0pt}{7mm}1111 &  &  & \\\hline
+\rule{0pt}{7mm}1112 &  &  & \\\hline
+\rule{0pt}{7mm}1113 &  &  & \\\hline
+\rule{0pt}{7mm}1114 &  &  & \\\hline
+\rule{0pt}{7mm}1115 &  &  & \\\hline
+\rule{0pt}{7mm}1116 &  &  & \\\hline
+\rule{0pt}{7mm}1117 &  &  & \\\hline
+\rule{0pt}{7mm}1118 &  &  & \\\hline
+\rule{0pt}{7mm}1119 &  &  & \\\hline
+\rule{0pt}{7mm}1120 &  &  & \\\hline
+\end{tabularx}\par\smallskip
+\note{Pomiary 1101--1120 z 1200. Krok przesuwania detektora: $0{,}1\,\mathrm{mm}$. Zakres pomiaru musi obejmować wszystkie wymagane prążki.}
+\clearpage
+\titlepagepart{Dwie szczeliny -- karta 57 z 60}
+
+\note{Wpisuj $p$ ze skali oraz $I$ z miernika. W uwagach zaznacz maksimum, minimum lub zmianę warunków.}
+\begin{tabularx}{\linewidth}{|Y|Y|Y|Y|}\hline
+\textbf{Seria / płytka} & \textbf{$L_2\ [\mathrm{mm}]$} & \textbf{$R_2\ [\Omega]$} & \textbf{Krok $\Delta p\ [\mathrm{mm}]$}\\\hline
+\rule{0pt}{7mm} &  &  & $0{,}1$ \\\hline
+\end{tabularx}\par\smallskip
+\begin{tabularx}{\linewidth}{|Y|Y|Y|Y|}\hline
+\textbf{$p_0\ [\mathrm{mm}]$} & \textbf{$I_0\ [\mathrm{j.u.}]$} & \textbf{Skala sygnału, np. mV} & \textbf{Tło, opcjonalnie}\\\hline
+\rule{0pt}{7mm} &  &  &  \\\hline
+\end{tabularx}\par\smallskip
+\begin{tabularx}{\linewidth}{|p{9mm}|Y|Y|Y|}\hline
+\textbf{Nr} & \textbf{Położenie $p\ [\mathrm{mm}]$} & \textbf{Sygnał $I\ [\mathrm{j.u.}]$} & \textbf{Uwagi}\\\hline
+\rule{0pt}{7mm}1121 &  &  & \\\hline
+\rule{0pt}{7mm}1122 &  &  & \\\hline
+\rule{0pt}{7mm}1123 &  &  & \\\hline
+\rule{0pt}{7mm}1124 &  &  & \\\hline
+\rule{0pt}{7mm}1125 &  &  & \\\hline
+\rule{0pt}{7mm}1126 &  &  & \\\hline
+\rule{0pt}{7mm}1127 &  &  & \\\hline
+\rule{0pt}{7mm}1128 &  &  & \\\hline
+\rule{0pt}{7mm}1129 &  &  & \\\hline
+\rule{0pt}{7mm}1130 &  &  & \\\hline
+\rule{0pt}{7mm}1131 &  &  & \\\hline
+\rule{0pt}{7mm}1132 &  &  & \\\hline
+\rule{0pt}{7mm}1133 &  &  & \\\hline
+\rule{0pt}{7mm}1134 &  &  & \\\hline
+\rule{0pt}{7mm}1135 &  &  & \\\hline
+\rule{0pt}{7mm}1136 &  &  & \\\hline
+\rule{0pt}{7mm}1137 &  &  & \\\hline
+\rule{0pt}{7mm}1138 &  &  & \\\hline
+\rule{0pt}{7mm}1139 &  &  & \\\hline
+\rule{0pt}{7mm}1140 &  &  & \\\hline
+\end{tabularx}\par\smallskip
+\note{Pomiary 1121--1140 z 1200. Krok przesuwania detektora: $0{,}1\,\mathrm{mm}$. Zakres pomiaru musi obejmować wszystkie wymagane prążki.}
+\clearpage
+\titlepagepart{Dwie szczeliny -- karta 58 z 60}
+
+\note{Wpisuj $p$ ze skali oraz $I$ z miernika. W uwagach zaznacz maksimum, minimum lub zmianę warunków.}
+\begin{tabularx}{\linewidth}{|Y|Y|Y|Y|}\hline
+\textbf{Seria / płytka} & \textbf{$L_2\ [\mathrm{mm}]$} & \textbf{$R_2\ [\Omega]$} & \textbf{Krok $\Delta p\ [\mathrm{mm}]$}\\\hline
+\rule{0pt}{7mm} &  &  & $0{,}1$ \\\hline
+\end{tabularx}\par\smallskip
+\begin{tabularx}{\linewidth}{|Y|Y|Y|Y|}\hline
+\textbf{$p_0\ [\mathrm{mm}]$} & \textbf{$I_0\ [\mathrm{j.u.}]$} & \textbf{Skala sygnału, np. mV} & \textbf{Tło, opcjonalnie}\\\hline
+\rule{0pt}{7mm} &  &  &  \\\hline
+\end{tabularx}\par\smallskip
+\begin{tabularx}{\linewidth}{|p{9mm}|Y|Y|Y|}\hline
+\textbf{Nr} & \textbf{Położenie $p\ [\mathrm{mm}]$} & \textbf{Sygnał $I\ [\mathrm{j.u.}]$} & \textbf{Uwagi}\\\hline
+\rule{0pt}{7mm}1141 &  &  & \\\hline
+\rule{0pt}{7mm}1142 &  &  & \\\hline
+\rule{0pt}{7mm}1143 &  &  & \\\hline
+\rule{0pt}{7mm}1144 &  &  & \\\hline
+\rule{0pt}{7mm}1145 &  &  & \\\hline
+\rule{0pt}{7mm}1146 &  &  & \\\hline
+\rule{0pt}{7mm}1147 &  &  & \\\hline
+\rule{0pt}{7mm}1148 &  &  & \\\hline
+\rule{0pt}{7mm}1149 &  &  & \\\hline
+\rule{0pt}{7mm}1150 &  &  & \\\hline
+\rule{0pt}{7mm}1151 &  &  & \\\hline
+\rule{0pt}{7mm}1152 &  &  & \\\hline
+\rule{0pt}{7mm}1153 &  &  & \\\hline
+\rule{0pt}{7mm}1154 &  &  & \\\hline
+\rule{0pt}{7mm}1155 &  &  & \\\hline
+\rule{0pt}{7mm}1156 &  &  & \\\hline
+\rule{0pt}{7mm}1157 &  &  & \\\hline
+\rule{0pt}{7mm}1158 &  &  & \\\hline
+\rule{0pt}{7mm}1159 &  &  & \\\hline
+\rule{0pt}{7mm}1160 &  &  & \\\hline
+\end{tabularx}\par\smallskip
+\note{Pomiary 1141--1160 z 1200. Krok przesuwania detektora: $0{,}1\,\mathrm{mm}$. Zakres pomiaru musi obejmować wszystkie wymagane prążki.}
+\clearpage
+\titlepagepart{Dwie szczeliny -- karta 59 z 60}
+
+\note{Wpisuj $p$ ze skali oraz $I$ z miernika. W uwagach zaznacz maksimum, minimum lub zmianę warunków.}
+\begin{tabularx}{\linewidth}{|Y|Y|Y|Y|}\hline
+\textbf{Seria / płytka} & \textbf{$L_2\ [\mathrm{mm}]$} & \textbf{$R_2\ [\Omega]$} & \textbf{Krok $\Delta p\ [\mathrm{mm}]$}\\\hline
+\rule{0pt}{7mm} &  &  & $0{,}1$ \\\hline
+\end{tabularx}\par\smallskip
+\begin{tabularx}{\linewidth}{|Y|Y|Y|Y|}\hline
+\textbf{$p_0\ [\mathrm{mm}]$} & \textbf{$I_0\ [\mathrm{j.u.}]$} & \textbf{Skala sygnału, np. mV} & \textbf{Tło, opcjonalnie}\\\hline
+\rule{0pt}{7mm} &  &  &  \\\hline
+\end{tabularx}\par\smallskip
+\begin{tabularx}{\linewidth}{|p{9mm}|Y|Y|Y|}\hline
+\textbf{Nr} & \textbf{Położenie $p\ [\mathrm{mm}]$} & \textbf{Sygnał $I\ [\mathrm{j.u.}]$} & \textbf{Uwagi}\\\hline
+\rule{0pt}{7mm}1161 &  &  & \\\hline
+\rule{0pt}{7mm}1162 &  &  & \\\hline
+\rule{0pt}{7mm}1163 &  &  & \\\hline
+\rule{0pt}{7mm}1164 &  &  & \\\hline
+\rule{0pt}{7mm}1165 &  &  & \\\hline
+\rule{0pt}{7mm}1166 &  &  & \\\hline
+\rule{0pt}{7mm}1167 &  &  & \\\hline
+\rule{0pt}{7mm}1168 &  &  & \\\hline
+\rule{0pt}{7mm}1169 &  &  & \\\hline
+\rule{0pt}{7mm}1170 &  &  & \\\hline
+\rule{0pt}{7mm}1171 &  &  & \\\hline
+\rule{0pt}{7mm}1172 &  &  & \\\hline
+\rule{0pt}{7mm}1173 &  &  & \\\hline
+\rule{0pt}{7mm}1174 &  &  & \\\hline
+\rule{0pt}{7mm}1175 &  &  & \\\hline
+\rule{0pt}{7mm}1176 &  &  & \\\hline
+\rule{0pt}{7mm}1177 &  &  & \\\hline
+\rule{0pt}{7mm}1178 &  &  & \\\hline
+\rule{0pt}{7mm}1179 &  &  & \\\hline
+\rule{0pt}{7mm}1180 &  &  & \\\hline
+\end{tabularx}\par\smallskip
+\note{Pomiary 1161--1180 z 1200. Krok przesuwania detektora: $0{,}1\,\mathrm{mm}$. Zakres pomiaru musi obejmować wszystkie wymagane prążki.}
+\clearpage
+\titlepagepart{Dwie szczeliny -- karta 60 z 60}
+
+\note{Wpisuj $p$ ze skali oraz $I$ z miernika. W uwagach zaznacz maksimum, minimum lub zmianę warunków.}
+\begin{tabularx}{\linewidth}{|Y|Y|Y|Y|}\hline
+\textbf{Seria / płytka} & \textbf{$L_2\ [\mathrm{mm}]$} & \textbf{$R_2\ [\Omega]$} & \textbf{Krok $\Delta p\ [\mathrm{mm}]$}\\\hline
+\rule{0pt}{7mm} &  &  & $0{,}1$ \\\hline
+\end{tabularx}\par\smallskip
+\begin{tabularx}{\linewidth}{|Y|Y|Y|Y|}\hline
+\textbf{$p_0\ [\mathrm{mm}]$} & \textbf{$I_0\ [\mathrm{j.u.}]$} & \textbf{Skala sygnału, np. mV} & \textbf{Tło, opcjonalnie}\\\hline
+\rule{0pt}{7mm} &  &  &  \\\hline
+\end{tabularx}\par\smallskip
+\begin{tabularx}{\linewidth}{|p{9mm}|Y|Y|Y|}\hline
+\textbf{Nr} & \textbf{Położenie $p\ [\mathrm{mm}]$} & \textbf{Sygnał $I\ [\mathrm{j.u.}]$} & \textbf{Uwagi}\\\hline
+\rule{0pt}{7mm}1181 &  &  & \\\hline
+\rule{0pt}{7mm}1182 &  &  & \\\hline
+\rule{0pt}{7mm}1183 &  &  & \\\hline
+\rule{0pt}{7mm}1184 &  &  & \\\hline
+\rule{0pt}{7mm}1185 &  &  & \\\hline
+\rule{0pt}{7mm}1186 &  &  & \\\hline
+\rule{0pt}{7mm}1187 &  &  & \\\hline
+\rule{0pt}{7mm}1188 &  &  & \\\hline
+\rule{0pt}{7mm}1189 &  &  & \\\hline
+\rule{0pt}{7mm}1190 &  &  & \\\hline
+\rule{0pt}{7mm}1191 &  &  & \\\hline
+\rule{0pt}{7mm}1192 &  &  & \\\hline
+\rule{0pt}{7mm}1193 &  &  & \\\hline
+\rule{0pt}{7mm}1194 &  &  & \\\hline
+\rule{0pt}{7mm}1195 &  &  & \\\hline
+\rule{0pt}{7mm}1196 &  &  & \\\hline
+\rule{0pt}{7mm}1197 &  &  & \\\hline
+\rule{0pt}{7mm}1198 &  &  & \\\hline
+\rule{0pt}{7mm}1199 &  &  & \\\hline
+\rule{0pt}{7mm}1200 &  &  & \\\hline
+\end{tabularx}\par\smallskip
+\note{Pomiary 1181--1200 z 1200. Krok przesuwania detektora: $0{,}1\,\mathrm{mm}$. Zakres pomiaru musi obejmować wszystkie wymagane prążki.}
+\clearpage
+\titlepagepart{63 Dwie szczeliny -- obliczenia}
+\note{Na wykresie liniowym ponumeruj jasne maksima, przypisując zero maksimum głównemu. Dobierz pary $-m,+m$.}
+\[r_m=\frac{p_{p,m}-p_{l,m}}2,\qquad d_m=\frac{m\lambda L_2}{r_m}.\]
+\begin{tabularx}{\linewidth}{|Y|Y|Y|Y|Y|}\hline
+\textbf{$m$} & \textbf{$p_{l,m}\ [\mathrm{mm}]$} & \textbf{$p_{p,m}\ [\mathrm{mm}]$} & \textbf{$r_m\ [\mathrm{mm}]$} & \textbf{$d_m\ [\mathrm{mm}]$}\\\hline
+\rule{0pt}{10mm}1 &  &  &  & \\\hline
+\rule{0pt}{10mm}2 &  &  &  & \\\hline
+\rule{0pt}{10mm}3 &  &  &  & \\\hline
+\rule{0pt}{10mm}4 &  &  &  & \\\hline
+\rule{0pt}{10mm}5 &  &  &  & \\\hline
+\rule{0pt}{10mm}6 &  &  &  & \\\hline
+\rule{0pt}{10mm}7 &  &  &  & \\\hline
+\end{tabularx}\par\smallskip
+\begin{tabularx}{\linewidth}{|Y|Y|Y|}\hline
+\textbf{$N$} & \textbf{$\bar d=\dfrac1N\sum_m d_m\ [\mathrm{mm}]$} & \textbf{$u_{\mathrm A}(\bar d)\ [\mathrm{mm}]$}\\\hline
+\rule{0pt}{12mm} &  & \\\hline
+\end{tabularx}\par\smallskip
+\[Q=\frac{I_{\min}}{I_{\max}}.\]
+\begin{tabularx}{\linewidth}{|Y|Y|Y|}\hline
+\textbf{Odczyt do oceny jakości} & \textbf{$p\ [\mathrm{mm}]$} & \textbf{$I\ [\mathrm{j.u.}]$}\\\hline
+\rule{0pt}{10mm}Największe maksimum &  & \\\hline
+\rule{0pt}{10mm}Najbliższe minimum &  & \\\hline
+\end{tabularx}\par\smallskip
+\begin{tabularx}{\linewidth}{|Y|Y|}\hline
+\textbf{$Q\ [1]$} & \textbf{Sygnał surowy czy po korekcie tła?}\\\hline
+\rule{0pt}{10mm} & \\\hline
+\end{tabularx}\par\smallskip
+\note{$Q$ bliskie 0: wyraźne prążki; $Q$ bliskie 1: prążki zanikają.}
+\writebox{Uwagi o symetrii, obwiedni i jakości obrazu}{23mm}
+\clearpage
+\titlepagepart{64 Niepewności i końcowe wyniki}
+\note{Wpisz niepewności standardowe i uzasadnij ich przyjęcie. Błąd graniczny oraz rozdzielczość nie są automatycznie niepewnością standardową.}
+\[u_{\mathrm B}=\frac{\Delta}{\sqrt3}\quad(\text{błąd jednostajny }\pm\Delta),\qquad u_{\mathrm B}=\frac{q}{\sqrt{12}}\quad(\text{zaokrąglenie o kroku }q).\]
+\begin{tabularx}{\linewidth}{|Y|Y|Y|}\hline
+\textbf{Wielkość} & \textbf{Przyrząd / źródło i model} & \textbf{$u$ z jednostką}\\\hline
+\rule{0pt}{11mm}$\lambda$ &  & \\\hline
+\rule{0pt}{11mm}$L_2$ &  & \\\hline
+\rule{0pt}{11mm}$p_l,p_p$ &  & \\\hline
+\rule{0pt}{11mm}$I$ lub $U$ &  & \\\hline
+\end{tabularx}\par\smallskip
+\[
+u_{\mathrm A}(\bar z)=\sqrt{\frac{\sum_{i=1}^N(z_i-\bar z)^2}{N(N-1)}},\qquad
+u(r)=\frac12\sqrt{u^2(p_l)+u^2(p_p)}.
+\]
+\[
+\frac{u(z)}{z}=\sqrt{\left(\frac{u(\lambda)}{\lambda}\right)^2+
+\left(\frac{u(L)}{L}\right)^2+\left(\frac{u(r)}r\right)^2},\quad z=d_m.
+\]
+\note{Wzór względny dotyczy pojedynczego oszacowania przy niezależnych danych wejściowych. W średniej uwzględnij wspólne $\lambda,L$, korelacje. Sama $u_{\mathrm A}$ nie jest pełną niepewnością.}
+\writebox{Obliczenia i uzasadnienie końcowej niepewności}{27mm}
+\begin{tabularx}{\linewidth}{|Y|Y|Y|Y|Y|}\hline
+\textbf{Wynik} & \textbf{Wartość [mm]} & \textbf{$u$ [mm]} & \textbf{$100u/z$ [\%]} & \textbf{$U=ku$ [mm]}\\\hline
+\rule{0pt}{12mm}$\bar d$ &  &  &  & \\\hline
+\end{tabularx}\par\smallskip
+\begin{tabularx}{\linewidth}{|Y|Y|}\hline
+\textbf{Współczynnik rozszerzenia $k$, jeśli stosujesz $U$} & \textbf{Wartość}\\\hline
+\rule{0pt}{9mm} & \\\hline
+\end{tabularx}\par\smallskip
+\clearpage
+\titlepagepart{65 Notatki do sprawozdania}
+\note{Wpisuj obserwacje wynikające z własnych danych. Na osi logarytmicznej pokazuj tylko dodatnie sygnały i opisz pominięte punkty.}
+\writebox{Cel, rzeczywista metoda i ustawienie aparatury}{24mm}
+\writebox{Wykres dla dwóch szczelin: natężenie w funkcji położenia detektora}{24mm}
+\writebox{Zgodność z teorią: minima, maksima, symetria, natężenia i wskaźnik $Q$}{24mm}
+\writebox{Źródła rozbieżności oraz ich wpływ na wynik}{24mm}
+\writebox{Wnioski na podstawie pomiarów}{24mm}
+\note{Podstawa: instrukcja 71\_wykon.pdf oraz opis 71\_opis (1).pdf. Przed oddaniem sprawdź jednostki, niepewności, podpisy wykresów i zaokrąglenia.}
+\end{document}

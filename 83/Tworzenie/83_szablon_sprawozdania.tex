@@ -1,0 +1,151 @@
+\documentclass[11pt,a4paper]{article}
+\newcommand{\Rodzaj}{Szablon sprawozdania}
+\input{styl.tex}
+\begin{document}
+\metryka
+\section{Cel ćwiczenia}
+Wyznaczenie długości fal widma liniowego par rtęci za pomocą spektrometru
+z siatką dyfrakcyjną oraz identyfikacja odpowiadających im przejść energetycznych.
+\section{Podstawy teoretyczne}
+Widmo liniowe wynika z przejść między dyskretnymi poziomami energetycznymi.
+Energia emitowanego fotonu spełnia zależność
+\[
+\boxed{E_g-E_d=h\nu=\frac{hc}{\lambda}.}
+\]
+Dla światła padającego prostopadle na siatkę warunek maksimum ma postać
+\[
+\boxed{d\sin\alpha_n=n\lambda,\qquad
+\lambda_n=\frac{d\sin\alpha_n}{n},\qquad d=\frac1N.}
+\]
+Tutaj $d$ jest stałą siatki, $N$ liczbą rys na jednostkę długości,
+$n=1,2$ dodatnim numerem rzędu, a $\alpha_n$ kątem odchylenia od
+wiązki nieodchylonej. Rząd $n=0$ służy wyznaczeniu kierunku zerowego,
+nie oblicza się z niego długości fali.
+\section{Aparatura i przebieg pomiarów}
+Stanowisko obejmuje lampę rtęciową, kolimator z regulowaną szczeliną,
+siatkę na stoliku oraz obracaną lunetę z podziałką kątową i noniuszem.
+\begin{center}\small\fbox{Lampa Hg $\longrightarrow$ kolimator
+$\longrightarrow$ siatka $\longrightarrow$ luneta i odczyt kąta}\end{center}
+\begin{tabularx}{\linewidth}{|Y|Y|}\hline
+\naglowek\textbf{Parametr} & \textbf{Wartość rzeczywista}\\\hline
+Stała siatki $d$ / liczba rys $N$ & \rule{0pt}{7mm}\\\hline
+Szerokość szczeliny & \rule{0pt}{7mm}\\\hline
+Przyjęta dokładność odczytu kąta & \rule{0pt}{7mm}\\\hline
+Kierunek zerowy $\theta_0$ & \rule{0pt}{7mm}\\\hline
+\end{tabularx}
+\miejsce{19mm}{Opis rzeczywistego przebiegu: ustawienie i kontrola siatki,
+odczyt zera, pomiar obu stron w I i II rzędzie, liczba powtórzeń,
+osobne odczyty dwóch linii żółtych.}
+
+\clearpage
+\section{Wyniki pomiarów}
+Zestaw odchylenia lewej i prawej strony dla każdej linii i obu rzędów.
+Surowe wskazania skali $\theta$ oraz odczyt zera $\theta_0$ zachowaj
+na karcie pomiarowej. Przy powtórzeniach podaj ich liczbę
+i sposób uśredniania. Identyfikator linii musi być taki sam w obu rzędach.
+\begin{center}\small
+\captionof{table}{Odchylenia obu stron wyznaczone z własnych odczytów.}
+\begin{tabularx}{\linewidth}{|c|c|Y|C|C|}\hline
+\naglowek\textbf{ID} & \textbf{Rząd} & \textbf{Barwa} &
+$\alpha_L$ [$^\circ$] & $\alpha_P$ [$^\circ$]\\\hline
+\csname @@input\endcsname{odchylenia_szablon.tex}
+\end{tabularx}\end{center}
+\miejsce{35mm}{Kontrola ustawienia: różnica odchyleń stron w I rzędzie,
+porównanie z progiem około $10'$ oraz rzeczywiste poprawki ustawienia.
+Nie stwierdzaj eliminacji wszystkich błędów systematycznych tylko na podstawie uśrednienia stron.}
+
+\clearpage
+\section{Opracowanie kątów i długości fal}
+\subsection{Kąt odchylenia}
+Odczyt $\theta$ jest wskazaniem skali, której zero nie musi odpowiadać
+wiązce nieodchylonej. Stopnie i minuty przeliczamy jako
+\[
+\boxed{\theta= D+\frac{M}{60}\quad[{}^\circ],\qquad
+\theta_{\mathrm{rad}}=\theta_{\mathrm{deg}}\frac{\pi}{180}.}
+\]
+Różnicę względem $\theta_0$ należy sprowadzić do przedziału
+$(-180^\circ,180^\circ]$, aby poprawnie przejść przez zero skali.
+Dla pary lewego i prawego prążka obliczamy
+\[
+\boxed{\begin{gathered}
+\alpha_L=|\operatorname{wrap}(\theta_L-\theta_0)|,\qquad
+\alpha_P=|\operatorname{wrap}(\theta_P-\theta_0)|,\\[3pt]
+\overline\alpha_n=\frac{\alpha_L+\alpha_P}{2},\qquad
+\lambda_n=\frac{d\sin\overline\alpha_n}{n}.
+\end{gathered}}
+\]
+Najpierw wyznaczamy średni kąt, następnie długość fali.
+W obliczeniach funkcji sinus należy użyć właściwej jednostki kąta.
+Dla powtórzeń najpierw uśrednia się odchylenia w obrębie tej samej linii i rzędu.
+\subsection{Zestawienie wyników obu rzędów}
+\begin{center}\small
+\captionof{table}{Kąty i długości fal tych samych linii w I i II rzędzie.}
+\begin{tabularx}{\linewidth}{|c|Y|C|C|C|C|C|}\hline
+\naglowek\textbf{ID} & \textbf{Barwa} & $\overline\alpha_1$ [$^\circ$] &
+$\lambda_1$ [nm] & $\overline\alpha_2$ [$^\circ$] &
+$\lambda_2$ [nm] & $|\lambda_1-\lambda_2|$ [nm]\\\hline
+\csname @@input\endcsname{wyniki_rzedy.tex}
+\end{tabularx}\end{center}
+\miejsce{37mm}{Przykład obliczenia dla jednej linii: surowe odczyty,
+przejście przez zero skali, średni kąt, stała siatki i długość fali z jednostkami.}
+
+\clearpage
+\section{Identyfikacja linii widmowych}
+Dla każdej linii zestaw wynik z długością fali odpowiadającego jej
+przejścia na diagramie poziomów Hg w instrukcji. Obie linie dubletu
+żółtego wpisz w osobnych wierszach. Symbole poziomów zapisuj
+w postaci $N^{2S+1}X_J$, z poziomem początkowym o wyższej energii.
+\[
+\boxed{\lambda_{\mathrm{konc}}=\frac{\lambda_1+\lambda_2}{2}
+\quad\text{(dla linii zmierzonej w obu rzędach)},\qquad
+\Delta E=\frac{hc}{\lambda_{\mathrm{konc}}}.}
+\]
+Średnia arytmetyczna jest przyjętym sposobem zestawienia dwóch rzędów.
+Gdy pomiar istnieje tylko w jednym rzędzie, wpisz ten wynik i zaznacz brak
+drugiego. Nie obliczaj wtedy różnicy między rzędami dla tej linii.
+\begin{center}\small
+\captionof{table}{Wyniki końcowe i identyfikacja przejść energetycznych.}
+\begin{tabularx}{\linewidth}{|c|Y|C|C|Y|Y|}\hline
+\naglowek\textbf{ID} & \textbf{Barwa} & $\lambda_{\mathrm{konc}}$ [nm] &
+$\lambda_{\mathrm{ref}}$ [nm] & \textbf{Poziom początkowy} & \textbf{Poziom końcowy}\\\hline
+\csname @@input\endcsname{identyfikacja.tex}
+\end{tabularx}\end{center}
+\miejsce{30mm}{Uzasadnienie przypisania linii: zgodność długości fal,
+rozdzielenie dubletu i ewentualne niejednoznaczności.}
+\miejsce{48mm}{Opcjonalny schemat zidentyfikowanych przejść lub diagram linii widmowych.
+Instrukcja wymaga tabeli identyfikacji; wykres nie jest obowiązkowy.}
+
+\clearpage
+\section{Ocena błędu pomiaru}
+Instrukcja wskazuje, że istotne mogą być błędy systematyczne związane
+z niedoskonałym ustawieniem spektrometru. Jako oszacowanie błędu
+zaleca średnią różnicę długości fal uzyskanych z I i II rzędu.
+Dla $K$ linii zmierzonych w obu rzędach przyjmujemy dodatnią miarę rozbieżności:
+\[
+\boxed{\Delta\lambda_{\mathrm{szac}}=
+\frac1K\sum_{i=1}^{K}|\lambda_{i,1}-\lambda_{i,2}|.}
+\]
+Jest to szacunkowa miara błędu według instrukcji, a nie automatycznie
+niepewność standardowa ani rozszerzona. Podaj, które linie uwzględniono.
+\miejsce{22mm}{Oszacowanie błędu: liczba wspólnych linii $K$, różnice między
+rzędami i obliczona wartość $\Delta\lambda_{\mathrm{szac}}$.}
+Jeżeli dostępne są niepewności stałej siatki i kąta, dodatkowo można
+zastosować propagację dla niezależnych wielkości:
+\[
+\boxed{u(\lambda_n)=\frac1n\sqrt{
+\sin^2\alpha_n\,u^2(d)+d^2\cos^2\alpha_n\,u^2(\alpha_n)}.}
+\]
+W tym wzorze $u(\alpha_n)$ musi być wyrażona w radianach.
+Sam zalecany odczyt do $1'$ nie jest gotowym bilansem niepewności.
+\miejsce{17mm}{Dyskusja wyników: różnice obu stron, ewentualny wspólny kierunek
+różnic I--II rzędu, wpływ ustawienia siatki i identyfikacji prążków.
+Odróżnij zaobserwowane rozbieżności od przypuszczalnych przyczyn.}
+\section{Wnioski}
+\begin{tabularx}{\linewidth}{|>{\raggedright\arraybackslash}p{43mm}|Y|}\hline
+\naglowek\textbf{Zagadnienie} & \textbf{Wynik i interpretacja}\\\hline
+Wyznaczone długości fal & \rule{0pt}{13mm}\\\hline
+Zgodność I i II rzędu oraz ocena błędu & \rule{0pt}{13mm}\\\hline
+Identyfikacja przejść i dublet żółty & \rule{0pt}{13mm}\\\hline
+Ograniczenia pomiaru & \rule{0pt}{13mm}\\\hline
+\end{tabularx}
+\end{document}

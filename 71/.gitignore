@@ -1,0 +1,103 @@
+# Publiczne PDF-y, źródła, instrukcje, dane i paczki Overleaf pozostają w Git.
+# Przykłady i archiwum są lokalne; wyjątki dla własnych PDF-ów podano na końcu.
+Przykład/
+Przyklad/
+przyklad/
+Archiwum/
+sprawozdanie.pdf
+main.pdf
+*_sprawozdanie_uzupelnione.*
+*_sprawozdanie_do_weryfikacji.*
+*_sprawozdanie_v[0-9]*.*
+*_sprawozdanie_obliczenia.*
+*_sprawozdanie_poglad.*
+**/Tworzenie/main.tex
+**/Tworzenie/pierwszy.tex
+uklad_sprawozdania.tex
+przygotuj_v2.py
+uzupelnij_szablon.py
+wahadlo_szablon.zip
+# Pomocniczy eksport Worda; publicznym formatem jest LaTeX/PDF.
+71_szablon_sprawozdania.docx
+
+# Python i środowiska lokalne
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+env/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# LaTeX: wyłącznie pliki pomocnicze, nie PDF-y ani źródła
+*.aux
+*.log
+*.out
+*.toc
+*.lof
+*.lot
+*.fls
+*.fdb_latexmk
+*.synctex.gz
+*.synctex(busy)
+*.xdv
+*.dvi
+*.nav
+*.snm
+*.vrb
+*.bcf
+*.run.xml
+*.blg
+*.idx
+*.ilg
+*.ind
+*.spl
+*.acn
+*.acr
+*.alg
+*.glg
+*.glo
+*.gls
+*.ist
+*.fmt
+*.bbl
+
+# Wyniki robocze generatorów, cache i podglądy
+wyniki/
+tmp/
+temp/
+.cache/
+rendered/
+preview/
+qa/
+
+# Konfiguracja lokalna, sekrety, edytory i system
+.env
+.env.*
+!.env.example
+!.env.sample
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+~$*
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Wyj?tki: wy??cznie w?asne sprawozdania PDF, poza przyk?adami i archiwum.
+
+# Exercise 71: earlier data and completed results stay local.
+/Dane_zrodlowe/
+/Sprawko/Dane/*
+!/Sprawko/Dane/szablon/
+!/Sprawko/Dane/README.md
+/Sprawko/PDF/Wykresy/
+/Sprawko/Tworzenie/analiza_pelna.py
+/Sprawko/Tworzenie/wykres_poglad.py
+/Sprawko/Tworzenie/wyniki_pelne.tex
+/Sprawko/Tworzenie/pary_pelne.tex

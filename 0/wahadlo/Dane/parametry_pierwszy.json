@@ -1,0 +1,5 @@
+{
+  "L_m": 0.245,
+  "u_L_m": 0.004,
+  "interpretacja": "u_L jako niepewnosc standardowa; delta dzialki 0.001 m nie jest tu u_L"
+}

@@ -1,0 +1,25 @@
+{
+  "autorzy": "",
+  "wydzial": "",
+  "rok": "",
+  "grupa": "",
+  "zespol": "",
+  "data_wykonania": "",
+  "data_oddania": "",
+  "lambda_nm": null,
+  "u_lambda_nm": null,
+  "podwojna": {
+    "L_mm": null,
+    "u_L_mm": null,
+    "p0_mm": null,
+    "krok_mm": null,
+    "R_ohm": null,
+    "u_p_mm": null,
+    "Imax_ju": null,
+    "Imin_ju": null,
+    "u_koncowe_d_mm": null
+  },
+  "opis_przebiegu": "[Opisz rzeczywiste ustawienie, pomiar i odstępstwa od instrukcji.]",
+  "opis_niepewnosci": "[Podaj specyfikacje przyrządów, sposób ustalenia ekstremów oraz metodę obliczenia końcowych niepewności.]",
+  "wnioski": "[Oceń zgodność z teorią na podstawie własnych danych i wskaż dominujące ograniczenia pomiaru.]"
+}

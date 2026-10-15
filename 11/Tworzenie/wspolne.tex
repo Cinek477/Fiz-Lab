@@ -1,0 +1,70 @@
+\newcommand{\przyrzadopis}[1]{%
+\par\medskip\noindent
+\begin{minipage}[c]{0.44\linewidth}
+\centering\includegraphics[width=\linewidth,height=104mm,keepaspectratio]{#1}
+\end{minipage}\hfill
+\begin{minipage}[c]{0.51\linewidth}
+\raggedright
+\captionof{figure}{Przyrząd do statycznego pomiaru modułu Younga.}
+\medskip
+\textbf{A — górny uchwyt}\par
+Mocuje górny koniec badanego drutu.
+\par\smallskip\textbf{B — dolne mocowanie}\par
+Łączy drut z układem obciążenia.
+\par\smallskip\textbf{C — dźwignia}\par
+Przenosi przemieszczenie drutu na czujnik.
+\par\smallskip\textbf{D — czujnik mikrometryczny}\par
+Wskazuje przemieszczenie dwukrotnie większe od wydłużenia drutu.
+\par\smallskip Szalka z odważnikami obciąża dolne mocowanie.
+\medskip\par{\footnotesize Rysunek: instrukcja \texttt{11\_wykon.pdf}, s.~2.}
+\end{minipage}\par\medskip}
+\newcommand{\teoria}{%
+W zakresie liniowej sprężystości prawo Hooke'a wiąże naprężenie
+$\sigma$ z odkształceniem względnym $\varepsilon$:
+\[
+\boxed{\sigma=E\varepsilon,\quad\sigma=\frac{F}{S},\quad
+\varepsilon=\frac{\Delta l}{l},\quad S=\frac{\pi d^2}{4}.}
+\]
+Moduł Younga $E$ ma jednostkę Pa. Zależność wydłużenia od siły
+w przyjętym zakresie opisujemy prostą ze swobodnym wyrazem wolnym:
+\[
+\boxed{\Delta l=aF+b,\qquad E=\frac{4l}{\pi d^2a},\qquad F=mg.}
+\]
+Wzór na $E$ wymaga jednostek SI: $l,d$ w m oraz $a$ w m/N.
+Dla dopasowania względem masy $\Delta l=cm+b$ zamiast siły
+należy użyć $E=4lg/(\pi d^2c)$; nie wolno zamieniać współczynników $a$ i $c$.
+}
+\newcommand{\dzwignia}{%
+Czujnik jest sprzężony z drutem przez dźwignię. Odległość drutu
+od osi obrotu jest dwa razy mniejsza niż odległość punktu styku czujnika,
+zatem jego wskazanie jest dwa razy większe od wydłużenia drutu.
+Po prawidłowym wyzerowaniu:
+\[
+\boxed{\Delta l_{\uparrow}=\frac{z_{\uparrow}}2,\quad
+\Delta l_{\downarrow}=\frac{z_{\downarrow}}2,\quad
+\overline{\Delta l}=\frac{z_{\uparrow}+z_{\downarrow}}4.}
+\]
+Jeśli zero nie jest równe 0, przed użyciem wzoru odejmij odpowiedni
+odczyt zerowy. Nie dziel wskazań przez 2 ponownie w regresji.
+}
+\newcommand{\tabelapomiarow}{%
+\begingroup\small\renewcommand{\arraystretch}{1}
+\begin{tabularx}{\linewidth}{|c|C|C|C|C|Y|}\hline
+\naglowek\textbf{Nr} & \textbf{Masa całkowita} [kg] & \textbf{Czujnik $z_\uparrow$} [mm] &
+\textbf{Czujnik $z_\downarrow$} [mm] & \textbf{Zero / uwagi} & \textbf{Uwagi do punktu}\\\hline
+\csname @@input\endcsname{tabela_pusta.tex}
+\end{tabularx}\endgroup}
+\newcommand{\tabelaopracowania}{%
+\begingroup\small\renewcommand{\arraystretch}{1}
+\begin{tabularx}{\linewidth}{|c|C|C|C|C|C|}\hline
+\naglowek\textbf{Nr} & $m$ [kg] & $F=mg$ [N] &
+$z_\uparrow$ [mm] & $z_\downarrow$ [mm] & $\overline{\Delta l}$ [mm]\\\hline
+\csname @@input\endcsname{tabela_pusta.tex}
+\end{tabularx}\endgroup}
+\newcommand{\wymiary}[1]{%
+\textbf{#1}\quad Materiał: \pole\quad Długość $l=$ \pole\ m.
+\par\smallskip
+\begin{tabularx}{\linewidth}{|Y|C|C|C|}\hline
+\naglowek\textbf{Średnica w trzech miejscach} & $d_1$ [mm] & $d_2$ [mm] & $d_3$ [mm]\\\hline
+Pomiar przy obciążeniu 2 kg & & &\rule{0pt}{9mm}\\\hline
+\end{tabularx}\par\smallskip}

@@ -1,0 +1,78 @@
+\documentclass[11pt,a4paper]{article}
+\newcommand{\Rodzaj}{Karta pomiarowa}
+\input{styl.tex}
+\usepackage{multirow}
+\newcommand{\notatki}[1]{%
+\par\smallskip\textbf{#1}\par
+\rule{\linewidth}{0.25pt}\par\vspace{5mm}
+\rule{\linewidth}{0.25pt}\par\vspace{5mm}
+\rule{\linewidth}{0.25pt}\par}
+\newcommand{\zeroserii}{%
+\begin{tabularx}{\linewidth}{|Y|p{27mm}|p{27mm}|}\hline
+\naglowek\textbf{Wiązka nieodchylona — odczyt $\theta_0$} & \textbf{Stopnie [$^\circ$]} & \textbf{Minuty [$'$]}\\\hline
+Kierunek zerowy dla tej serii & &\rule{0pt}{9mm}\\\hline
+\end{tabularx}\par\medskip}
+\newcommand{\tabelaodczytow}{%
+\begingroup\small\setlength{\tabcolsep}{5pt}\renewcommand{\arraystretch}{1}
+\begin{tabularx}{\linewidth}{|c|p{35mm}|c|C|C|C|C|}\hline
+\naglowek\textbf{ID} & \textbf{Barwa linii} & \textbf{Pomiar} &
+\multicolumn{2}{c|}{\textbf{Lewa strona $\theta_L$}} &
+\multicolumn{2}{c|}{\textbf{Prawa strona $\theta_P$}}\\\cline{4-7}
+ & & & stopnie [$^\circ$] & minuty [$'$] & stopnie [$^\circ$] & minuty [$'$]\\\hline
+\csname @@input\endcsname{odczyty.tex}
+\end{tabularx}\endgroup\par}
+\begin{document}
+\metryka
+\section*{1. Parametry stanowiska}
+\begin{tabularx}{\linewidth}{|Y|p{53mm}|p{20mm}|}\hline
+\naglowek\textbf{Parametr} & \textbf{Wartość} & \textbf{Jednostka}\\\hline
+Liczba rys siatki $N$ & & $\mathrm{mm}^{-1}$\rule{0pt}{10mm}\\\hline
+Stała siatki $d=1/N$ & & mm\rule{0pt}{10mm}\\\hline
+Szerokość szczeliny & & mm\rule{0pt}{10mm}\\\hline
+Przyjęta dokładność odczytu kąta & & minuty ($'$)\rule{0pt}{10mm}\\\hline
+\end{tabularx}
+\odstep\small Stałą siatki lub liczbę rys odczytaj na stanowisku.
+Nie wpisuj parametrów z przykładowego sprawozdania bez sprawdzenia.\normalsize
+
+\section*{2. Kontrola ustawienia}
+Dla tej samej linii w I rzędzie porównaj odchylenia lewej i prawej
+strony względem wiązki nieodchylonej. Różnica większa niż około
+$10'$ wymaga poprawienia prostopadłości siatki.
+\par\medskip
+\begin{tabularx}{\linewidth}{|Y|C|C|C|}\hline
+\naglowek\textbf{Linia kontrolna / barwa} & $\alpha_L$ [$^\circ$] & $\alpha_P$ [$^\circ$] & \textbf{Różnica [$'$]}\\\hline
+ & & &\rule{0pt}{13mm}\\\hline
+\end{tabularx}
+\odstep
+$\square$ ostrość lunety\quad $\square$ odczyt zera\quad
+$\square$ prostopadłość siatki
+\notatki{Uwagi do przygotowania stanowiska}
+
+\section*{3. Zasady zapisu}
+\begin{itemize}\setlength{\itemsep}{2pt}
+\item W tabelach zapisuj \textbf{surowe wskazania skali $\theta$}.
+Odchylenia $\alpha$ obliczysz później względem $\theta_0$.
+\item Stopnie i minuty wpisuj w osobnych kolumnach.
+Przykład: $14^\circ20'$ to $14{,}3333\ldots{}^\circ$, nie $14{,}20^\circ$.
+\item Zachowaj ten sam ID dla danej linii po obu stronach i w obu rzędach.
+Obie linie żółte wpisz jako dwa osobne ID.
+\item Trzy wiersze pod jednym ID służą powtórzeniom. Niewykonane
+pomiary pozostaw puste, a niewidoczną linię oznacz w uwagach.
+\end{itemize}
+
+\clearpage
+\section*{I rząd widma — $n=1$}
+\zeroserii
+\small Wpisuj wskazania skali. Dwa żółte prążki mają osobne ID.
+Trzy pomiary w grupie dotyczą tej samej linii.\normalsize
+\par\medskip\tabelaodczytow
+\odstep\small Uwagi: \rule{\dimexpr\linewidth-14mm\relax}{0.25pt}\normalsize
+
+\clearpage
+\section*{II rząd widma — $n=2$}
+\zeroserii
+\small Zachowaj ID z I rzędu. Jeśli linii nie widać, wpisz
+„niewidoczna” w polu barwy i nie uzupełniaj odczytu.\normalsize
+\par\medskip\tabelaodczytow
+\odstep\small Uwagi: \rule{\dimexpr\linewidth-14mm\relax}{0.25pt}\normalsize
+\end{document}

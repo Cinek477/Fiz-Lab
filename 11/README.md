@@ -44,4 +44,3 @@ Rysunek przyrządu znajduje się w `Tworzenie/Rysunki/` i w ZIP-ie.
 Karta ma 3 strony, szablon 6. Paczkę odtworzysz z głównego folderu
 przez `python Narzedzia/pakuj_overleaf.py`.
 
-Folder `Przykład/` pozostaje lokalny i jest ignorowany przez Git.

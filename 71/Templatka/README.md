@@ -19,4 +19,3 @@ tectonic 71_karta_pomiarowa_1_1200.tex --outdir ../PDF
 
 Generator korzysta z `uklad_karty.tex`. Ten plik jest bazą układu,
 nie dokumentem do samodzielnej kompilacji. Edytuj go przed odtworzeniem karty.
-Dawne karty pozostają lokalnie w `Archiwum/` i nie są potrzebne do działania generatora.

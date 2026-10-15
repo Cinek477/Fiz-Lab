@@ -29,7 +29,3 @@ Overleaf: **XeLaTeX**; wybierz `71_karta_pomiarowa_1_1200.tex` lub
 `71_szablon_sprawozdania.tex`. ZIP odtwarza `Narzedzia/pakuj_overleaf.py`
 uruchomiony z głównego folderu zbioru.
 
-Gotowe raporty z ćwiczenia 71 nie są przeznaczone do publikacji. Ich PDF-y,
-źródła treści i pliki robocze pozostają lokalne. Foldery przykładów i archiwum
-są ignorowane przez Git. Zapisana wcześniejsza seria i jej wykresy również pozostają lokalne.
-Publiczne są szablony, ich generatory oraz puste wejścia `Sprawko/Dane/szablon/`.

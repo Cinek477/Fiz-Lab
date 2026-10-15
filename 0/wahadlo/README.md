@@ -21,4 +21,4 @@ Uruchomienie nadpisuje wyniki obliczeń, zachowując pliki pomiarowe.
 Na wykresie współczynnik kierunkowy ma jednostkę s²/m. Kąt widocznej prostej
 zależy od skal osi i proporcji rysunku; nie jest niezależną wielkością fizyczną.
 [Gotowe sprawozdanie PDF](PDF/sprawozdanie.pdf) na własnych danych jest publiczne.
-Źródła treści raportu pozostają lokalne. Zestaw nie zawiera pustego szablonu.
+Zestaw nie zawiera pustego szablonu.

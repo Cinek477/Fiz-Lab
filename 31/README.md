@@ -37,4 +37,4 @@ tectonic 31_A_szablon.tex --outdir ../PDF
 
 Wspólny styl i rysunki są w `Wspolne/`. ZIP-y zawierają ich kopie z dopasowanymi
 ścieżkami. W Overleaf wybierz **XeLaTeX** i plik główny karty albo szablonu.
-Daty są puste. Folder `Przykład/` jest wykluczony z Git.
+Daty są puste.

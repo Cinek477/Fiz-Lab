@@ -50,22 +50,11 @@ Pierwsze polecenie sprawdza linki README, składnię Pythona, JSON/CSV, zgodnoś
 ze źródłami i reguły Git. Wymaga programu `git` dostępnego w PATH.
 Drugie odtwarza paczki ćwiczeń 11, 31, 71 i 83. [Szczegóły](Narzedzia/README.md).
 
-## GitHub
-
-Foldery `Przykład/` i `Archiwum/` są w całości lokalne — także przykłady z poprzednich roczników.
-Publiczne gotowe sprawozdania ograniczono do poniższych PDF-ów na własnych danych:
+## Sprawozdania
 
 | Ćwiczenie | Własne sprawozdanie |
 |---|---|
 | 0 — wahadło | [PDF](0/wahadlo/PDF/sprawozdanie.pdf) |
-
-Pozostałe gotowe raporty i pliki robocze pozostają ignorowane. Wyjątki `.gitignore`
-dotyczą wyłącznie wskazanych PDF-ów, nie ich źródeł ani dowolnych kolejnych raportów.
-Puste PDF-y, źródła szablonów, instrukcje i paczki Overleaf są publiczne.
-Dane i skrypty spoza folderów prywatnych również są publiczne.
-
-`.gitignore` nie usuwa plików już śledzonych. Przed publikacją sprawdź `git status`
-oraz `git ls-files`; nie dodawaj materiałów lokalnych przez `git add -f`.
 
 ## Współpraca
 

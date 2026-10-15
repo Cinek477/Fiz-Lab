@@ -14,5 +14,3 @@ na podstawie wyników innych grup. W obu sposobach mierzono czasy 10 okresów.
 | `wahadlo/PDF/Wykresy/` | Wykres T²(L) |
 
 To zestaw danych i narzędzi, bez publicznego pustego szablonu ani paczki Overleaf.
-Sprawozdanie PDF na własnych danych jest dopuszczone do publikacji.
-Źródła treści raportu, przykłady i archiwum pozostają lokalne.

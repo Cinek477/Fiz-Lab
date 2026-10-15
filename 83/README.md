@@ -35,4 +35,3 @@ z głównego folderu zbioru.
 
 Nie myl stopni dziesiętnych z zapisem stopnie–minuty: 14,20° to 14°12′.
 Stałą siatki odczytaj na stanowisku, nie z przykładowych danych.
-Folder `Przykład/` z gotowymi opracowaniami jest wykluczony z Git.

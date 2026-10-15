@@ -28,5 +28,3 @@ Generator czyta puste `Dane/szablon/` i zapisuje LaTeX oraz pomocniczy DOCX.
 Nadpisuje źródło szablonu, więc własne zmiany zachowaj przed uruchomieniem.
 Pliki robocze generatora i wyniki obliczeń nie są wymagane do kompilacji pustego szablonu.
 
-Narzędzia analizy wcześniejszej serii, jej dane i wykresy pozostają lokalne.
-Gotowe raporty ćwiczenia 71, źródła ich treści, przykłady i archiwum pozostają lokalne, ignorowane przez Git.

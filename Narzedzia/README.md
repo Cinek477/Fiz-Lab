@@ -2,6 +2,19 @@
 
 [Wszystkie ćwiczenia](../README.md)
 
+## Dane z Excela
+
+[Arkusze pomiarowe i instrukcja generowania sprawozdań](../Excel/README.md).
+
+```powershell
+uv run Narzedzia/excel_sprawozdanie.py Moje_pomiary/11.xlsx
+```
+
+Generator wymaga bibliotek z `requirements_excel.txt`; `uv run` instaluje je automatycznie.
+PDF kompiluje Tectonic, a ZIP można otworzyć w Overleaf z kompilatorem XeLaTeX.
+
+## Kontrola szablonów
+
 Skrypty działają z Pythonem 3.11 lub nowszym, bez dodatkowych bibliotek Pythona.
 Kontrola `.gitignore` wymaga programu Git. Polecenia uruchamiaj z głównego folderu zbioru.
 

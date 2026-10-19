@@ -1,5 +1,6 @@
 # Ćwiczenie 83 — spektrometr optyczny
 
+[Excel](../Excel/83_pomiary.xlsx) | [Excel -> sprawozdanie](../Excel/README.md)
 [Wszystkie ćwiczenia](../README.md)
 
 | Materiał | Plik |

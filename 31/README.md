@@ -1,5 +1,6 @@
 # Ćwiczenie 31 — modelowanie pola elektrycznego
 
+[Excel A](../Excel/31A_pomiary.xlsx) | [Excel B](../Excel/31B_pomiary.xlsx) | [Excel C](../Excel/31C_pomiary.xlsx) | [Generator](../Excel/README.md)
 [Wszystkie ćwiczenia](../README.md)
 
 Wariant wybiera prowadzący. Każdy ma osobną kartę, szablon i paczkę Overleaf.

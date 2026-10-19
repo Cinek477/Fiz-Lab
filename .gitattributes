@@ -7,3 +7,5 @@
 *.pdf binary
 *.png binary
 *.zip binary
+*.xlsx binary
+*.cmd text eol=crlf

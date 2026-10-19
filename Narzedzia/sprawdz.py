@@ -10,6 +10,7 @@ import subprocess
 import tempfile
 from urllib.parse import unquote
 import zipfile
+from xml.etree import ElementTree as ET
 from pakuj_overleaf import ROOT, packages
 
 SKIP = {'.git', '__pycache__', '.venv', 'tmp', 'temp', 'Archiwum'}
@@ -52,7 +53,7 @@ def main():
     args = parser.parse_args()
     errors = []
     all_files = files()
-    counts = {'readme': 0, 'python': 0, 'json': 0, 'csv': 0, 'zip': 0, 'compiled': 0}
+    counts = {'readme': 0, 'python': 0, 'json': 0, 'csv': 0, 'xlsx': 0, 'zip': 0, 'compiled': 0}
     ignored = ignored_paths(all_files)
     public_links = []
     for p in all_files:
@@ -81,6 +82,12 @@ def main():
                 if not rows or any(len(row) != len(rows[0]) for row in rows):
                     raise ValueError('CSV has an empty header or inconsistent columns')
                 counts['csv'] += 1
+            elif p.suffix == '.xlsx' and p.parent == ROOT / 'Excel':
+                with zipfile.ZipFile(p) as z:
+                    if z.testzip() is not None:raise ValueError('XLSX CRC error')
+                    if any('vbaProject' in n for n in z.namelist()):raise ValueError('Unexpected macro in XLSX')
+                    ET.fromstring(z.read('xl/workbook.xml'))
+                counts['xlsx'] += 1
         except (ValueError, SyntaxError, OSError) as exc:
             errors.append(f'{rel}: {exc}')
         if 'Przykład' in p.parts and rel not in ignored:
@@ -98,6 +105,8 @@ def main():
               ROOT / '71/Sprawko/PDF/71_sprawozdanie_v2.pdf', ROOT / '31/Przykład/PDF/test.pdf', ROOT / '71/Templatka/Archiwum/test.pdf',
               ROOT / '71/Sprawko/Tworzenie/wyniki/71_sprawozdanie_do_weryfikacji.docx',
               ROOT / '71/Sprawko/Tworzenie/71_sprawozdanie_do_weryfikacji.tex']
+    probes += [ROOT / 'Excel/Wyniki/11/obliczenia.json', ROOT / 'Moje_pomiary/11.xlsx',
+               ROOT / 'Excel/11_pomiary.xlsx.inspect.ndjson']
     hidden = ignored_paths(probes)
     for p in probes:
         if p.relative_to(ROOT).as_posix() not in hidden:

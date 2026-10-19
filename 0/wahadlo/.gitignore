@@ -91,3 +91,8 @@ desktop.ini
 
 # Wyj?tki: wy??cznie w?asne sprawozdania PDF, poza przyk?adami i archiwum.
 !/PDF/sprawozdanie.pdf
+
+# Measurement input copies and generated report output
+Moje_pomiary/
+Wyniki/
+*.inspect.ndjson

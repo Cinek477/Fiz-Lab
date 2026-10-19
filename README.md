@@ -3,6 +3,18 @@
 Karty pomiarowe, puste szablony sprawozdań w LaTeX i narzędzia do opracowania wyników.
 Każde ćwiczenie ma własny opis i instrukcję uruchomienia.
 
+## Excel i automatyczne sprawozdanie — 1.1
+
+[Pobierz karty Excel i zobacz instrukcję](Excel/README.md).
+Wpisz pomiary, parametry i wnioski w arkuszu. Generator przygotuje obliczenia,
+wykresy oraz sprawozdanie LaTeX, ZIP do Overleaf i PDF przy dostępnym Tectonicu.
+
+```powershell
+uv run Narzedzia/excel_sprawozdanie.py Moje_pomiary/11.xlsx
+```
+
+Na Windows możesz przeciągnąć XLSX na `Narzedzia/utworz_sprawozdanie.cmd`.
+
 ## Materiały
 
 | Ćwiczenie | Temat | Dokumenty i narzędzia |

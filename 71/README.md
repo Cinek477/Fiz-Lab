@@ -1,5 +1,6 @@
 # Ćwiczenie 71 — dwie szczeliny
 
+[Excel](../Excel/71_pomiary.xlsx) | [Excel -> sprawozdanie](../Excel/README.md)
 [Wszystkie ćwiczenia](../README.md)
 
 | Materiał | Plik |

@@ -1,5 +1,6 @@
 # Wariant B — kondensator cylindryczny
 
+[Arkusz Excel](Excel/31B_pomiary.xlsx) · [Tworzenie raportu](Excel/README.md)
 [Ćwiczenie 31](../README.md)
 
 | Materiał | Plik |

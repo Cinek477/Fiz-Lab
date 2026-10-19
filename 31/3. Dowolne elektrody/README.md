@@ -1,5 +1,6 @@
 # Wariant C — dowolne elektrody
 
+[Arkusz Excel](Excel/31C_pomiary.xlsx) · [Tworzenie raportu](Excel/README.md)
 [Ćwiczenie 31](../README.md)
 
 | Materiał | Plik |

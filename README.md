@@ -6,6 +6,7 @@ Każde ćwiczenie ma własny opis i instrukcję uruchomienia.
 ## Excel i automatyczne sprawozdanie — 1.1
 
 [Pobierz karty Excel i zobacz instrukcję](Excel/README.md).
+Arkusze znajdziesz też w folderze **Excel/** każdego ćwiczenia, obok pliku uruchamiającego raport.
 Wpisz pomiary, parametry i wnioski w arkuszu. Generator przygotuje obliczenia,
 wykresy oraz sprawozdanie LaTeX, ZIP do Overleaf i PDF przy dostępnym Tectonicu.
 

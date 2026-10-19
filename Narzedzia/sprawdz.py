@@ -12,6 +12,7 @@ from urllib.parse import unquote
 import zipfile
 from xml.etree import ElementTree as ET
 from pakuj_overleaf import ROOT, packages
+from excel_schema import WORKBOOK_PATHS
 
 SKIP = {'.git', '__pycache__', '.venv', 'tmp', 'temp', 'Archiwum'}
 OWN_REPORTS = (
@@ -82,7 +83,7 @@ def main():
                 if not rows or any(len(row) != len(rows[0]) for row in rows):
                     raise ValueError('CSV has an empty header or inconsistent columns')
                 counts['csv'] += 1
-            elif p.suffix == '.xlsx' and p.parent == ROOT / 'Excel':
+            elif p.relative_to(ROOT).as_posix() in WORKBOOK_PATHS.values():
                 with zipfile.ZipFile(p) as z:
                     if z.testzip() is not None:raise ValueError('XLSX CRC error')
                     if any('vbaProject' in n for n in z.namelist()):raise ValueError('Unexpected macro in XLSX')
@@ -97,6 +98,8 @@ def main():
         rel = target.relative_to(ROOT).as_posix()
         if rel in link_ignored:
             errors.append(f'{origin}: public link points to an ignored file: {rel}')
+    for rel in WORKBOOK_PATHS.values():
+        if not (ROOT/rel).exists():errors.append(f'Missing workbook: {rel}')
     # Także pliki, które dopiero mogą zostać wygenerowane.
     probes = [ROOT / '71/Sprawko/PDF/71_sprawozdanie_uzupelnione.pdf',
               ROOT / '71/Sprawko/Dane/seria_pelna.csv',
@@ -105,8 +108,8 @@ def main():
               ROOT / '71/Sprawko/PDF/71_sprawozdanie_v2.pdf', ROOT / '31/Przykład/PDF/test.pdf', ROOT / '71/Templatka/Archiwum/test.pdf',
               ROOT / '71/Sprawko/Tworzenie/wyniki/71_sprawozdanie_do_weryfikacji.docx',
               ROOT / '71/Sprawko/Tworzenie/71_sprawozdanie_do_weryfikacji.tex']
-    probes += [ROOT / 'Excel/Wyniki/11/obliczenia.json', ROOT / 'Moje_pomiary/11.xlsx',
-               ROOT / 'Excel/11_pomiary.xlsx.inspect.ndjson']
+    probes += [ROOT / '11/Excel/Wyniki/11/obliczenia.json', ROOT / 'Moje_pomiary/11.xlsx',
+               ROOT / '11/Excel/11_pomiary.xlsx.inspect.ndjson']
     hidden = ignored_paths(probes)
     for p in probes:
         if p.relative_to(ROOT).as_posix() not in hidden:

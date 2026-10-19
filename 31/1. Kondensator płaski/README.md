@@ -1,5 +1,6 @@
 # Wariant A — kondensator płaski
 
+[Arkusz Excel](Excel/31A_pomiary.xlsx) · [Tworzenie raportu](Excel/README.md)
 [Ćwiczenie 31](../README.md)
 
 | Materiał | Plik |

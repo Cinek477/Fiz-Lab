@@ -9,7 +9,7 @@ import tempfile
 import unittest
 import numpy as np
 import openpyxl
-from excel_schema import SPECS
+from excel_schema import SPECS,WORKBOOK_PATHS
 from excel_sprawozdanie import Report,load,generate,num,fit,pendulum,young,field,slits,spectrum
 
 ROOT=Path(__file__).resolve().parent.parent
@@ -26,7 +26,7 @@ class ExcelTests(unittest.TestCase):
 
     def test_all_blank_templates(self):
         for code,spec in SPECS.items():
-            path=ROOT/'Excel'/f'{code}_pomiary.xlsx'
+            path=ROOT/WORKBOOK_PATHS[code]
             s,p,t=load(path)
             self.assertEqual(s['code'],code);self.assertFalse(any(t.values()))
             with self.assertRaisesRegex(ValueError,'Brak pomiarów'):generate(path,self.out/code,tex_only=True)

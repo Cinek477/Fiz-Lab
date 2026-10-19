@@ -3,6 +3,16 @@ import json
 import sys
 from pathlib import Path
 
+WORKBOOK_PATHS = {
+    '0': '0/Excel/0_pomiary.xlsx',
+    '11': '11/Excel/11_pomiary.xlsx',
+    '31A': '31/1. Kondensator płaski/Excel/31A_pomiary.xlsx',
+    '31B': '31/2. Kondensator cylindryczny/Excel/31B_pomiary.xlsx',
+    '31C': '31/3. Dowolne elektrody/Excel/31C_pomiary.xlsx',
+    '71': '71/Excel/71_pomiary.xlsx',
+    '83': '83/Excel/83_pomiary.xlsx',
+}
+
 META = [
     ('autorzy', 'Imiona i nazwiska', None), ('wydzial', 'Wydział', None),
     ('rok', 'Rok', None), ('grupa', 'Grupa', None), ('zespol', 'Zespół', None),

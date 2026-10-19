@@ -1,6 +1,6 @@
 # Ćwiczenie 11 — moduł Younga
 
-[Excel](../Excel/11_pomiary.xlsx) | [Excel -> sprawozdanie](../Excel/README.md)
+[Arkusz Excel](Excel/11_pomiary.xlsx) · [Wpisywanie danych i tworzenie raportu](Excel/README.md)
 [Wszystkie ćwiczenia](../README.md)
 
 | Materiał | Plik |

@@ -9,13 +9,17 @@ rzeczywiste zero wpisz jako `0`.
 
 | Ćwiczenie | Arkusz | Zawartość |
 |---|---|---|
-| 0 | [Wahadło](0_pomiary.xlsx) | 100 powtórzeń czasu i 100 zestawów L,T innych grup |
-| 11 | [Moduł Younga](11_pomiary.xlsx) | Dwa druty, wymiary i po 21 punktów obciążania/odciążania |
-| 31 A | [Kondensator płaski](31A_pomiary.xlsx) | 20 pozycji trzech profili i 50 punktów mapy |
-| 31 B | [Kondensator cylindryczny](31B_pomiary.xlsx) | 20 pozycji trzech promieni |
-| 31 C | [Dowolne elektrody](31C_pomiary.xlsx) | 100 punktów mapy |
-| 71 | [Dwie szczeliny](71_pomiary.xlsx) | 1200 odczytów i 20 par maksimów |
-| 83 | [Spektrometr](83_pomiary.xlsx) | 8 linii × 3 powtórzenia × 2 rzędy, osobne stopnie i minuty |
+| 0 | [Wahadło](../0/Excel/0_pomiary.xlsx) | 100 powtórzeń czasu i 100 zestawów L,T innych grup |
+| 11 | [Moduł Younga](../11/Excel/11_pomiary.xlsx) | Dwa druty, wymiary i po 21 punktów obciążania/odciążania |
+| 31 A | [Kondensator płaski](<../31/1. Kondensator płaski/Excel/31A_pomiary.xlsx>) | 20 pozycji trzech profili i 50 punktów mapy |
+| 31 B | [Kondensator cylindryczny](<../31/2. Kondensator cylindryczny/Excel/31B_pomiary.xlsx>) | 20 pozycji trzech promieni |
+| 31 C | [Dowolne elektrody](<../31/3. Dowolne elektrody/Excel/31C_pomiary.xlsx>) | 100 punktów mapy |
+| 71 | [Dwie szczeliny](../71/Excel/71_pomiary.xlsx) | 1200 odczytów i 20 par maksimów |
+| 83 | [Spektrometr](../83/Excel/83_pomiary.xlsx) | 8 linii × 3 powtórzenia × 2 rzędy, osobne stopnie i minuty |
+
+Każde ćwiczenie ma własny folder **Excel/** z arkuszem, krótką instrukcją
+i plikiem **utworz_sprawozdanie.cmd**. W ćwiczeniu 31 folder Excel znajduje się
+wewnątrz wybranego wariantu A/B/C.
 
 ## Od pomiarów do sprawozdania
 
@@ -30,7 +34,8 @@ Z głównego folderu repozytorium:
 uv run Narzedzia/excel_sprawozdanie.py Moje_pomiary/11.xlsx
 ```
 
-Na Windows możesz też przeciągnąć XLSX na **[utworz_sprawozdanie.cmd](../Narzedzia/utworz_sprawozdanie.cmd)**.
+Na Windows możesz przeciągnąć XLSX na **utworz_sprawozdanie.cmd** obok arkusza
+lub na [wspólny plik uruchamiający](../Narzedzia/utworz_sprawozdanie.cmd).
 Wymagany jest `uv` albo Python 3.11+ z bibliotekami z
 `Narzedzia/requirements_excel.txt`. Przy użyciu `uv run` biblioteki instalują się automatycznie.
 

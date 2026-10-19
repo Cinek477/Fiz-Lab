@@ -1,6 +1,6 @@
 # Ćwiczenie 0 — wahadło matematyczne
 
-[Excel](../Excel/0_pomiary.xlsx) | [Excel -> sprawozdanie](../Excel/README.md)
+[Arkusz Excel](Excel/0_pomiary.xlsx) · [Wpisywanie danych i tworzenie raportu](Excel/README.md)
 [Wszystkie ćwiczenia](../README.md) · [Obliczenia i uruchomienie](wahadlo/README.md) · [Dane i jednostki](wahadlo/Dane/README.md)
 
 [Sprawozdanie na własnych danych — PDF](wahadlo/PDF/sprawozdanie.pdf)

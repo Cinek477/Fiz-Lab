@@ -90,5 +90,15 @@ class ExcelTests(unittest.TestCase):
         self.assertAlmostEqual(line['u_lambda_nm'],expected_u)
         with self.assertRaises(ValueError):spectrum(self.report('83',p),{'Odczyty':[row(order=1,id=1,repeat=1,ldeg=330,lmin=60,rdeg=10,rmin=0)],'Odniesienia':[]})
 
+    def test_spectrum_right_deviation_matches_raw_scale(self):
+        p=dict(N=570,zero1_deg=0,zero1_min=0)
+        common=dict(order=1,id=1,repeat=1,ldeg=14,lmin=42,barwa='niebieska')
+        raw=self.report('83',p)
+        spectrum(raw,{'Odczyty':[row(**common,rdeg=345,rmin=9)],'Odniesienia':[]})
+        converted=self.report('83',p)
+        spectrum(converted,{'Odczyty':[row(**common,rdeg=14,rmin=51,uwagi='P: odchylenie od 0;')],'Odniesienia':[]})
+        self.assertAlmostEqual(raw.results['widmo'][0]['alpha'],converted.results['widmo'][0]['alpha'])
+        self.assertAlmostEqual(raw.results['widmo'][0]['lambda_nm'],converted.results['widmo'][0]['lambda_nm'])
+
 
 if __name__=='__main__':unittest.main()

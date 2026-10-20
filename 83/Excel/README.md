@@ -1,5 +1,8 @@
 # Pomiary — ćwiczenie 83
 
+To folder **pustej karty pomiarowej**. Gotowe [sprawozdanie](../Sprawozdanie/README.md)
+znajduje się w osobnym folderze ćwiczenia.
+
 [Opis ćwiczenia](../README.md) · [Pełna instrukcja](../../Excel/README.md)
 
 1. Otwórz [83_pomiary.xlsx](83_pomiary.xlsx) i zapisz kopię ze swoimi pomiarami.

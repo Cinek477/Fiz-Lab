@@ -9,6 +9,14 @@
 | Pusty szablon sprawozdania | [PDF](PDF/83_szablon_sprawozdania.pdf) |
 | Instrukcja | [PDF](Instrukcja/83.pdf) |
 | Źródła do Overleaf | [ZIP](83_overleaf.zip) |
+| Własne sprawozdanie — 20.10.2026 | [PDF](Sprawozdanie/PDF/83_sprawozdanie.pdf) |
+
+## Własne sprawozdanie
+
+[Sprawozdanie](Sprawozdanie/README.md) zawiera opracowanie pomiarów
+Marcina Podymy i Pawła Mierzwy dla siatki 570 rys/mm.
+
+## Puste materiały
 
 Ćwiczenie dotyczy widma rtęci. Materiały o dwóch szczelinach znajdują się w ćwiczeniu 71.
 

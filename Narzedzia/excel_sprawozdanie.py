@@ -323,6 +323,8 @@ def spectrum(r,t):
             return D+M/60
         zero=angle(p.get(f'zero{int(order)}_deg'),p.get(f'zero{int(order)}_min'))
         left=angle(row['ldeg'],row['lmin']);right=angle(row['rdeg'],row['rmin'])
+        if 'P: odchylenie od 0;' in str(row.get('uwagi') or ''):
+            right=(-right)%360
         signed_l=(left-zero+180)%360-180;signed_r=(right-zero+180)%360-180
         al=abs(signed_l);ar=abs(signed_r)
         if max(al,ar)>=90:raise ValueError('Odchylenie ≥90°: sprawdź kierunek zerowy i odczyty.')

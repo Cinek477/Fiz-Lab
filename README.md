@@ -69,6 +69,7 @@ Drugie odtwarza paczki ćwiczeń 11, 31, 71 i 83. [Szczegóły](Narzedzia/README
 |---|---|
 | 0 — wahadło | [PDF](0/wahadlo/PDF/sprawozdanie.pdf) |
 | 71 — dwie szczeliny | [PDF](71/PDF/INF3z1c71v1.pdf) |
+| 83 — spektrometr optyczny | [PDF](83/Sprawozdanie/PDF/83_sprawozdanie.pdf) |
 
 ## Współpraca
 

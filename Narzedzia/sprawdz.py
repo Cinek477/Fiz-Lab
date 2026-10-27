@@ -16,7 +16,7 @@ from excel_schema import WORKBOOK_PATHS
 
 SKIP = {'.git', '__pycache__', '.venv', 'tmp', 'temp', 'Archiwum'}
 OWN_REPORTS = (
-    '11/Sprawozdanie_v2/PDF/11_sprawozdanie_v2.pdf',
+    '11/PDF/11_sprawozdanie.pdf',
     '0/wahadlo/PDF/sprawozdanie.pdf',
     '71/PDF/INF3z1c71v1.pdf',
     '83/Sprawozdanie/PDF/83_sprawozdanie.pdf',

@@ -95,3 +95,15 @@ desktop.ini
 Moje_pomiary/
 Wyniki/
 *.inspect.ndjson
+
+# Wlasne pomiary i opracowanie cwiczenia 11 pozostaja lokalnie.
+/Moje_wyniki/
+/Sprawozdanie/
+/Sprawozdanie_v2/
+
+# Publikujemy tylko gotowe sprawozdanie v2.
+!/Sprawozdanie_v2/
+/Sprawozdanie_v2/*
+!/Sprawozdanie_v2/PDF/
+/Sprawozdanie_v2/PDF/*
+!/Sprawozdanie_v2/PDF/11_sprawozdanie_v2.pdf

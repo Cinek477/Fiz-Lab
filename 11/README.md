@@ -10,6 +10,7 @@
 | Źródła do Overleaf | [ZIP](11_overleaf.zip) |
 | Teoria | [Instrukcja](Instrukcja/11_opis.pdf) |
 | Wykonanie i wymagania | [Instrukcja](Instrukcja/11_wykon.pdf) |
+| Własne sprawozdanie — 27.10.2026 | [PDF — v2](Sprawozdanie_v2/PDF/11_sprawozdanie_v2.pdf) |
 
 Karta obejmuje dwa druty: długości, po trzy odczyty średnicy, dane przyrządów
 i po 21 wierszy obciążania/odciążania. Instrukcja ogranicza obciążenie stali
